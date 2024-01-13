@@ -1,0 +1,15 @@
+"D:\Program\Work\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
+
+"D:\Program\Work\IAR Systems\Embedded Workbench 8.3\arm\bin\armstlink2.dll" 
+
+"C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Exe\cmwx1zzabz_0xx.out" 
+
+--plugin="D:\Program\Work\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program\Work\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\ST\STM32L0xx.dmac" 
+
+--flash_loader="D:\Program\Work\IAR Systems\Embedded Workbench 8.3\arm\config\flashloader\ST\FlashSTM32L07xxZ.board" 
+
+
+
+

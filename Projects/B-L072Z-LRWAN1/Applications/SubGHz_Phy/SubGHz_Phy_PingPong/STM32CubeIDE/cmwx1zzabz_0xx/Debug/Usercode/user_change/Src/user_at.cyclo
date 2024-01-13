@@ -1,0 +1,16 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:365:6:_fAT_SET_LED	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:125:6:_fAT_GET_DEVICE_ID	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:153:6:_fAT_GET_NETWORK_ID	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:186:6:_fAT_GET_DUTY_WAKEUP	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:244:6:_fAT_GET_TYPE_MODEM	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:329:6:_fAT_GET_RTC	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:413:6:_fAT_GET_FIRM_VER	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:418:6:_fAT_GET_AUTHOR	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:158:6:_fAT_SET_DUTY_WAKEUP	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:205:6:_fAT_SET_TYPE_MODEM	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:350:6:_fAT_RESET_MODEM	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:287:6:_fAT_SET_RTC	8
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:102:6:_fAT_SET_DEVICE_ID	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:130:6:_fAT_SET_NETWORK_ID	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:370:6:_fAT_SET_MODE	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:38:9:Check_AT_User	15

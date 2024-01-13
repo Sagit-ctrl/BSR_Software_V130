@@ -1,0 +1,72 @@
+#Generating source browse information for project SubGHz_Phy_PingPong
+
+
+#Abbreviations
+cc = D$:\Program\Work\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = D$:\Program\Work\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = D$:\Program\Work\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build app_subghz_phy.pbi : index app_subghz_phy.xcl
+build subghz_phy_app.pbi : index subghz_phy_app.xcl
+build dma.pbi : index dma.xcl
+build main.pbi : index main.xcl
+build rtc.pbi : index rtc.xcl
+build stm32l0xx_hal_msp.pbi : index stm32l0xx_hal_msp.xcl
+build stm32l0xx_it.pbi : index stm32l0xx_it.xcl
+build sys_app.pbi : index sys_app.xcl
+build sys_debug.pbi : index sys_debug.xcl
+build usart_if.pbi : index usart_if.xcl
+build b_l072z_lrwan1_bus.pbi : index b_l072z_lrwan1_bus.xcl
+build b-l072z-lrwan1.pbi : index b-l072z-lrwan1.xcl
+build cmwx1zzabz_0xx.pbi : index cmwx1zzabz_0xx.xcl
+build system_stm32l0xx.pbi : index system_stm32l0xx.xcl
+build stm32l0xx_hal.pbi : index stm32l0xx_hal.xcl
+build stm32l0xx_hal_adc.pbi : index stm32l0xx_hal_adc.xcl
+build stm32l0xx_hal_adc_ex.pbi : index stm32l0xx_hal_adc_ex.xcl
+build stm32l0xx_hal_cortex.pbi : index stm32l0xx_hal_cortex.xcl
+build stm32l0xx_hal_dma.pbi : index stm32l0xx_hal_dma.xcl
+build stm32l0xx_hal_exti.pbi : index stm32l0xx_hal_exti.xcl
+build stm32l0xx_hal_gpio.pbi : index stm32l0xx_hal_gpio.xcl
+build stm32l0xx_hal_i2c.pbi : index stm32l0xx_hal_i2c.xcl
+build stm32l0xx_hal_pwr.pbi : index stm32l0xx_hal_pwr.xcl
+build stm32l0xx_hal_pwr_ex.pbi : index stm32l0xx_hal_pwr_ex.xcl
+build stm32l0xx_hal_rcc.pbi : index stm32l0xx_hal_rcc.xcl
+build stm32l0xx_hal_rcc_ex.pbi : index stm32l0xx_hal_rcc_ex.xcl
+build stm32l0xx_hal_rtc.pbi : index stm32l0xx_hal_rtc.xcl
+build stm32l0xx_hal_rtc_ex.pbi : index stm32l0xx_hal_rtc_ex.xcl
+build stm32l0xx_hal_spi.pbi : index stm32l0xx_hal_spi.xcl
+build stm32l0xx_hal_tim.pbi : index stm32l0xx_hal_tim.xcl
+build stm32l0xx_hal_tim_ex.pbi : index stm32l0xx_hal_tim_ex.xcl
+build stm32l0xx_hal_uart.pbi : index stm32l0xx_hal_uart.xcl
+build stm32l0xx_hal_uart_ex.pbi : index stm32l0xx_hal_uart_ex.xcl
+build sx1276.pbi : index sx1276.xcl
+build stm32_adv_trace.pbi : index stm32_adv_trace.xcl
+build stm32_mem.pbi : index stm32_mem.xcl
+build stm32_seq.pbi : index stm32_seq.xcl
+build stm32_systime.pbi : index stm32_systime.xcl
+build stm32_tiny_vsnprintf.pbi : index stm32_tiny_vsnprintf.xcl
+build SubGHz_Phy_PingPong_part0.pbi : link app_subghz_phy.pbi subghz_phy_app.pbi dma.pbi main.pbi rtc.pbi stm32l0xx_hal_msp.pbi
+build SubGHz_Phy_PingPong_part1.pbi : link stm32l0xx_it.pbi sys_app.pbi sys_debug.pbi usart_if.pbi b_l072z_lrwan1_bus.pbi b-l072z-lrwan1.pbi
+build SubGHz_Phy_PingPong_part2.pbi : link cmwx1zzabz_0xx.pbi system_stm32l0xx.pbi stm32l0xx_hal.pbi stm32l0xx_hal_adc.pbi stm32l0xx_hal_adc_ex.pbi stm32l0xx_hal_cortex.pbi
+build SubGHz_Phy_PingPong_part3.pbi : link stm32l0xx_hal_dma.pbi stm32l0xx_hal_exti.pbi stm32l0xx_hal_gpio.pbi stm32l0xx_hal_i2c.pbi stm32l0xx_hal_pwr.pbi stm32l0xx_hal_pwr_ex.pbi
+build SubGHz_Phy_PingPong_part4.pbi : link stm32l0xx_hal_rcc.pbi stm32l0xx_hal_rcc_ex.pbi stm32l0xx_hal_rtc.pbi stm32l0xx_hal_rtc_ex.pbi stm32l0xx_hal_spi.pbi stm32l0xx_hal_tim.pbi
+build SubGHz_Phy_PingPong_part5.pbi : link stm32l0xx_hal_tim_ex.pbi stm32l0xx_hal_uart.pbi stm32l0xx_hal_uart_ex.pbi sx1276.pbi stm32_adv_trace.pbi stm32_mem.pbi
+build SubGHz_Phy_PingPong_part6.pbi : link stm32_seq.pbi stm32_systime.pbi stm32_tiny_vsnprintf.pbi
+build SubGHz_Phy_PingPong.pbd : link SubGHz_Phy_PingPong_part0.pbi SubGHz_Phy_PingPong_part1.pbi SubGHz_Phy_PingPong_part2.pbi SubGHz_Phy_PingPong_part3.pbi SubGHz_Phy_PingPong_part4.pbi SubGHz_Phy_PingPong_part5.pbi SubGHz_Phy_PingPong_part6.pbi
+build SubGHz_Phy_PingPong.pbw : browsedata SubGHz_Phy_PingPong.pbd
+
+

@@ -1,0 +1,74 @@
+.c
+
+/**
+  * @file    app_subghz_phy.c
+  * @author  MCD Application Team
+  * @brief   Application of the SubGHz_Phy Middleware
+  */
+
+/* Includes ------------------------------------------------------------------*/
+
+/* External variables ---------------------------------------------------------*/
+
+/* Private typedef -----------------------------------------------------------*/
+
+/* Private define ------------------------------------------------------------*/
+
+/* Private macro -------------------------------------------------------------*/
+
+/* Private variables ---------------------------------------------------------*/
+
+/* Private function prototypes -----------------------------------------------*/
+
+/* Exported functions --------------------------------------------------------*/
+
+/* Private functions definition -----------------------------------------------*/
+
+/**
+ * @brief	
+ * @note	
+ * @param	
+ * @retval	
+ */
+
+/* End of file ----------------------------------------------------------------*/
+
+.h
+
+/**
+  * @file    app_subghz_phy.h
+  * @author  MCD Application Team
+  * @brief   Header of application of the SubGHz_Phy Middleware
+  */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __APP_SUBGHZ_PHY_H__
+#define __APP_SUBGHZ_PHY_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+
+/* Define --------------------------------------------------------------------*/
+
+/* Exported struct -----------------------------------------------------------*/
+
+/* Exported types ------------------------------------------------------------*/
+
+/* Exported constants --------------------------------------------------------*/
+
+/* External variables --------------------------------------------------------*/
+
+/* Exported macro ------------------------------------------------------------*/
+
+/* Exported functions prototypes ---------------------------------------------*/
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /*__APP_SUBGHZ_PHY_H__*/
+
+/* End of file ----------------------------------------------------------------*/

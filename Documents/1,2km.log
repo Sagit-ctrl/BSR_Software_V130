@@ -1,0 +1,721 @@
+Terminal log file
+Date: 4/23/2023 - 14:59:58
+-----------------------------------------------
+315s207:OnRxDone: RssiValue=119 dBm, SnrValue=-22dB
+
+15:01:00.538> user_lora_protocol: rx payload: 0A045331B2D48746421BB131E92DC5A8FE434F41
+15:01:00.538> 
+315s226:subghz_phy_app.c: send data: 8301533132380001
+
+15:01:00.538> 316s238:OnTxDone, Rx start
+
+15:01:01.525> 319s619:OnRxDone: RssiValue=-111 dBm, SnrValue=3dB
+
+15:01:04.962> user_lora_protocol: rx payload: 0A0453313238010600010100000708020001006D
+15:01:04.962> 
+319s638:subghz_phy_app.c: send data: 8301533132380001
+
+15:01:04.962> 320s650:OnTxDone, Rx start
+
+15:01:05.973> 322s459:OnRxDone: RssiValue=-112 dBm, SnrValue=1dB
+
+15:01:07.776> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:01:07.776> 
+322s522:subghz_phy_app.c: send data: 8301533132380001
+
+15:01:07.839> 323s534:OnTxDone, Rx start
+
+15:01:08.851> 
+15:01:45.438> 
+=Timer TX Event callback=
+15:01:45.438> 
+417s137:OnRxDone: RssiValue=-112 dBm, SnrValue=4dB
+
+15:02:42.482> user_lora_protocol: rx payload: 0A0453313238010600010100000408020001006E
+15:02:42.482> 
+417s156:subghz_phy_app.c: send data: 8301533132380001
+
+15:02:42.482> 418s167:OnTxDone, Rx start
+
+15:02:43.485> 419s979:OnRxDone: RssiValue=-111 dBm, SnrValue=4dB
+
+15:02:45.324> user_lora_protocol: rx payload: 0A04533132380106000101000018080200020071
+15:02:45.324> 
+420s041:subghz_phy_app.c: send data: 8301533132380001
+
+15:02:45.387> 421s053:OnTxDone, Rx start
+
+15:02:46.391> 422s874:OnRxDone: RssiValue=-109 dBm, SnrValue=5dB
+
+15:02:48.202> user_lora_protocol: rx payload: 0A0453313238010600010100002C080200030044
+15:02:48.202> 
+422s936:subghz_phy_app.c: send data: 8301533132380001
+
+15:02:48.265> 423s948:OnTxDone, Rx start
+
+15:02:49.268> 
+15:03:45.421> 
+=Timer TX Event callback=
+15:03:45.421> 
+537s396:OnRxDone: RssiValue=-110 dBm, SnrValue=5dB
+
+15:04:42.728> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:04:42.728> 
+537s415:subghz_phy_app.c: send data: 8301533132380001
+
+15:04:42.728> 538s426:OnTxDone, Rx start
+
+15:04:43.737> 540s236:OnRxDone: RssiValue=-108 dBm, SnrValue=5dB
+
+15:04:45.544> user_lora_protocol: rx payload: 0A0453313238010600010100001508020002007C
+15:04:45.544> 
+540s299:subghz_phy_app.c: send data: 8301533132380001
+
+15:04:45.607> 541s311:OnTxDone, Rx start
+
+15:04:46.612> 543s131:OnRxDone: RssiValue=-114 dBm, SnrValue=1dB
+
+15:04:48.431> user_lora_protocol: rx payload: 0A04533132380106000101000029080200030041
+15:04:48.431> 
+543s195:subghz_phy_app.c: send data: 8301533132380001
+
+15:04:48.499> 544s207:OnTxDone, Rx start
+
+15:04:49.499> 
+15:05:45.449> 
+=Timer TX Event callback=
+15:05:45.449> 
+633s716:OnRxDone: RssiValue=-98 dBm, SnrValue=4dB
+
+15:06:19.050> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:06:19.050> 
+633s736:subghz_phy_app.c: send data: 8301533132380001
+
+15:06:19.050> 634s747:OnTxDone, Rx start
+
+15:06:20.051> 639s541:OnRxDone: RssiValue=-88 dBm, SnrValue=7dB
+
+15:06:24.856> user_lora_protocol: rx payload: 0A04533132380106000101000008080200010062
+15:06:24.856> 
+639s561:subghz_phy_app.c: send data: 8301533132380001
+
+15:06:24.856> 640s573:OnTxDone, Rx start
+
+15:06:25.856> 642s382:OnRxDone: RssiValue=-93 dBm, SnrValue=5dB
+
+15:06:27.671> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:06:27.733> 
+642s446:subghz_phy_app.c: send data: 8301533132380001
+
+15:06:27.733> 643s458:OnTxDone, Rx start
+
+15:06:28.798> 645s278:OnRxDone: RssiValue=-99 dBm, SnrValue=3dB
+
+15:06:30.612> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:06:30.612> 
+645s340:subghz_phy_app.c: send data: 8301533132380001
+
+15:06:30.675> 646s352:OnTxDone, Rx start
+
+15:06:31.675> 715s833:OnRxDone: RssiValue=-107 dBm, SnrValue=-2dB
+
+15:07:41.132> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:07:41.132> 
+715s852:subghz_phy_app.c: send data: 8301533132380001
+
+15:07:41.194> 716s864:OnTxDone, Rx start
+
+15:07:42.187> 718s673:OnRxDone: RssiValue=-101 dBm, SnrValue=3dB
+
+15:07:44.010> user_lora_protocol: rx payload: 0A04533132380106000101000019080200020070
+15:07:44.010> 
+718s737:subghz_phy_app.c: send data: 8301533132380001
+
+15:07:44.073> 719s748:OnTxDone, Rx start
+
+15:07:45.076> 
+15:07:45.451> 
+=Timer TX Event callback=
+15:07:45.451> 
+721s569:OnRxDone: RssiValue=-109 dBm, SnrValue=-4dB
+
+15:07:46.899> user_lora_protocol: rx payload: 0A0453313238010600010100002D080200030045
+15:07:46.899> 
+721s631:subghz_phy_app.c: send data: 8301533132380001
+
+15:07:46.962> 722s643:OnTxDone, Rx start
+
+15:07:47.973> 826s364:OnRxDone: RssiValue=-111 dBm, SnrValue=-7dB
+
+15:09:31.670> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:09:31.670> 
+826s383:subghz_phy_app.c: send data: 8301533132380001
+
+15:09:31.670> 827s394:OnTxDone, Rx start
+
+15:09:32.683> 829s206:OnRxDone: RssiValue=-108 dBm, SnrValue=-2dB
+
+15:09:34.501> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:09:34.501> 
+829s268:subghz_phy_app.c: send data: 8301533132380001
+
+15:09:34.563> 830s280:OnTxDone, Rx start
+
+15:09:35.564> 832s101:OnRxDone: RssiValue=-112 dBm, SnrValue=-4dB
+
+15:09:37.440> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:09:37.440> 
+832s164:subghz_phy_app.c: send data: 8301533132380001
+
+15:09:37.502> 833s175:OnTxDone, Rx start
+
+15:09:38.506> 
+15:09:45.427> 
+=Timer TX Event callback=
+15:09:45.427> 
+
+15:11:45.476> 
+=Timer TX Event callback=
+15:11:45.476> 
+969s716:OnRxDone: RssiValue=-104 dBm, SnrValue=2dB
+
+15:11:55.043> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:11:55.043> 
+969s736:subghz_phy_app.c: send data: 8301533132380001
+
+15:11:55.043> 970s747:OnTxDone, Rx start
+
+15:11:56.051> 972s557:OnRxDone: RssiValue=-105 dBm, SnrValue=2dB
+
+15:11:57.863> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:11:57.863> 
+972s620:subghz_phy_app.c: send data: 8301533132380001
+
+15:11:57.925> 973s631:OnTxDone, Rx start
+
+15:11:58.930> 975s452:OnRxDone: RssiValue=-103 dBm, SnrValue=4dB
+
+15:12:00.744> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:12:00.744> 
+975s515:subghz_phy_app.c: send data: 8301533132380001
+
+15:12:00.807> 976s527:OnTxDone, Rx start
+
+15:12:01.812> 1050s608:OnRxError
+
+15:13:15.921> 1050s610:Rx start again
+
+15:13:15.921> 
+15:13:45.459> 
+=Timer TX Event callback=
+15:13:45.459> 
+1097s670:OnRxDone: RssiValue=-120 dBm, SnrValue=-10dB
+
+15:14:02.978> user_lora_protocol: rx payload: 0A0453313238010600010100000408020001006E
+15:14:02.978> 
+1097s690:subghz_phy_app.c: send data: 8301533132380001
+
+15:14:02.978> 1098s702:OnTxDone, Rx start
+
+15:14:04.034> 1100s511:OnRxError
+
+15:14:05.797> 1100s513:Rx start again
+
+15:14:05.797> 1193s488:OnRxDone: RssiValue=-118 dBm, SnrValue=-13dB
+
+15:15:38.809> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:15:38.809> 
+1193s507:subghz_phy_app.c: send data: 8301533132380001
+
+15:15:38.809> 1194s519:OnTxDone, Rx start
+
+15:15:39.817> 
+15:15:45.460> 
+=Timer TX Event callback=
+15:15:45.460> 
+1300s646:OnRxDone: RssiValue=-105 dBm, SnrValue=-3dB
+
+15:17:25.978> user_lora_protocol: rx payload: 0A0453313238010600010100000408020001006E
+15:17:25.978> 
+1300s666:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:25.978> 1301s677:OnTxDone, Rx start
+
+15:17:26.964> 1303s487:OnRxDone: RssiValue=-110 dBm, SnrValue=-8dB
+
+15:17:28.786> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:17:28.786> 
+1303s550:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:28.849> 1304s561:OnTxDone, Rx start
+
+15:17:29.865> 1306s382:OnRxDone: RssiValue=-104 dBm, SnrValue=2dB
+
+15:17:31.681> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:17:31.681> 
+1306s446:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:32.072> 1307s457:OnTxDone, Rx start
+
+15:17:32.744> 1309s278:OnRxDone: RssiValue=-106 dBm, SnrValue=0dB
+
+15:17:34.568> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:17:34.568> 
+1309s340:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:34.631> 1310s352:OnTxDone, Rx start
+
+15:17:35.633> 1312s173:OnRxDone: RssiValue=-111 dBm, SnrValue=-6dB
+
+15:17:37.722> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:17:37.722> 
+1312s236:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:37.722> 1313s248:OnTxDone, Rx start
+
+15:17:38.586> 1315s069:OnRxDone: RssiValue=-106 dBm, SnrValue=-1dB
+
+15:17:40.373> user_lora_protocol: rx payload: 0A0453313238010600010100001508020002007C
+15:17:40.373> 
+1315s131:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:40.831> 1316s143:OnTxDone, Rx start
+
+15:17:41.451> 1317s963:OnRxDone: RssiValue=-111 dBm, SnrValue=-3dB
+
+15:17:43.262> user_lora_protocol: rx payload: 0A04533132380106000101000029080200030041
+15:17:43.262> 
+1318s027:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:43.324> 1319s039:OnTxDone, Rx start
+
+15:17:44.330> 
+15:17:45.460> 
+=Timer TX Event callback=
+15:17:45.460> 
+1320s860:OnRxDone: RssiValue=-121 dBm, SnrValue=-12dB
+
+15:17:46.534> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:17:46.534> 
+1320s923:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:46.534> 1321s935:OnTxDone, Rx start
+
+15:17:47.231> 1323s755:OnRxDone: RssiValue=-119 dBm, SnrValue=-10dB
+
+15:17:49.045> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:17:49.045> 
+1323s819:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:49.107> 1324s831:OnTxDone, Rx start
+
+15:17:50.170> 1326s651:OnRxDone: RssiValue=-114 dBm, SnrValue=-6dB
+
+15:17:52.231> user_lora_protocol: rx payload: 0A0453313238010600010100001508020002007C
+15:17:52.231> 
+1326s714:subghz_phy_app.c: send data: 8301533132380001
+
+15:17:52.231> 1327s726:OnTxDone, Rx start
+
+15:17:53.050> 1388s283:OnRxDone: RssiValue=-105 dBm, SnrValue=2dB
+
+15:18:53.580> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:18:53.580> 
+1388s302:subghz_phy_app.c: send data: 8301533132380001
+
+15:18:53.642> 1389s314:OnTxDone, Rx start
+
+15:18:54.653> 1391s124:OnRxDone: RssiValue=-103 dBm, SnrValue=0dB
+
+15:18:56.409> user_lora_protocol: rx payload: 0A04533132380106000101000029080200030041
+15:18:56.471> 
+1391s187:subghz_phy_app.c: send data: 8301533132380001
+
+15:18:56.471> 1392s199:OnTxDone, Rx start
+
+15:18:57.533> 1422s872:OnRxDone: RssiValue=-114 dBm, SnrValue=-8dB
+
+15:19:28.168> user_lora_protocol: rx payload: 0A0453313238010600010100002508020001004F
+15:19:28.168> 
+1422s891:subghz_phy_app.c: send data: 8301533132380001
+
+15:19:28.231> 1423s903:OnTxDone, Rx start
+
+15:19:29.236> 1425s713:OnRxDone: RssiValue=-113 dBm, SnrValue=-9dB
+
+15:19:30.997> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:19:31.059> 
+1425s777:subghz_phy_app.c: send data: 8301533132380001
+
+15:19:31.059> 1426s789:OnTxDone, Rx start
+
+15:19:32.122> 
+15:19:45.451> 
+=Timer TX Event callback=
+15:19:45.451> 
+
+15:21:45.468> 
+=Timer TX Event callback=
+15:21:45.468> 
+
+15:23:45.443> 
+=Timer TX Event callback=
+15:23:45.443> 
+
+15:25:45.468> 
+=Timer TX Event callback=
+15:25:45.468> 
+1845s595:OnRxError
+
+15:26:30.907> 1845s597:Rx start again
+
+15:26:30.907> 1909s166:OnRxDone: RssiValue=-99 dBm, SnrValue=1dB
+
+15:27:34.469> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:27:34.469> 
+1909s184:subghz_phy_app.c: send data: 8301533132380001
+
+15:27:34.469> 1910s196:OnTxDone, Rx start
+
+15:27:35.474> 1912s005:OnRxDone: RssiValue=-101 dBm, SnrValue=-2dB
+
+15:27:37.340> user_lora_protocol: rx payload: 0A0453313238010600010100003608020002005F
+15:27:37.340> 
+1912s068:subghz_phy_app.c: send data: 8301533132380001
+
+15:27:37.402> 1913s080:OnTxDone, Rx start
+
+15:27:38.406> 1914s900:OnRxDone: RssiValue=-107 dBm, SnrValue=-4dB
+
+15:27:40.215> user_lora_protocol: rx payload: 0A0453313238010600010100010E080200030067
+15:27:40.215> 
+1914s963:subghz_phy_app.c: send data: 8301533132380001
+
+15:27:40.277> 1915s974:OnTxDone, Rx start
+
+15:27:41.282> 1917s795:OnRxDone: RssiValue=-100 dBm, SnrValue=0dB
+
+15:27:43.100> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:27:43.100> 
+1917s858:subghz_phy_app.c: send data: 8301533132380001
+
+15:27:43.163> 1918s870:OnTxDone, Rx start
+
+15:27:44.155> 
+15:27:45.468> 
+=Timer TX Event callback=
+15:27:45.468> 
+1920s690:OnRxDone: RssiValue=-103 dBm, SnrValue=-2dB
+
+15:27:45.968> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:27:46.030> 
+1920s753:subghz_phy_app.c: send data: 8301533132380001
+
+15:27:46.030> 1921s765:OnTxDone, Rx start
+
+15:27:47.088> 1941s297:OnRxDone: RssiValue=-108 dBm, SnrValue=-6dB
+
+15:28:06.632> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:28:06.632> 
+1941s360:subghz_phy_app.c: send data: 8301533132380001
+
+15:28:06.694> 1942s372:OnTxDone, Rx start
+
+15:28:07.681> 1944s193:OnRxDone: RssiValue=-103 dBm, SnrValue=-2dB
+
+15:28:09.509> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:28:09.509> 
+1944s256:subghz_phy_app.c: send data: 8301533132380001
+
+15:28:09.571> 1945s267:OnTxDone, Rx start
+
+15:28:10.571> 2016s970:OnRxDone: RssiValue=-116 dBm, SnrValue=-15dB
+
+15:29:22.301> user_lora_protocol: rx payload: 0A0453313238010600010100002E080200010044
+15:29:22.301> 
+2016s990:subghz_phy_app.c: send data: 8301533132380001
+
+15:29:22.301> 2018s001:OnTxDone, Rx start
+
+15:29:23.294> 2019s812:OnRxDone: RssiValue=-116 dBm, SnrValue=-12dB
+
+15:29:25.100> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:29:25.100> 
+2019s875:subghz_phy_app.c: send data: 8301533132380001
+
+15:29:25.162> 2020s887:OnTxDone, Rx start
+
+15:29:26.214> 
+15:29:45.473> 
+=Timer TX Event callback=
+15:29:45.473> 
+
+15:31:45.458> 
+=Timer TX Event callback=
+15:31:45.458> 
+
+15:33:45.429> 
+=Timer TX Event callback=
+15:33:45.429> 
+
+15:35:45.429> 
+=Timer TX Event callback=
+15:35:45.429> 
+2463s105:OnRxDone: RssiValue=-100 dBm, SnrValue=-1dB
+
+15:36:48.386> user_lora_protocol: rx payload: 0A0453313238010600010100000508020001006F
+15:36:48.386> 
+2463s124:subghz_phy_app.c: send data: 8301533132380001
+
+15:36:48.449> 2464s135:OnTxDone, Rx start
+
+15:36:49.451> 2465s946:OnRxDone: RssiValue=-100 dBm, SnrValue=2dB
+
+15:36:51.269> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:36:51.269> 
+2466s008:subghz_phy_app.c: send data: 8301533132380001
+
+15:36:51.332> 2467s020:OnTxDone, Rx start
+
+15:36:52.326> 2468s840:OnRxDone: RssiValue=-100 dBm, SnrValue=1dB
+
+15:36:54.152> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:36:54.152> 
+2468s903:subghz_phy_app.c: send data: 8301533132380001
+
+15:36:54.216> 2469s915:OnTxDone, Rx start
+
+15:36:55.223> 2471s736:OnRxDone: RssiValue=-100 dBm, SnrValue=1dB
+
+15:36:57.035> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:36:57.035> 
+2471s798:subghz_phy_app.c: send data: 8301533132380001
+
+15:36:57.098> 2472s810:OnTxDone, Rx start
+
+15:36:58.100> 2474s630:OnRxDone: RssiValue=-100 dBm, SnrValue=-1dB
+
+15:36:59.913> user_lora_protocol: rx payload: 0A0453313238010600010100001708020002007E
+15:36:59.913> 
+2474s694:subghz_phy_app.c: send data: 8301533132380001
+
+15:36:59.975> 2475s706:OnTxDone, Rx start
+
+15:37:01.038> 2477s526:OnRxDone: RssiValue=-98 dBm, SnrValue=2dB
+
+15:37:02.846> user_lora_protocol: rx payload: 0A0453313238010600010100010308020002006B
+15:37:02.846> 
+2477s589:subghz_phy_app.c: send data: 8301533132380001
+
+15:37:02.908> 2478s601:OnTxDone, Rx start
+
+15:37:03.906> 2480s421:OnRxDone: RssiValue=-105 dBm, SnrValue=-3dB
+
+15:37:05.726> user_lora_protocol: rx payload: 0A0453313238010600010100011708020003007E
+15:37:05.726> 
+2480s485:subghz_phy_app.c: send data: 8301533132380001
+
+15:37:05.789> 2481s496:OnTxDone, Rx start
+
+15:37:06.793> 2483s317:OnRxDone: RssiValue=-102 dBm, SnrValue=-1dB
+
+15:37:08.624> user_lora_protocol: rx payload: 0A0453313238010600010100001608020002007F
+15:37:08.624> 
+2483s379:subghz_phy_app.c: send data: 8301533132380001
+
+15:37:08.686> 2484s391:OnTxDone, Rx start
+
+15:37:09.686> 
+15:37:45.449> 
+=Timer TX Event callback=
+15:37:45.449> 
+2556s738:OnRxDone: RssiValue=-107 dBm, SnrValue=-7dB
+
+15:38:22.052> user_lora_protocol: rx payload: 0A0453313238010600010100000408020001006E
+15:38:22.052> 
+2556s758:subghz_phy_app.c: send data: 8301533132380001
+
+15:38:22.052> 2557s769:OnTxDone, Rx start
+
+15:38:23.055> 2559s580:OnRxDone: RssiValue=-106 dBm, SnrValue=-5dB
+
+15:38:24.875> user_lora_protocol: rx payload: 0A0453313238010600010100002A080200030042
+15:38:24.875> 
+2559s642:subghz_phy_app.c: send data: 8301533132380001
+
+15:38:24.938> 2560s654:OnTxDone, Rx start
+
+15:38:25.941> 
+15:39:45.466> 
+15:39:45.466> =Timer TX Event callback=
+15:41:45.468> 
+15:41:45.468> =Timer TX Event callback=
+15:43:29.887> 2864s559:OnRxDone: RssiValue=-102 dBm, SnrValue=-2dB
+15:43:29.887> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:43:29.887> 2864s579:subghz_phy_app.c: send data: 8301533132380001
+15:43:30.896> 2865s589:OnTxDone, Rx start
+15:43:32.702> 2867s400:OnRxDone: RssiValue=-102 dBm, SnrValue=-3dB
+15:43:32.702> user_lora_protocol: rx payload: 0A0453313238010600010100001508020002007C
+15:43:32.765> 2867s462:subghz_phy_app.c: send data: 8301533132380001
+15:43:33.770> 2868s474:OnTxDone, Rx start
+15:43:45.460> 
+15:43:45.460> =Timer TX Event callback=
+15:45:45.470> 
+15:45:45.470> =Timer TX Event callback=
+15:47:45.482> 
+15:47:45.482> =Timer TX Event callback=
+15:49:01.302> 3196s002:OnRxDone: RssiValue=-99 dBm, SnrValue=0dB
+15:49:01.302> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:49:01.302> 3196s022:subghz_phy_app.c: send data: 8301533132380001
+15:49:02.307> 3197s033:OnTxDone, Rx start
+15:49:04.134> 3198s843:OnRxDone: RssiValue=-99 dBm, SnrValue=0dB
+15:49:04.134> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:49:04.197> 3198s906:subghz_phy_app.c: send data: 8301533132380001
+15:49:05.206> 3199s917:OnTxDone, Rx start
+15:49:07.014> 3201s739:OnRxDone: RssiValue=-99 dBm, SnrValue=4dB
+15:49:07.014> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:49:07.077> 3201s800:subghz_phy_app.c: send data: 8301533132380001
+15:49:08.084> 3202s812:OnTxDone, Rx start
+15:49:45.449> 
+15:49:45.449> =Timer TX Event callback=
+15:50:21.596> 3276s268:OnRxDone: RssiValue=-105 dBm, SnrValue=-4dB
+15:50:21.596> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:50:21.596> 3276s288:subghz_phy_app.c: send data: 8301533132380001
+15:50:22.597> 3277s299:OnTxDone, Rx start
+15:50:24.415> 3279s109:OnRxDone: RssiValue=-108 dBm, SnrValue=-7dB
+15:50:24.415> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:50:24.477> 3279s171:subghz_phy_app.c: send data: 8301533132380001
+15:50:25.478> 3280s183:OnTxDone, Rx start
+15:50:27.303> 3282s004:OnRxDone: RssiValue=-104 dBm, SnrValue=1dB
+15:50:27.303> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:50:27.365> 3282s067:subghz_phy_app.c: send data: 8301533132380001
+15:50:28.359> 3283s079:OnTxDone, Rx start
+15:51:22.410> 3337s118:OnRxDone: RssiValue=-104 dBm, SnrValue=-5dB
+15:51:22.410> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:51:22.410> 3337s137:subghz_phy_app.c: send data: 8301533132380001
+15:51:23.464> 3338s149:OnTxDone, Rx start
+15:51:25.282> 3339s958:OnRxDone: RssiValue=-110 dBm, SnrValue=-9dB
+15:51:25.282> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:51:25.344> 3340s021:subghz_phy_app.c: send data: 8301533132380001
+15:51:26.344> 3341s033:OnTxDone, Rx start
+15:51:28.158> 3342s854:OnRxDone: RssiValue=-112 dBm, SnrValue=-11dB
+15:51:28.158> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:51:28.220> 3342s917:subghz_phy_app.c: send data: 8301533132380001
+15:51:29.221> 3343s929:OnTxDone, Rx start
+15:51:45.460> 
+15:51:45.460> =Timer TX Event callback=
+15:53:45.461> 
+15:53:45.461> =Timer TX Event callback=
+15:55:45.452> 
+15:55:45.452> =Timer TX Event callback=
+15:56:29.149> 3643s756:OnRxDone: RssiValue=-110 dBm, SnrValue=-8dB
+15:56:29.149> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:56:29.149> 3643s776:subghz_phy_app.c: send data: 8301533132380001
+15:56:30.092> 3644s788:OnTxDone, Rx start
+15:56:31.914> 3646s598:OnRxDone: RssiValue=-114 dBm, SnrValue=-12dB
+15:56:31.914> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+15:56:31.977> 3646s662:subghz_phy_app.c: send data: 8301533132380001
+15:56:32.978> 3647s673:OnTxDone, Rx start
+15:56:34.800> 3649s494:OnRxDone: RssiValue=-103 dBm, SnrValue=-3dB
+15:56:34.800> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:56:34.863> 3649s557:subghz_phy_app.c: send data: 8301533132380001
+15:56:35.866> 3650s569:OnTxDone, Rx start
+15:57:45.477> 
+15:57:45.477> =Timer TX Event callback=
+15:57:48.293> 3722s993:OnRxDone: RssiValue=-111 dBm, SnrValue=-7dB
+15:57:48.293> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:57:48.293> 3723s012:subghz_phy_app.c: send data: 8301533132380001
+15:57:49.298> 3724s024:OnTxDone, Rx start
+15:58:49.995> 3784s718:OnRxDone: RssiValue=-115 dBm, SnrValue=-12dB
+15:58:49.995> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+15:58:50.058> 3784s738:subghz_phy_app.c: send data: 8301533132380001
+15:58:51.057> 3785s750:OnTxDone, Rx start
+15:58:52.875> 3787s560:OnRxDone: RssiValue=-104 dBm, SnrValue=-2dB
+15:58:52.875> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+15:58:52.938> 3787s624:subghz_phy_app.c: send data: 8301533132380001
+15:58:53.941> 3788s635:OnTxDone, Rx start
+15:58:55.750> 3790s455:OnRxError
+15:58:55.750> 3790s457:Rx start again
+15:59:45.478> 
+15:59:45.478> =Timer TX Event callback=
+16:00:00.269> 3854s944:OnRxDone: RssiValue=-102 dBm, SnrValue=-1dB
+16:00:00.269> user_lora_protocol: rx payload: 0A0453313238010600010100010D080200010066
+16:00:00.269> 3854s963:subghz_phy_app.c: send data: 8301533132380001
+16:00:01.273> 3855s975:OnTxDone, Rx start
+16:00:03.080> 3857s787:OnRxDone: RssiValue=-100 dBm, SnrValue=0dB
+16:00:03.080> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+16:00:03.143> 3857s849:subghz_phy_app.c: send data: 8301533132380001
+16:00:04.137> 3858s860:OnTxDone, Rx start
+16:00:05.954> 3860s681:OnRxDone: RssiValue=-100 dBm, SnrValue=-1dB
+16:00:05.954> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+16:00:06.016> 3860s745:subghz_phy_app.c: send data: 8301533132380001
+16:00:07.023> 3861s756:OnTxDone, Rx start
+16:00:08.891> 3863s577:OnRxDone: RssiValue=-99 dBm, SnrValue=0dB
+16:00:08.891> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+16:00:08.953> 3863s640:subghz_phy_app.c: send data: 8301533132380001
+16:00:09.953> 3864s652:OnTxDone, Rx start
+16:00:11.771> 3866s472:OnRxDone: RssiValue=-97 dBm, SnrValue=1dB
+16:00:11.771> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+16:00:11.834> 3866s536:subghz_phy_app.c: send data: 8301533132380001
+16:00:12.837> 3867s547:OnTxDone, Rx start
+16:00:14.656> 3869s368:OnRxDone: RssiValue=-93 dBm, SnrValue=6dB
+16:00:14.656> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+16:00:14.719> 3869s431:subghz_phy_app.c: send data: 8301533132380001
+16:00:15.719> 3870s443:OnTxDone, Rx start
+16:00:17.537> 3872s263:OnRxDone: RssiValue=-92 dBm, SnrValue=6dB
+16:00:17.537> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+16:00:17.600> 3872s326:subghz_phy_app.c: send data: 8301533132380001
+16:00:18.604> 3873s337:OnTxDone, Rx start
+16:00:20.479> 3875s159:OnRxDone: RssiValue=-89 dBm, SnrValue=7dB
+16:00:20.479> user_lora_protocol: rx payload: 0A0453313238010600010100011E080200020076
+16:00:20.541> 3875s221:subghz_phy_app.c: send data: 8301533132380001
+16:00:21.545> 3876s233:OnTxDone, Rx start
+16:01:19.749> 3934s443:OnRxDone: RssiValue=-99 dBm, SnrValue=2dB
+16:01:19.749> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+16:01:19.749> 3934s462:subghz_phy_app.c: send data: 8301533132380001
+16:01:20.758> 3935s474:OnTxDone, Rx start
+16:01:22.556> 3937s284:OnRxDone: RssiValue=-105 dBm, SnrValue=-2dB
+16:01:22.556> user_lora_protocol: rx payload: 0A0453313238010600010100013208020003005B
+16:01:22.619> 3937s346:subghz_phy_app.c: send data: 8301533132380001
+16:01:23.620> 3938s358:OnTxDone, Rx start
+16:01:25.443> 3940s178:OnRxDone: RssiValue=-98 dBm, SnrValue=2dB
+16:01:25.505> user_lora_protocol: rx payload: 0A0453313238010600010100020208020004006F
+16:01:25.505> 3940s242:subghz_phy_app.c: send data: 8301533132380001
+16:01:26.571> 3941s253:OnTxDone, Rx start
+16:01:45.445> 
+16:01:45.445> =Timer TX Event callback=
+16:02:16.303> 3991s004:OnRxDone: RssiValue=-97 dBm, SnrValue=4dB
+16:02:16.303> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+16:02:16.303> 3991s025:subghz_phy_app.c: send data: 8301533132380001
+16:02:17.304> 3992s036:OnTxDone, Rx start
+16:02:19.118> 3993s846:OnRxDone: RssiValue=-95 dBm, SnrValue=6dB
+16:02:19.118> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+16:02:19.197> 3993s909:subghz_phy_app.c: send data: 8301533132380001
+16:02:20.185> 3994s920:OnTxDone, Rx start
+16:02:22.063> 3996s741:OnRxDone: RssiValue=-97 dBm, SnrValue=5dB
+16:02:22.063> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+16:02:22.142> 3996s803:subghz_phy_app.c: send data: 8301533132380001
+16:02:23.126> 3997s815:OnTxDone, Rx start
+16:03:45.502> 
+16:03:45.502> =Timer TX Event callback=
+16:04:04.023> 4098s702:OnRxDone: RssiValue=-105 dBm, SnrValue=-5dB
+16:04:04.023> user_lora_protocol: rx payload: 0A04533132380106000101000003080200010069
+16:04:04.023> 4098s721:subghz_phy_app.c: send data: 8301533132380001
+16:04:05.023> 4099s733:OnTxDone, Rx start
+16:04:06.831> 4101s542:OnRxDone: RssiValue=-112 dBm, SnrValue=-10dB
+16:04:06.831> user_lora_protocol: rx payload: 0A0453313238010600010100001408020002007D
+16:04:06.893> 4101s605:subghz_phy_app.c: send data: 8301533132380001
+16:04:07.884> 4102s617:OnTxDone, Rx start
+16:04:09.760> 4104s438:OnRxDone: RssiValue=-103 dBm, SnrValue=-3dB
+16:04:09.760> user_lora_protocol: rx payload: 0A04533132380106000101000028080200030040
+16:04:09.823> 4104s500:subghz_phy_app.c: send data: 8301533132380001
+16:04:10.822> 4105s512:OnTxDone, Rx start
+16:05:45.485> 
+16:05:45.485> =Timer TX Event callback=
+16:07:45.505> 
+16:07:45.505> =Timer TX Event callback=
+
+
+-----------------------------------------------
+Date: 4/23/2023 - 15:39:34
+End log file

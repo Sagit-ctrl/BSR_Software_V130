@@ -1,0 +1,98 @@
+Với những hàm app, thư viện .c sẽ thay đổi danh sách sự kiện tương ứng với file .h
+
+user_app_common.c
+	+ Chứa các hàm chức năng cơ bản của IC LoRa
+		+ Ngắt Timer
+		+ Truyền thông UART
+		+ Cài đặt RTC
+		+ Nháy LED
+		+ Truyền dữ liệu qua LoRa
+	+ Khai báo các thông số, ngoại vi của IC
+	+ Chứa vòng while(1)
+	+ Chứa các hàm ngắt GPIO
+user_app_common.h: Không có gì để config
+
+user_define.h
+	+ Cài đặt chu kì tỉnh dậy
+	+ Cài đặt ID thiết bị
+	+ Cài đặt chu kì gửi dữ liệu (nếu cần)
+
+user_modem_init.c
+	+ Chứa các hàm khai báo cơ bản khi chương trình khởi động
+	+ Các thông số được lấy ra từ bộ nhớ và các hàm lưu chúng vào bộ nhớ
+	+ Thông số lưu trữ:
+		+ Thông số vận hành, log
+		+ Chu kì vận hành
+		+ ID thiết bị
+user_modem_init.h: Không có gì để config
+
+user_modem.c
+	+ Chứa các cấu trúc (struct) mang thông tin về thiết bị
+		+ Bộ nhớ flash của TSVH, Event, Log
+		+ ID
+		+ Chu kì tỉnh, truyền
+		+ Cấu hình trong chế độ LPM
+	+ Chứa các hàm xử lý liên quan đến toàn hệ thống IC
+		+ Reset chip (có chế độ ngay lập tức reset)
+		+ Update firmware (có thể không dùng)
+		+ Hàm phản hồi AT cmd
+		+ Các hàm tạo và hủy peripheral dùng trong LPM (cần config UART, GPIO, ...)
+user_modem.h: Không có gì để config
+	
+user_app_lora.c
+	+ Chứa các sự kiện của riêng LoRa
+		+ Truyền dũ liệu
+		+ Nhận dữ liệu bằng ngắt
+		+ Nháy led	
+	+ Chứa các hàm xử lý sự kiện khi truyền và nhận dữ liệu
+		+ Có thể xử lý frame data trong này
+		+ Nếu là gateway thì thêm hàm HAL_UART_Tran vào RX (Callback)
+		+ Xử lý loại bảng tin trong hàm mCallback_Send_OK()
+		+ Tập trung sửa hàm _Cb_Lora_IRQ_Process() và các hàm liên quan
+user_app_lora.h
+	+ Chỉnh sửa thời gian timeout
+	+ Chỉnh số lần gửi lại nếu lỗi, thời gian gửi lại
+	+ Cài tần số, công suất truyền, băm xung, ......
+
+user_lora_protocol.c
+	+ Chứa các hàm xử lý buffer
+	+ Tập trung vào hàm Lora_Pro_Check_Rx, Lora_Pro_Extract_Rx, Lora_Pro_Packet_Header
+	+ Rất khó, không nên sửa gì
+user_lora_protocol.h: Không có gì để config
+
+user_message.c
+	+ Chứa các hàm đóng gói bảng tin gửi đi theo loại bảng tin
+	+ Chứa hàm xử lý bảng tin gửi đi
+	+ Chứa hàm kiểm tra gửi và xử lý khi gửi OK, gửi fail
+	+ Tập trung vào _DATA_INTAN
+user_message.h: Không có gì để config
+
+user_app_temp.c
+	+ Giả sử cần gửi nhiều loại bảng tin thì thêm hàm đóng gói trong này
+	+ Giả sử có nhiều loại thiết bị gửi nhiều loại dữ liệu khác nhau sửa trong này
+	+ Cách dễ nhất là sửa hàm packet bảng tin - thế thôi
+user_app_temp.h: Không có gì để config
+
+user_at_serial.c
+	+ Thêm các lệnh at thường dùng vào đây
+user_at_serial.h: Thêm các lệnh tương ứng vào đây
+	+ Copy hàm khác là được
+
+user_uart.c
+	+ Khai báo ngắt UART
+user_uart.h
+	+ Khai báo kênh UART dùng ở đây
+
+user_internal_mem.c
+	+ Chỉnh sửa Flash_Read_Last_Record
+user_internal_mem.h
+	+ Chứa thông tin địa chỉ lưu trữ dữ liệu
+	+ Sửa thì sửa ko thì để nguyên là được
+
+event_driven.c: Không có gì để config
+event_driven.h: Không có gì để config
+
+file trong folder user_generate gen ra từ CubeMX
+file trong folder user_queue không dùng
+
+

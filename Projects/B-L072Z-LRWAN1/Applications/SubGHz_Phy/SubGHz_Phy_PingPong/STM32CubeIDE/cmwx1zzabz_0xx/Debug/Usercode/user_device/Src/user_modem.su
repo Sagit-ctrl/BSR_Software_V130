@@ -1,0 +1,16 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:139:6:Modem_Init_Before_IRQ_Handle	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:146:6:Modem_Deinit_Before_IRQ_Handle	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:86:6:Reset_Chip_Immediately	0	static,ignoring_inline_asm
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:92:6:DCU_Response_AT	16	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:153:6:MX_GPIO_DeInit	48	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:98:6:Modem_Deinit_Peripheral	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:184:6:Modem_Init_Gpio_Again	56	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:119:6:Modem_Init_Peripheral	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:236:6:Init_Index_Packet	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:277:6:Save_ID	56	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:247:6:Init_ID	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:328:6:Save_Freq_Send_Data	32	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:305:6:Init_Timer_Send	32	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:364:6:Save_Device_Type	32	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:343:6:Init_Device_Type	32	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_modem.c:228:6:Init_Memory_Infor	8	static

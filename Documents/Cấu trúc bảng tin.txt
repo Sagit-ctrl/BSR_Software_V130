@@ -1,0 +1,33 @@
+Node gửi:	83 01 53313238 00 01 0A 04 53313238 01 06 000101000007 08 02 0001 00 6D ABC
+Gateway in ra: 			     0A 04 53313238 01 06 000101000007 08 02 0001 00 6D ABC
+Gateway gửi:	83 01 53313238 00 01
+
+53 31 32 38 = S 1 2 8
+
+Cấu trúc bảng tin thật mà thiết bị gửi đi có thêm 8 bit ở đầu
+	+ Header: 		1 byte
+	+ Fctrl:  		1 byte
+	+ Địa chỉ thiết bị:	4 byte
+	+ Fcnt:			2 byte
+	+ Payload
+
+0A: obis node id
+04: length 4 byte
+53313238: Data node ID: S128 (4 byte)
+
+01 : Obis RealTime
+06 : length 6 byte
+000101001313 : năm/tháng/ngay giờ/phut/giay (hex -> dec)
+                            00/01/01 00:19:19
+
+08: Obis index inrease
+02 : length
+0001 : index increase ++
+00 : scale
+6D: crc
+1046s102 : Phần thừa header của printf
+
+0B 54303031 4E303031 01 04 54303031 07 02 0000 09 02 0388 00 E5
+0B 54303031 4E303031 01 04 54303031 07 02 0388 09 02 0388 00 6E
+
+13 54303031 4E303031 01 04 54303031 07 64 05D7 05D6 05D8 05D6 05D6 05D6 05D7 05D7 05D7 05D7 05D6 05D6 05D6 05D7 05D7 05D6 05D6 05D7 05D6 05D7 05D6 05D6 05D7 05D6 05D7 05D6 05D6 05D7 05D7 05D7 05D7 05D7 05D6 05D7 05D6 05D6 05D7 05D6 05D6 05D7 05D7 05D6 05D7 05D6 AD3D 0008 A63D 0008 0000 0001 00 06

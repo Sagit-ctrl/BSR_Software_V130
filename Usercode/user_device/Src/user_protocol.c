@@ -1,0 +1,345 @@
+#include "user_protocol.h"
+
+#include "stm32_mem.h"
+#include "sys_app.h"
+
+#include "user_lora.h"
+#include "user_define.h"
+#include "user_message.h"
+#include "user_time.h"
+#include "user_payload.h"
+#include "radio.h"
+
+/* External variables ---------------------------------------------------------*/
+StructControlLora        sCtrlLora =
+{
+	.CtrlACK_u8 = FALSE,
+};
+/* Exported functions --------------------------------------------------------*/
+uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, LoRaFrame_t *sFrameRx)
+{
+    uint8_t 	Result = FALSE;
+    uint32_t 	DevAddrRx = 0;
+    uint32_t 	NetAddrRx = 0;
+    uint8_t 	i = 0;
+
+    LOG_Array(LOG_RECEI, pData, Length);
+
+    //Frame Header
+    sFrameRx->Header.Value 	= 	*(pData);
+
+    DevAddrRx = DevAddrRx << 8 | *(pData + 1);
+    DevAddrRx = DevAddrRx << 8 | *(pData + 2);
+    DevAddrRx = DevAddrRx << 8 | *(pData + 3);
+    DevAddrRx = DevAddrRx << 8 | *(pData + 4);
+
+    sFrameRx->DevAddr = DevAddrRx;
+    NetAddrRx = NetAddrRx << 8 | *(pData + 5);
+    NetAddrRx = NetAddrRx << 8 | *(pData + 6);
+    NetAddrRx = NetAddrRx << 8 | *(pData + 7);
+    NetAddrRx = NetAddrRx << 8 | *(pData + 8);
+
+    sFrameRx->NetAddr = NetAddrRx;
+
+	#ifdef DEVICE_TYPE_STATION
+		if (*(pData + 1) != 'T')
+		{
+			return FALSE;
+		}
+
+		for (i = 0; i < 4; i++)
+		{
+			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
+			{
+				return FALSE;
+			}
+		}
+
+		if (sFrameRx->Header.Bits.RespondType_u8 == DATA_CONFIRMED_UP)
+		{
+			sCtrlLora.CtrlACK_u8 = TRUE;
+			Result = TRUE;
+		}
+
+		if (Length > 9)
+		{
+			Protocol_Process_Rx (sFrameRx->Header.Bits.DataType_u8, pData + 9, Length - 9);
+		}
+	#else
+		// Check NET ID
+
+		// Check DCU ID without send all node
+		if (sFrameRx->Header.Bits.SendAll == 0){
+			for (i = 0; i < 4; i++){
+				if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
+				{
+					return FALSE;
+				}
+			}
+
+			for (i = 0; i < 4; i++){
+				if ( *(pData + 1 + i) != *(sModem.sDCU_id.Data_a8 + i))
+				{
+					return FALSE;
+				}
+			}
+		}
+
+		// Check ACK answer
+		if (sFrameRx->Header.Bits.RespondType_u8 == DATA_CONFIRMED_DOWN )
+		{
+			sCtrlLora.CtrlACK_u8 = TRUE;
+			Result = TRUE;
+		}
+
+		// Extract
+		if (Length > 9)
+		{
+			Protocol_Process_Rx (sFrameRx->Header.Bits.DataType_u8, pData + 9, Length - 9);
+		}
+	#endif
+    return Result;
+}
+
+uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
+{
+    uint8_t 	Obis = 0;
+    uint8_t 	Pos = 0;
+	#ifdef DEVICE_TYPE_STATION
+    	uint8_t 	length_data = 0;
+		uint16_t 	i = 0;
+    	switch(DataType)
+    	{
+    		case _DATA_SINGLE:
+				USER_Payload_Station_RTC(0);
+				Reset_Buff(&sLoraVar.sIntanData);
+				for ( i = 0; i < (Length - 1); i++)
+					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
+				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
+				break;
+    		case _DATA_MULTI:
+				USER_Payload_Station_Confirm(0);
+				Reset_Buff(&sLoraVar.sIntanData);
+				for ( i = 0; i < (Length - 1); i++)
+					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
+				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
+				break;
+    		case _DATA_MODE:
+				while (Pos < (Length - 1))  //bo crc
+				{
+					Obis = *(pData + Pos++);
+					switch (Obis)
+					{
+						case OBIS_ID_SENSOR:
+							length_data = *(pData + Pos++);
+							Pos++;
+							Pos++;
+							Pos++;
+							Pos++;
+							break;
+						case OBIS_MODE:
+							length_data = *(pData + Pos++);
+							sModem.Mode_Node = *(pData + Pos++);
+							USER_Payload_Station_Confirm(0);
+							break;
+						default:
+							break;
+					}
+				}
+				Reset_Buff(&sLoraVar.sIntanData);
+				for ( i = 0; i < (Length - 1); i++)
+					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
+				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
+				break;
+    		case _DATA_CONFIRM:
+				while (Pos < (Length - 1))  //bo crc
+				{
+					Obis = *(pData + Pos++);
+					switch (Obis)
+					{
+						case OBIS_ID_SENSOR:
+							length_data = *(pData + Pos++);
+							Pos++;
+							Pos++;
+							Pos++;
+							Pos++;
+							break;
+						case OBIS_CONFIRM:
+							length_data = *(pData + Pos++);
+							break;
+						default:
+							break;
+					}
+				}
+				if (sModem.Mode_Station == _MODE_WAKEUP)
+				{
+					USER_Payload_Station_Mode(0);
+				}
+	            Radio.Rx(RX_TIMEOUT_VALUE);
+    			break;
+    		case _DATA_NONE:
+    			break;
+    		default:
+    			break;
+    	}
+    	length_data = 0;
+	#else
+        uint8_t 	length_data = 0;
+	    switch(DataType)
+	    {
+	    	case _DATA_RTC:
+				while (Pos < (Length - 1))  //bo crc
+				{
+					Obis = *(pData + Pos++);
+					switch (Obis)
+					{
+						case OBIS_ID_STATION:
+							length_data = *(pData + Pos++);
+							Pos++;
+							Pos++;
+							Pos++;
+							Pos++;
+							break;
+						case OBIS_TIME:
+							length_data = *(pData + Pos++);
+							if ( (Pos + length_data) <= Length )
+							{
+								sRTCSet.year    = *(pData + Pos++);
+								sRTCSet.month   = *(pData + Pos++);
+								sRTCSet.date    = *(pData + Pos++);
+
+								sRTCSet.hour    = *(pData + Pos++);
+								sRTCSet.min     = *(pData + Pos++);
+								sRTCSet.sec     = *(pData + Pos++);
+
+							}
+						    UTIL_Set_RTC(sRTCSet);
+						    USER_Payload_Node_Confirm(0);
+							break;
+						default:
+							break;
+					}
+				}
+				break;
+	       	case _DATA_MODE:
+				while (Pos < (Length - 1))  //bo crc
+				{
+					Obis = *(pData + Pos++);
+					switch (Obis)
+					{
+						case OBIS_ID_STATION:
+							length_data = *(pData + Pos++);
+							Pos++;
+							Pos++;
+							Pos++;
+							Pos++;
+							break;
+						case OBIS_MODE:
+							length_data = *(pData + Pos++);
+							sModem.Mode_Node = *(pData + Pos++);
+							break;
+						default:
+							break;
+					}
+				}
+				switch(sModem.Mode_Node)
+				{
+					case _MODE_SLEEP:
+						LED_OFF(__LED_MODE);
+						sModem.CheckInit = 1;
+						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
+						USER_Payload_Node_Mode(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+						UTIL_TIMER_Start (&TimerLoraTx);
+						break;
+					case _MODE_WAKEUP:
+						LED_ON(__LED_MODE);
+						UTIL_TIMER_Stop(&TimerLoraTx);
+						USER_Payload_Node_Mode(0);
+						Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+						break;
+					case _MODE_MEASURE:
+						LED_ON(__LED_MODE);
+						USER_Payload_Node_Calib(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_CALIB);
+						break;
+					default:
+						break;
+				}
+				break;
+	       	case _DATA_CONFIRM:
+				while (Pos < (Length - 1))  //bo crc
+				{
+					Obis = *(pData + Pos++);
+					switch (Obis)
+					{
+						case OBIS_ID_STATION:
+							length_data = *(pData + Pos++);
+							Pos++;
+							Pos++;
+							Pos++;
+							Pos++;
+							break;
+						case OBIS_CONFIRM:
+							length_data = *(pData + Pos++);
+							break;
+						default:
+							break;
+					}
+				}
+				if(sModem.Mode_Node != _MODE_SLEEP)
+				{
+					sModem.Mode_Node = _MODE_WAKEUP;
+					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+				}
+	       		break;
+	    	case _DATA_NONE:
+	    		break;
+	    	default:
+	    		break;
+		}
+	#endif
+    return 1;
+}
+
+uint8_t Protocol_Packet_Header (LoRaFrame_t *pFrame, uint8_t RespondType, uint8_t DataType)
+{
+	pFrame->Header.Bits.RespondType_u8 = RespondType;
+	pFrame->Header.Bits.DataType_u8 = DataType;
+	pFrame->Header.Bits.ACK_u8 = sCtrlLora.CtrlACK_u8;
+
+	#ifdef DEVICE_TYPE_STATION
+		if (sModem.SendAll == 1)
+		{
+			pFrame->Header.Bits.SendAll = 1;
+		} else {
+			pFrame->Header.Bits.SendAll = 0;
+		}
+	#else
+		pFrame->Header.Bits.SendAll = 0;
+	#endif
+
+	#ifdef DEVICE_TYPE_STATION
+		pFrame->DevAddr = sLoraVar.sFrameRx.DevAddr;
+		pFrame->NetAddr = sLoraVar.sFrameRx.NetAddr;
+	#else
+		uint32_t DCUID_u32 = 0;
+		uint32_t NETID_u32 = 0;
+		uint8_t i = 0;
+
+		for (i = 0; i < 4; i++)
+		{
+			DCUID_u32 = (DCUID_u32 << 8) + *(sModem.sDCU_id.Data_a8 + i);
+			NETID_u32 = (NETID_u32 << 8) + *(sModem.sNET_id.Data_a8 + i);
+		}
+
+		pFrame->DevAddr = DCUID_u32;
+		pFrame->NetAddr = NETID_u32;
+	#endif
+
+	sCtrlLora.CtrlACK_u8 = 0;
+
+    if (pFrame->Header.Bits.ACK_u8 != 0)
+    {
+        return 1;
+    }
+    return 0;
+}

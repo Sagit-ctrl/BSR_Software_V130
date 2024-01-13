@@ -1,0 +1,14 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:211:16:_Cb_Interrupt	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:195:16:_Cb_Idle_Handler	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:188:16:_Cb_Set_RTC	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:100:16:_Cb_Timer_Lora_Tx	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:94:16:_Cb_Timer_Start	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:58:6:AppCom_IRQ_Timer_CallBack	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:157:16:_Cb_Meas_Multi	16	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:135:16:_Cb_Meas_Single	16	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:108:16:_Cb_Uart_Debug	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:63:9:AppCom_Task	24	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:84:6:AppCom_Cacul_Random_Delay	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:46:6:AppCom_Init	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:217:6:_Cb_Active_Lora_Tx_Event	8	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:222:6:HAL_GPIO_EXTI_Callback	8	static

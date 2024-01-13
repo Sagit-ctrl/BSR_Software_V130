@@ -1,0 +1,38 @@
+Tập lệnh AT
+
+AT+DEVID?
+AT+DEVID=S001
+	+ S: Station
+	+ T: Node - Bắt buộc
+AT+NETID?
+AT+NETID=N001
+	+ N: Network
+AT+DUTY?
+AT+DUTY=10,100
+	+ NumWakeup
+	+ Freq
+AT+TYPE?
+AT+TYPE=0
+	+ 0: Node VNA
+	+ 1: Node VP
+	+ 2: Station
+AT+RTC?
+AT+RTC=2-20-06-21,12:10:20
+	+ Date
+	+ Day
+	+ Month
+	+ Year
+	+ Hour
+	+ Minute
+	+ Second
+AT+RESET?
+AT+LED=0,1
+	+ Led
+	+ Mode: 1: ON
+		0: OFF
+AT+MODE=0
+	+ 0: Sleep mode
+	+ 1: Active mode
+	+ 2: Measure mode
+AT+VERSION?
+AT+AUTHOR? - Secret

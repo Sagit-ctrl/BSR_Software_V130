@@ -1,0 +1,8 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:22:6:Get_RTC	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:74:9:Check_update_Time	7
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:44:9:Set_RTC	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:102:6:Convert_sTime_ToGMT	7
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:144:10:HW_RTC_GetCalendarValue_Second	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:168:6:Set_Alarm_Defaut_Time	5
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:194:6:Set_Alarm_For_Time	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_time.c:218:6:Set_Alarm_DCU	5

@@ -1,0 +1,124 @@
+Bảng tin đầu gửi từ Node _MESS_INFOR
+
+RespondType: DATA_CONFIRMED_UP
+DataType: _DATA_HAVE
+ACK: FALSE
+DevAddr: ID Node
+NetAddr: ID Net
+Payloade: Giá trị điện áp,.....
+CRC
+/////////////////////////////////////////////////////////////////////////////////
+Station nhận bảng tin
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = TRUE
+	+ Lưu payload vừa nhận được vào flash
+	+ Truyền qua UART payload
+	+ Truyền ngược lại _MESS_INFOR
+	+ Bật RX lên
+
+RespondType: DATA_CONFIRMED_DOWN
+DataType: _DATA_HAVE
+ACK: TRUE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Time, Mode
+CRC
+//////////////////////////////////////////////////////////////////////////////////
+Node nhận bảng tin
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = TRUE
+	+ Lưu RTC theo thời gian
+	+ Kiểm tra Mode
+		+ 1: sự kiện chờ bảng tin mới Radio.Rx + bật _MESS_CONFIRM
+		+ 0: bật _MESS_CONFIRM
+		+ 2: 
+	+ Truyền ngược lại _MESS_CONFIRM
+RespondType: DATA_UNCONFIRMED_UP
+DataType: _DATA_HAVE
+ACK: TRUE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Mode
+CRC
+///////////////////////////////////////////////////////////////////////////////////
+Station nhận bảng tin
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = FALSE
+	+ Truyền UART
+/////////////////////////////////////////////////////////////////////////////////////
+Trong khi Node đang tỉnh
+Station gửi bảng tin
+	+ Truyền bảng tin
+	+ Bật RX
+
+RespondType: DATA_CONFIRMED_DOWN
+DataType: _DATA_HAVE
+ACK: FALSE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Time, Mode
+CRC
+/////////////////////////////////////////////////////////////////////////////////////
+Node nhận được
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = TRUE
+	+ Lưu RTC
+	+ Kiểm tra Mode
+		+ 1: sự kiện chờ bảng tin mới Radio.Rx + bật _MESS_CONFIRM
+		+ 0: bật _MESS_CONFIRM
+		+ 2: sự kiện đo + bật _MESS_CONFIRM
+	+ Truyền _MESS_CONFIRM
+
+RespondType: DATA_UNCONFIRMED_UP
+DataType: _DATA_HAVE
+ACK: TRUE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Mode
+CRC
+////////////////////////////////////////////////////////////////////////////////////
+Sự kiện đo xong:
+	+ Truyền bảng tin _MESS_MULTI_VAR
+
+RespondType: DATA_CONFIRMED_UP
+DataType: _DATA_HAVE
+ACK: FALSE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Multi Voltage
+CRC
+/////////////////////////////////////////////////////////////////////////////////////
+Station nhận được bảng tin
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = TRUE
+	+ Lưu payload vừa nhận được vào flash
+	+ Truyền qua UART payload
+	+ Truyền ngược lại _MESS_INFOR
+	+ Bật RX lên
+
+RespondType: DATA_CONFIRMED_DOWN
+DataType: _DATA_HAVE
+ACK: TRUE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Time, Mode
+CRC
+//////////////////////////////////////////////////////////////////////////////////////
+Node nhận được
+	+ Giải nén bảng tin
+	+ sCtrlACK_u8 = TRUE
+	+ Lưu RTC
+	+ Kiểm tra Mode
+		+ 1: sự kiện chờ bảng tin mới Radio.Rx + bật _MESS_CONFIRM
+		+ 0: bật _MESS_CONFIRM
+		+ 2: sự kiện đo + bật _MESS_CONFIRM
+	+ Truyền _MESS_CONFIRM
+
+RespondType: DATA_UNCONFIRMED_UP
+DataType: _DATA_HAVE
+ACK: TRUE
+DevAddr: ID Node
+NetAddr: ID Net
+Payload: Mode
+CRC
+//////////////////////////////////////////////////////////////////////////////////////

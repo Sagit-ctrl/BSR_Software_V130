@@ -1,0 +1,553 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  12/Nov/2023  02:22:37
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Exe\cmwx1zzabz_0xx.out
+#    Map file     =
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\List\cmwx1zzabz_0xx.map
+#    Command line =
+#        -f C:\Users\Sagit\AppData\Local\Temp\EWF656.tmp
+#        (C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\app_subghz_phy.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\b-l072z-lrwan1.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\b_l072z_lrwan1_bus.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\cmwx1zzabz_0xx.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\dma.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\main.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\rtc.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\startup_stm32l072xx.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_adv_trace.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_mem.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_seq.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_systime.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_tiny_vsnprintf.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_adc.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_adc_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_cortex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_dma.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_exti.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_gpio.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_i2c.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_msp.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_pwr.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_pwr_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_rcc.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_rcc_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_rtc.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_rtc_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_spi.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_tim.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_tim_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_uart.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_hal_uart_ex.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\subghz_phy_app.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sx1276.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sys_app.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sys_debug.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\system_stm32l0xx.o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\usart_if.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Exe\cmwx1zzabz_0xx.out
+#        --map
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\List\cmwx1zzabz_0xx.map
+#        --config
+#        C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\stm32l072xx_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Error[Li005]: no definition for "Main_Task" [referenced from C:\Users\Sagit\Des
+          ktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Ph
+          y\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\main.o]
+Error[Li005]: no definition for "UTIL_TIMER_Init" [referenced from C:\Users\Sag
+          it\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\Sub
+          GHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sys_app.o]
+Error[Li005]: no definition for "UTIL_LPM_Init" [referenced from C:\Users\Sagit
+          \Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGH
+          z_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sys_app.o]
+Error[Li005]: no definition for "UTIL_LPM_SetStopMode" [referenced from C:\User
+          s\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Application
+          s\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\sys_app.o]
+Error[Li005]: no definition for "UTIL_SYSTIMDriver" [referenced from C:\Users\S
+          agit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\S
+          ubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32_systime.
+          o]
+Error[Li005]: no definition for "huart2" [referenced from C:\Users\Sagit\Deskto
+          p\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\S
+          ubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\usart_if.o]
+Error[Li005]: no definition for "MX_USART2_UART_Init" [referenced from C:\Users
+          \Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications
+          \SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\usart_if.o]
+Error[Li005]: no definition for "sEventAppCom" [referenced from C:\Users\Sagit\
+          Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz
+          _Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "sUartDebug" [referenced from C:\Users\Sagit\De
+          sktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_P
+          hy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "sUartMCU" [referenced from C:\Users\Sagit\Desk
+          top\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy
+          \SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "huart1" [referenced from C:\Users\Sagit\Deskto
+          p\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\S
+          ubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "hdma_usart2_tx" [referenced from C:\Users\Sagi
+          t\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubG
+          Hz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "hdma_usart1_tx" [referenced from C:\Users\Sagi
+          t\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubG
+          Hz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.o]
+Error[Li005]: no definition for "RtCountSystick_u32" [referenced from C:\Users\
+          Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\
+          SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj\stm32l0xx_it.
+          o]
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x802'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xc0
+  .intvec            ro code   0x800'0000    0xc0  startup_stm32l072xx.o [1]
+                             - 0x800'00c0    0xc0
+
+"P1":                                      0x24e2
+  .text              ro code   0x800'00c0   0x704  stm32l0xx_hal_rcc.o [1]
+  .text              ro code   0x800'07c4    0x44  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'0808     0xc  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'0814    0x32  I64Mul.o [3]
+  .text              ro code   0x800'0846    0x6a  I64DivMod.o [3]
+  .text              ro code   0x800'08b0    0x36  I32DivMod.o [3]
+  .text              ro code   0x800'08e6     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'08e8    0x78  stm32l0xx_hal_cortex.o [1]
+  .text              ro code   0x800'0960     0x2  I64DivZer.o [3]
+  .text              ro code   0x800'0962     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'0964     0x2  IntDivZer.o [3]
+  .text              ro code   0x800'0966     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'0968   0x5bc  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'0f24   0x17c  stm32l0xx_hal_dma.o [1]
+  .text              ro code   0x800'10a0     0x2  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'10a2     0x2  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'10a4     0x2  stm32l0xx_hal_uart_ex.o [1]
+  .text              ro code   0x800'10a6     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'10a8    0x7e  usart_if.o [1]
+  .text              ro code   0x800'1126     0x2  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'1128     0x2  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'112a     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'112c   0x298  stm32_tiny_vsnprintf.o [1]
+  .text              ro code   0x800'13c4     0xe  strlen.o [3]
+  .text              ro code   0x800'13d2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'13d4    0x10  ABImemset_small.o [3]
+  .text              ro code   0x800'13e4   0x250  stm32_adv_trace.o [1]
+  .text              ro code   0x800'1634    0x12  stm32_mem.o [1]
+  .text              ro code   0x800'1646     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'1648   0x14c  sys_app.o [1]
+  .text              ro code   0x800'1794   0x1c6  stm32l0xx_hal_gpio.o [1]
+  .text              ro code   0x800'195a     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'195c    0x4e  sys_debug.o [1]
+  .text              ro code   0x800'19aa     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'19ac   0x1b0  cmwx1zzabz_0xx.o [1]
+  .text              ro code   0x800'1b5c    0xa4  stm32_systime.o [1]
+  .text              ro code   0x800'1c00    0x74  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'1c74    0xe4  b_l072z_lrwan1_bus.o [1]
+  .text              ro code   0x800'1d58    0x30  stm32l0xx_hal_msp.o [1]
+  .text              ro code   0x800'1d88    0xd8  stm32l0xx_hal_spi.o [1]
+  .text              ro code   0x800'1e60    0x14  stm32l0xx_hal_pwr.o [1]
+  .text              ro code   0x800'1e74    0x1c  stm32l0xx_hal_pwr_ex.o [1]
+  .text              ro code   0x800'1e90   0x1ac  stm32l0xx_hal_rcc_ex.o [1]
+  .text              ro code   0x800'203c   0x154  stm32l0xx_it.o [1]
+  .text              ro code   0x800'2190    0x10  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'21a0    0x28  stm32l0xx_hal_exti.o [1]
+  .text              ro code   0x800'21c8    0x64  stm32l0xx_hal_rtc.o [1]
+  .text              ro code   0x800'222c     0x2  stm32l0xx_hal_rtc.o [1]
+  .text              ro code   0x800'222e     0x2  stm32l0xx_hal_rtc_ex.o [1]
+  .text              ro code   0x800'2230    0xf4  main.o [1]
+  .text              ro code   0x800'2324     0x8  app_subghz_phy.o [1]
+  .text              ro code   0x800'232c    0x74  system_stm32l0xx.o [1]
+  .rodata            const     0x800'23a0    0x50  stm32_tiny_vsnprintf.o [1]
+  .text              ro code   0x800'23f0    0x3c  zero_init3.o [3]
+  .text              ro code   0x800'242c    0x30  copy_init3.o [3]
+  .text              ro code   0x800'245c    0x28  data_init.o [3]
+  .rodata            const     0x800'2484    0x24  stm32l0xx_it.o [1]
+  .iar.init_table    const     0x800'24a8    0x24  - Linker created -
+  .rodata            const     0x800'24cc    0x20  b_l072z_lrwan1_bus.o [1]
+  Initializer bytes  const     0x800'24ec    0x20  <for P2-1> (used: 0x0)
+  .text              ro code   0x800'250c    0x1e  cmain.o [3]
+  .text              ro code   0x800'252a     0x4  low_level_init.o [2]
+  .text              ro code   0x800'252e     0x8  exit.o [2]
+  .text              ro code   0x800'2536     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2538     0xa  cexit.o [3]
+  .text              ro code   0x800'2542     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2544    0x14  exit.o [4]
+  .rodata            const     0x800'2558    0x10  usart_if.o [1]
+  .text              ro code   0x800'2568    0x10  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2578     0xc  cstartup_M.o [3]
+  .rodata            const     0x800'2584     0x8  system_stm32l0xx.o [1]
+  .text              ro code   0x800'258c     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'258e     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2590     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2592     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2594     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2596     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'2598     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'259a     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'259c     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'259e     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'25a0     0x2  startup_stm32l072xx.o [1]
+  .rodata            const     0x800'25a2     0x0  zero_init3.o [3]
+  .rodata            const     0x800'25a2     0x0  copy_init3.o [3]
+                             - 0x800'25a2  0x24e2
+
+"P2", part 1 of 3:                           0x20
+  P2-1                        0x2000'0000    0x20  <Init block>
+    .data            inited   0x2000'0000    0x10  cmwx1zzabz_0xx.o [1]
+    .data            inited   0x2000'0010     0xc  stm32l0xx_hal.o [1]
+    .data            inited   0x2000'001c     0x4  system_stm32l0xx.o [1]
+                            - 0x2000'0020    0x20
+
+"P2", part 2 of 3:                          0x3bc
+  .bss               zero     0x2000'0020   0x318  stm32_adv_trace.o [1]
+  .bss               zero     0x2000'0338    0x58  b_l072z_lrwan1_bus.o [1]
+  .bss               zero     0x2000'0390    0x24  rtc.o [1]
+  .bss               zero     0x2000'03b4    0x20  cmwx1zzabz_0xx.o [1]
+  .bss               zero     0x2000'03d4     0x4  usart_if.o [1]
+  .bss               zero     0x2000'03d8     0x1  usart_if.o [1]
+                            - 0x2000'03d9   0x3b9
+
+"P2", part 3 of 3:                          0x400
+  CSTACK                      0x2000'03e0   0x400  <Block>
+    CSTACK           uninit   0x2000'03e0   0x400  <Block tail>
+                            - 0x2000'07e0   0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'25a2   0x802'ffff  0x2'da5e
+  0x2000'03dc  0x2000'03df       0x4
+  0x2000'07e0  0x2000'4fff    0x4820
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x3b9:
+          0x2000'0020  0x3b9
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x20:
+           0x800'24ec   0x20
+    1 destination range, total size 0x20:
+          0x2000'0000   0x20
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                   ro code  ro data  rw data
+    ------                   -------  -------  -------
+command line/config:
+    --------------------------------------------------
+    Total:
+
+C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj: [1]
+    app_subghz_phy.o               8
+    b_l072z_lrwan1_bus.o         228       32       88
+    cmwx1zzabz_0xx.o             432       16       48
+    main.o                       244
+    rtc.o                                           36
+    startup_stm32l072xx.o        252
+    stm32_adv_trace.o            592               792
+    stm32_mem.o                   18
+    stm32_systime.o              164
+    stm32_tiny_vsnprintf.o       664       80
+    stm32l0xx_hal.o              212       12       12
+    stm32l0xx_hal_cortex.o       120
+    stm32l0xx_hal_dma.o          380
+    stm32l0xx_hal_exti.o          40
+    stm32l0xx_hal_gpio.o         454
+    stm32l0xx_hal_msp.o           48
+    stm32l0xx_hal_pwr.o           20
+    stm32l0xx_hal_pwr_ex.o        28
+    stm32l0xx_hal_rcc.o        1'796
+    stm32l0xx_hal_rcc_ex.o       428
+    stm32l0xx_hal_rtc.o          102
+    stm32l0xx_hal_rtc_ex.o         2
+    stm32l0xx_hal_spi.o          216
+    stm32l0xx_hal_uart.o       1'476
+    stm32l0xx_hal_uart_ex.o        2
+    stm32l0xx_it.o               340       36
+    sys_app.o                    332
+    sys_debug.o                   78
+    system_stm32l0xx.o           116       12        4
+    usart_if.o                   126       16        5
+    --------------------------------------------------
+    Total:                     8'918      204      985
+
+dl6M_tlf.a: [2]
+    exit.o                         8
+    low_level_init.o               4
+    --------------------------------------------------
+    Total:                        12
+
+rt6M_tl.a: [3]
+    ABImemset_small.o             16
+    I32DivMod.o                   54
+    I64DivMod.o                  106
+    I64DivZer.o                    2
+    I64Mul.o                      50
+    IntDivZer.o                    2
+    cexit.o                       10
+    cmain.o                       30
+    copy_init3.o                  48
+    cstartup_M.o                  12
+    data_init.o                   40
+    strlen.o                      14
+    zero_init3.o                  60
+    --------------------------------------------------
+    Total:                       444
+
+shb_l.a: [4]
+    exit.o                        20
+    --------------------------------------------------
+    Total:                        20
+
+    Linker created                         36    1'024
+------------------------------------------------------
+    Grand Total:               9'394      240    2'009
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'24a8          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'24cc          --   Gb  - Linker created -
+?main                    0x800'250d         Code  Gb  cmain.o [3]
+ADV_TRACE_Buffer        0x2000'0038  0x200  Data  Lc  stm32_adv_trace.o [1]
+ADV_TRACE_Ctx           0x2000'0020   0x18  Data  Lc  stm32_adv_trace.o [1]
+AHBPrescTable            0x800'2384   0x10  Data  Gb  system_stm32l0xx.o [1]
+APBPrescTable            0x800'2584    0x8  Data  Gb  system_stm32l0xx.o [1]
+BSP_SPI1_Init            0x800'1c75   0x6e  Code  Gb  b_l072z_lrwan1_bus.o [1]
+CMWX1ZZABZ0XX_RADIO_Bus_Init
+                         0x800'1b2d    0x8  Code  Gb  cmwx1zzabz_0xx.o [1]
+CMWX1ZZABZ0XX_RADIO_IoInit
+                         0x800'19ad  0x17e  Code  Gb  cmwx1zzabz_0xx.o [1]
+CSTACK$$Base            0x2000'03e0          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'07e0          --   Gb  - Linker created -
+DBG_ConfigForLpm         0x800'1967   0x3a  Code  Gb  sys_debug.o [1]
+DBG_Disable              0x800'195d    0xa  Code  Gb  sys_debug.o [1]
+DBG_ProbesInit           0x800'19a9    0x2  Code  Gb  sys_debug.o [1]
+DMA1_Channel2_3_IRQHandler
+                         0x800'20d9    0xa  Code  Gb  stm32l0xx_it.o [1]
+DMA1_Channel4_5_6_7_IRQHandler
+                         0x800'20e3    0xa  Code  Gb  stm32l0xx_it.o [1]
+EXTI0_1_IRQHandler       0x800'2055   0x16  Code  Gb  stm32l0xx_it.o [1]
+EXTI2_3_IRQHandler       0x800'206b    0x2  Code  Gb  stm32l0xx_it.o [1]
+EXTI4_15_IRQHandler      0x800'206d   0x6c  Code  Gb  stm32l0xx_it.o [1]
+Error_Handler            0x800'2309    0x4  Code  Gb  main.o [1]
+HAL_DBGMCU_DisableDBGSleepMode
+                         0x800'1c31    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DBGMCU_DisableDBGStandbyMode
+                         0x800'1c61    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DBGMCU_DisableDBGStopMode
+                         0x800'1c49    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DBGMCU_EnableDBGSleepMode
+                         0x800'1c25    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DBGMCU_EnableDBGStandbyMode
+                         0x800'1c55    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DBGMCU_EnableDBGStopMode
+                         0x800'1c3d    0xc  Code  Gb  stm32l0xx_hal.o [1]
+HAL_DMA_Abort            0x800'0f25   0x4a  Code  Gb  stm32l0xx_hal_dma.o [1]
+HAL_DMA_Abort_IT         0x800'0f6f   0x4e  Code  Gb  stm32l0xx_hal_dma.o [1]
+HAL_DMA_IRQHandler       0x800'0fbd   0xe4  Code  Gb  stm32l0xx_hal_dma.o [1]
+HAL_EXTI_IRQHandler      0x800'21a1   0x22  Code  Gb  stm32l0xx_hal_exti.o [1]
+HAL_GPIO_EXTI_IRQHandler
+                         0x800'191d   0x14  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_Init            0x800'1795  0x17c  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'1911    0xc  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GetTick              0x800'0809    0xc  Code  Wk  stm32l0xx_hal.o [1]
+HAL_IncTick              0x800'2191   0x10  Code  Wk  stm32l0xx_hal.o [1]
+HAL_Init                 0x800'1c01   0x24  Code  Gb  stm32l0xx_hal.o [1]
+HAL_InitTick             0x800'07c5   0x44  Code  Wk  stm32l0xx_hal.o [1]
+HAL_MspInit              0x800'1d59   0x30  Code  Gb  stm32l0xx_hal_msp.o [1]
+HAL_NVIC_SetPriority     0x800'0923    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_PWREx_EnableFastWakeUp
+                         0x800'1e75    0xc  Code  Gb  stm32l0xx_hal_pwr_ex.o [1]
+HAL_PWREx_EnableUltraLowPower
+                         0x800'1e81    0xc  Code  Gb  stm32l0xx_hal_pwr_ex.o [1]
+HAL_PWR_DisablePVD       0x800'1e61    0x4  Code  Gb  stm32l0xx_hal_pwr.o [1]
+HAL_RCCEx_PeriphCLKConfig
+                         0x800'1e91  0x180  Code  Gb  stm32l0xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig      0x800'0565  0x194  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK2Freq     0x800'0781    0xc  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'0705   0x72  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'00c1  0x48a  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RTCEx_AlarmBEventCallback
+                         0x800'222f    0x2  Code  Wk  stm32l0xx_hal_rtc_ex.o [1]
+HAL_RTC_AlarmIRQHandler
+                         0x800'21c9   0x56  Code  Gb  stm32l0xx_hal_rtc.o [1]
+HAL_SPI_GetState         0x800'1e59    0x6  Code  Gb  stm32l0xx_hal_spi.o [1]
+HAL_SPI_Init             0x800'1d89   0xcc  Code  Gb  stm32l0xx_hal_spi.o [1]
+HAL_SYSTICK_Config       0x800'092d   0x28  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_UARTEx_WakeupCallback
+                         0x800'10a5    0x2  Code  Wk  stm32l0xx_hal_uart_ex.o [1]
+HAL_UART_IRQHandler      0x800'0ac5  0x21e  Code  Gb  stm32l0xx_hal_uart.o [1]
+HAL_UART_MspDeInit       0x800'1129    0x2  Code  Wk  stm32l0xx_hal_uart.o [1]
+HAL_UART_Receive_IT      0x800'0a63   0x5c  Code  Gb  stm32l0xx_hal_uart.o [1]
+HAL_UART_Transmit        0x800'0969   0xfa  Code  Gb  stm32l0xx_hal_uart.o [1]
+HAL_UART_TxCpltCallback
+                         0x800'1125    0x2  Code  Gb  usart_if.o [1]
+HardFault_Handler        0x800'203f    0x2  Code  Gb  stm32l0xx_it.o [1]
+MX_SubGHz_Phy_Init       0x800'2325    0x8  Code  Gb  app_subghz_phy.o [1]
+NMI_Handler              0x800'203d    0x2  Code  Gb  stm32l0xx_it.o [1]
+PLLMulTable              0x800'2394    0xc  Data  Gb  system_stm32l0xx.o [1]
+PendSV_Handler           0x800'2043    0x2  Code  Gb  stm32l0xx_it.o [1]
+RADIO_DIO_MODE           0x800'1b4c   0x10  Data  Lc  cmwx1zzabz_0xx.o [1]
+RADIO_DIO_PIN            0x800'1b44    0x8  Data  Lc  cmwx1zzabz_0xx.o [1]
+RADIO_DIO_PORT          0x2000'0000   0x10  Data  Lc  cmwx1zzabz_0xx.o [1]
+RTC_IRQHandler           0x800'2155    0xa  Code  Gb  stm32l0xx_it.o [1]
+Region$$Table$$Base      0x800'24a8          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'24cc          --   Gb  - Linker created -
+SPI_GetPrescaler::baudrate
+                         0x800'24cc   0x20  Data  Lc  b_l072z_lrwan1_bus.o [1]
+SVC_Handler              0x800'2041    0x2  Code  Gb  stm32l0xx_it.o [1]
+SysTick_Handler          0x800'2045   0x10  Code  Gb  stm32l0xx_it.o [1]
+SysTimeAdd               0x800'1b5d   0x3e  Code  Gb  stm32_systime.o [1]
+SysTimeGet               0x800'1bb1   0x44  Code  Gb  stm32_systime.o [1]
+SystemApp_Init           0x800'1649   0xd2  Code  Gb  sys_app.o [1]
+SystemClock_Config       0x800'2253   0xaa  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'001c    0x4  Data  Gb  system_stm32l0xx.o [1]
+SystemInit               0x800'232d   0x40  Code  Gb  system_stm32l0xx.o [1]
+TRACE_AllocateBufer      0x800'15bf   0x5a  Code  Lc  stm32_adv_trace.o [1]
+TRACE_Lock               0x800'1619    0xa  Code  Lc  stm32_adv_trace.o [1]
+TRACE_Send               0x800'14e1   0x68  Code  Lc  stm32_adv_trace.o [1]
+TRACE_TxCpltCallback     0x800'1549   0x76  Code  Lc  stm32_adv_trace.o [1]
+TRACE_UnLock             0x800'1623    0xa  Code  Lc  stm32_adv_trace.o [1]
+TimestampNow             0x800'1739   0x2c  Code  Lc  sys_app.o [1]
+TxCpltCallback          0x2000'03d4    0x4  Data  Lc  usart_if.o [1]
+UART_DMAAbortOnError     0x800'0e61   0x14  Code  Lc  stm32l0xx_hal_uart.o [1]
+UART_EndRxTransfer       0x800'0e21   0x30  Code  Lc  stm32l0xx_hal_uart.o [1]
+UART_RxISR_16BIT         0x800'0eab   0x36  Code  Lc  stm32l0xx_hal_uart.o [1]
+UART_RxISR_8BIT          0x800'0e75   0x36  Code  Lc  stm32l0xx_hal_uart.o [1]
+UART_Start_Receive_IT    0x800'0d9d   0x7a  Code  Gb  stm32l0xx_hal_uart.o [1]
+UART_WaitOnFlagUntilTimeout
+                         0x800'0cf9   0xa2  Code  Gb  stm32l0xx_hal_uart.o [1]
+USART1_IRQHandler        0x800'20ed   0x3a  Code  Gb  stm32l0xx_it.o [1]
+USART2_IRQHandler        0x800'2127   0x2e  Code  Gb  stm32l0xx_it.o [1]
+UTIL_ADV_TRACE_COND_FSend
+                         0x800'140b   0xba  Code  Gb  stm32_adv_trace.o [1]
+UTIL_ADV_TRACE_Init      0x800'13e5   0x26  Code  Gb  stm32_adv_trace.o [1]
+UTIL_ADV_TRACE_PostSendHook
+                         0x800'176f    0xa  Code  Gb  sys_app.o [1]
+UTIL_ADV_TRACE_PreSendHook
+                         0x800'1765    0xa  Code  Gb  sys_app.o [1]
+UTIL_ADV_TRACE_RegisterTimeStampFunction
+                         0x800'14d1    0x6  Code  Gb  stm32_adv_trace.o [1]
+UTIL_ADV_TRACE_SetVerboseLevel
+                         0x800'14d7    0x6  Code  Gb  stm32_adv_trace.o [1]
+UTIL_MEM_set_8           0x800'1635   0x12  Code  Gb  stm32_mem.o [1]
+UTIL_TraceDriver         0x800'2558   0x10  Data  Gb  usart_if.o [1]
+__NVIC_SetPriority       0x800'08e9   0x3a  Code  Lc  stm32l0xx_hal_cortex.o [1]
+__aeabi_idiv0            0x800'0965         Code  Gb  IntDivZer.o [3]
+__aeabi_ldiv0            0x800'0961         Code  Gb  I64DivZer.o [3]
+__aeabi_lmul             0x800'0815         Code  Gb  I64Mul.o [3]
+__aeabi_uldivmod         0x800'0847         Code  Gb  I64DivMod.o [3]
+__cmain                  0x800'250d         Code  Gb  cmain.o [3]
+__exit                   0x800'2545   0x14  Code  Gb  exit.o [4]
+__iar_copy_init3         0x800'242d   0x30  Code  Gb  copy_init3.o [3]
+__iar_data_init3         0x800'245d   0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'2579         Code  Gb  cstartup_M.o [3]
+__iar_small_Memset4_word
+                         0x800'13d9         Code  Gb  ABImemset_small.o [3]
+__iar_small_Memset_word
+                         0x800'13d9         Code  Gb  ABImemset_small.o [3]
+__iar_small_memclr       0x800'13d5         Code  Gb  ABImemset_small.o [3]
+__iar_small_memclr4      0x800'13d5         Code  Gb  ABImemset_small.o [3]
+__iar_small_memclr8      0x800'13d5         Code  Gb  ABImemset_small.o [3]
+__iar_small_memset       0x800'13d9         Code  Gb  ABImemset_small.o [3]
+__iar_small_memset4      0x800'13d9         Code  Gb  ABImemset_small.o [3]
+__iar_small_memset8      0x800'13d9         Code  Gb  ABImemset_small.o [3]
+__iar_small_uidiv        0x800'08b1         Code  Gb  I32DivMod.o [3]
+__iar_small_uidivmod     0x800'08b1         Code  Gb  I32DivMod.o [3]
+__iar_zero_init3         0x800'23f1   0x3c  Code  Gb  zero_init3.o [3]
+__low_level_init         0x800'252b    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32l072xx.o [1]
+_call_main               0x800'2519         Code  Gb  cmain.o [3]
+_exit                    0x800'2539         Code  Gb  cexit.o [3]
+_main                    0x800'2527         Code  Gb  cmain.o [3]
+charRx                  0x2000'03d8    0x1  Data  Gb  usart_if.o [1]
+exit                     0x800'252f    0x8  Code  Gb  exit.o [2]
+hRADIO_DIO_exti         0x2000'03b4   0x20  Data  Gb  cmwx1zzabz_0xx.o [1]
+hrtc                    0x2000'0390   0x24  Data  Gb  rtc.o [1]
+hspi1                   0x2000'0338   0x58  Data  Gb  b_l072z_lrwan1_bus.o [1]
+main                     0x800'2231   0x22  Code  Gb  main.o [1]
+strlen                   0x800'13c5         Code  Gb  strlen.o [3]
+sztmp                   0x2000'0238  0x100  Data  Lc  stm32_adv_trace.o [1]
+tiny_snprintf_like       0x800'1779   0x10  Code  Lc  sys_app.o [1]
+tiny_vsnprintf_like      0x800'112d  0x288  Code  Gb  stm32_tiny_vsnprintf.o [1]
+uwTick                  0x2000'0014    0x4  Data  Gb  stm32l0xx_hal.o [1]
+uwTickFreq              0x2000'0010    0x1  Data  Gb  stm32l0xx_hal.o [1]
+uwTickPrio              0x2000'0018    0x4  Data  Gb  stm32l0xx_hal.o [1]
+vcom_DeInit              0x800'10b7   0x20  Code  Gb  usart_if.o [1]
+vcom_Init                0x800'10a9    0xe  Code  Gb  usart_if.o [1]
+vcom_ReceiveInit         0x800'10f3   0x1e  Code  Gb  usart_if.o [1]
+vcom_Trace_DMA           0x800'10d7   0x1c  Code  Gb  usart_if.o [1]
+
+
+[1] = C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM\cmwx1zzabz_0xx\Obj
+[2] = dl6M_tlf.a
+[3] = rt6M_tl.a
+[4] = shb_l.a
+
+  9'394 bytes of readonly  code memory
+    240 bytes of readonly  data memory
+  2'009 bytes of readwrite data memory
+
+Errors: 14
+Warnings: none

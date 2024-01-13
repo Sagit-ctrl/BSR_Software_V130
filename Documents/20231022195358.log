@@ -1,0 +1,1890 @@
+Terminal log file
+Date: 10/22/2023 - 7:54:03 PM
+-----------------------------------------------
+user_lora.c: Boot up the Node's LoRa module.
+user_lora.c: App lora init
+user_modem.c: Memory information init
+user_common.c: App common init
+user_packet.c: App packet init
+3325s149:user_main.c: Main task start
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+3426s308:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3437s852:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+3528s996:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3540s540:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+3631s680:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3643s225:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+3734s369:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3745s913:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+3837s052:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3848s596:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+3939s740:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+3951s284:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+4042s424:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4053s968:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+4145s112:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4156s656:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+4247s795:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4259s339:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+4350s483:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4362s027:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+4453s166:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4464s710:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+4555s854:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4567s398:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+4658s539:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4670s083:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+4761s226:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4772s770:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+4863s911:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4875s456:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+4966s599:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+4978s143:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+5069s284:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5080s828:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+5171s972:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5183s516:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+5274s657:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5286s201:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+5377s344:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5388s888:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+5480s029:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5491s574:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+5582s717:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5594s261:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+5685s402:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5696s946:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+5788s089:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5799s633:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+5890s774:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+5902s318:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+5993s461:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6005s005:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+6096s146:user_lora.c: TX: 0B543030314E30303101045430303107020BB80902000000DD
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6107s690:user_lora.c: TX: 0B543030314E30303101045430303107020BB80902000000DD
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+6198s833:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6210s377:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+6301s518:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6313s062:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+6404s206:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6415s750:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+6506s890:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6518s434:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+6609s578:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6621s122:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+6712s262:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6723s806:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+6814s950:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6826s494:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+6917s634:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+6929s178:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+7020s322:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7031s866:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+7123s006:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7134s550:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+7225s694:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7237s238:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+7328s377:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7339s921:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+7431s065:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7442s609:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+7533s750:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7545s293:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+7636s437:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7647s981:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+7739s122:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7750s666:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+7841s810:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7853s354:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+7944s495:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+7956s039:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+8047s182:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8058s726:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+8149s867:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8161s411:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+8252s554:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8264s098:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+8355s239:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8366s783:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+8457s926:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8469s470:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+8560s611:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8572s155:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+8663s298:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8674s842:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+8765s983:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8777s527:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+8868s670:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8880s214:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+8971s355:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+8982s899:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+9074s042:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9085s586:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+9176s727:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9188s271:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+9279s415:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9290s958:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+9382s099:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9393s643:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+9484s787:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9496s331:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+9587s471:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9599s015:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+9690s159:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9701s703:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+9792s843:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9804s387:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+9895s531:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+9907s075:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+9998s215:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10009s759:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+10100s903:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10112s447:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+10203s587:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10215s132:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+10306s276:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10317s820:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+10408s960:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10420s505:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+10511s649:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10523s193:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+10614s333:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10625s877:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+10717s021:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10728s565:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+10819s706:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10831s250:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+10922s394:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+10933s938:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_main.c: Low power mode
+11025s079:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11036s623:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+11127s766:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11139s310:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+11230s451:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11241s996:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+11333s139:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11344s683:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+11435s824:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11447s369:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+11538s512:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11550s056:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+11641s197:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11652s742:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+11743s885:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11755s429:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+11846s570:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11858s115:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+11949s258:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+11960s802:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+12051s943:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+12063s488:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+12154s631:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+12166s175:user_lora.c: TX: 0B543030314E30303101045430303107020BB60902000000D3
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+user_main.c: Low power mode
+user_common.c: Timer TX callback
+user_packet.c: Entry measure single
+user_packet.c: Packeting single message.
+user_main.c: Low power mode
+user_main.c: Low power mode
+12257s316:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+12268s861:user_lora.c: TX: 0B543030314E30303101045430303107020BB70902000000D2
+user_main.c: Low power mode
+user_lora.c: OnTxDone
+user_main.c: Low power mode
+user_lora.c: OnRxTimeout
+user_lora.c: OnRxError
+user_lora.c: Rx start again
+user_main.c: Low power mode
+

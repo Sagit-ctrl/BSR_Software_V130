@@ -1,0 +1,12 @@
+stm32_tiny_vsnprintf.pbi: \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Utilities\misc\stm32_tiny_vsnprintf.c \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Utilities\misc/stm32_tiny_vsnprintf.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdarg.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\string.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  D:\\Program\\Work\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Full.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product_string.h

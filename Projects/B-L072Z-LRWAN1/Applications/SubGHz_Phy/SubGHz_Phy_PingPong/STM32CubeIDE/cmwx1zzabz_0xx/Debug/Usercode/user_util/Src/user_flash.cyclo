@@ -1,0 +1,7 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:7:19:OnchipFlashWriteData	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:43:19:OnchipFlashCopy	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:83:19:OnchipFlashPageErase	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:112:6:Erase_Firmware	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:119:6:OnchipFlashReadData	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:137:9:Save_Array	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:153:9:Save_Array_without_erase	1

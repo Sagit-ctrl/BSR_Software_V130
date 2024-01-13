@@ -1,0 +1,24 @@
+app_subghz_phy.pbi: \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\SubGHz_Phy\App\app_subghz_phy.c \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\SubGHz_Phy\App/app_subghz_phy.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\SubGHz_Phy\App/subghz_phy_app.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../Core/Inc\sys_app.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  D:\\Program\\Work\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Full.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../Core/Inc/sys_conf.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Utilities/trace/adv_trace\stm32_adv_trace.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../Core/Inc\utilities_conf.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Drivers/CMSIS/Include\cmsis_compiler.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Drivers/CMSIS/Include\cmsis_iccarm.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Utilities/misc\stm32_mem.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Utilities/misc\stm32_tiny_vsnprintf.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdarg.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\string.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
+  D:\Program\Work\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product_string.h \
+  C:\Users\Sagit\Desktop\BSR_Software_V110\Projects\B-L072Z-LRWAN1\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\EWARM/../../../../../../Utilities/sequencer\stm32_seq.h
