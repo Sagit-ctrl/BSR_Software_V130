@@ -45,13 +45,14 @@ typedef struct
 
 typedef enum eDataDeviceType
 {
-    _DATA_NONE      = 0x00,
-	_DATA_SINGLE	= 0x01,
-	_DATA_MULTI		= 0x02,
-	_DATA_MODE		= 0x03,
-	_DATA_RTC		= 0x04,
-	_DATA_FREQ		= 0x05,
-	_DATA_CONFIRM   = 0x06,
+    _DATA_NONE = 0x00,
+	_DATA_JOIN,
+	_DATA_ACCEPT,
+	_DATA_SINGLE,
+	_DATA_MULTI,
+	_DATA_MODE,
+	_DATA_RTC,
+	_DATA_CONFIRM,
 }eDataDeviceType_t;
 
 typedef struct

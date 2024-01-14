@@ -35,7 +35,7 @@ sEvent_struct sEventAppCom[] =
 	#ifdef DEVICE_TYPE_STATION
 		{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
 	#else
-		{ _EVENT_IDLE_HANDLER, 		    0, 0, 10000, 	_Cb_Idle_Handler },
+		{ _EVENT_IDLE_HANDLER, 		    0, 0, 100000, 	_Cb_Idle_Handler },
 	#endif
 	{ _EVENT_INTERRUPT, 		    0, 0, 0, 	    _Cb_Interrupt },
 };
@@ -200,11 +200,14 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 	#else
 		LED_TOGGLE(__LED_MODE);
 		if (sModem.CheckInit == 0){
+			if (sModem.CheckJoin == 0)
+			{
+				USER_Payload_Node_Join(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+			}
+			fevent_enable(sEventAppCom, event);
 			Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
-			fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 		}
 	#endif
-	Get_RTC();
 	return 1;
 }
 

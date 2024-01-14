@@ -203,6 +203,39 @@ void USER_Payload_Node_Mode(uint32_t delay)
 	AppLora_Send(pData, length, DATA_CONFIRMED_UP, _DATA_MODE, delay);
 }
 
+void USER_Payload_Node_Join(uint32_t delay)
+{
+	/* Init */
+	LOG(LOG_DEBUG, "USER_Payload_Node_Join");
+	uint8_t     pData[128] = {0};
+	uint8_t     length = 0;
+	uint8_t     TempCrc = 0;
+	uint16_t	i = 0;
+
+	/* Packet */
+	pData[length++] = OBIS_ID_SENSOR;
+	pData[length++] = sModem.sDCU_id.Length_u16;
+
+	for (i = 0; i < sModem.sDCU_id.Length_u16; i++)
+		pData[length++] = *(sModem.sDCU_id.Data_a8 + i);
+
+	pData[length++] = OBIS_MODE;
+	pData[length++] = 0x01;
+	pData[length++] = sModem.Mode_Node & 0xFF;
+	pData[length++] = 0x00;
+
+	length++;
+	for (i = 0; i < (length - 1); i++)
+		TempCrc ^= pData[i];
+
+	pData[length-1] = TempCrc;
+
+	/* Send */
+	sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+	sModem.TypeDataMessage = _DATA_JOIN;
+	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_JOIN, delay);
+}
+
 void USER_Payload_Node_Confirm(uint32_t delay)
 {
 	/* Init */
@@ -232,40 +265,6 @@ void USER_Payload_Node_Confirm(uint32_t delay)
 	sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
 	sModem.TypeDataMessage = _DATA_CONFIRM;
 	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_CONFIRM, delay);
-}
-
-void USER_Payload_Node_Frequency(uint32_t delay)
-{
-	/* Init */
-	LOG(LOG_DEBUG, "USER_Payload_Node_Frequency");
-	uint8_t     pData[128] = {0};
-    uint8_t     length = 0;
-    uint16_t	i = 0;
-    uint8_t     TempCrc = 0;
-
-    /* Packet */
-    pData[length++] = OBIS_ID_SENSOR;
-    pData[length++] = sModem.sDCU_id.Length_u16;
-
-    for (i = 0; i < sModem.sDCU_id.Length_u16; i++)
-        pData[length++] = *(sModem.sDCU_id.Data_a8 + i);
-
-    pData[length++] = OBIS_FREQUENCY;
-    pData[length++]	= 0x02;
-    pData[length++]	= (uint8_t) (sFreqInfor.FreqWakeup_u32 >> 8);
-    pData[length++]	= (uint8_t) (sFreqInfor.FreqWakeup_u32);
-    pData[length++] = 0x00;
-
-    length++;
-	for (i = 0; i < (length - 1); i++)
-		TempCrc ^= pData[i];
-
-    pData[length-1] = TempCrc;
-
-    /* Send */
-	sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
-	sModem.TypeDataMessage = _DATA_FREQ;
-	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_FREQ, delay);
 }
 
 void USER_Payload_Station_RTC(uint32_t delay)
@@ -374,10 +373,10 @@ void USER_Payload_Station_Confirm(uint32_t delay)
 	AppLora_Send(pData, length, DATA_UNCONFIRMED_DOWN, _DATA_CONFIRM, delay);
 }
 
-void USER_Payload_Station_Frequency(uint32_t delay)
+void USER_Payload_Station_Accept(uint32_t delay)
 {
 	/* Init */
-	LOG(LOG_DEBUG, "USER_Payload_Station_Frequency");
+	LOG(LOG_DEBUG, "USER_Payload_Station_Accecpt");
 	uint8_t     pData[128] = {0};
     uint8_t     length = 0;
     uint16_t	i = 0;
@@ -390,10 +389,7 @@ void USER_Payload_Station_Frequency(uint32_t delay)
     for (i = 0; i < sModem.sDCU_id.Length_u16; i++)
         pData[length++] = *(sModem.sDCU_id.Data_a8 + i);
 
-    pData[length++] = OBIS_FREQUENCY;
-    pData[length++]	= 0x02;
-    pData[length++]	= (uint8_t) (sFreqInfor.FreqWakeup_u32 >> 8);
-    pData[length++]	= (uint8_t) (sFreqInfor.FreqWakeup_u32);
+    pData[length++] = OBIS_CONFIRM;
     pData[length++] = 0x00;
 
     length++;
@@ -404,8 +400,7 @@ void USER_Payload_Station_Frequency(uint32_t delay)
 
     /* Send */
 	sModem.bNeedConfirm = DATA_UNCONFIRMED_DOWN;
-	sModem.TypeDataMessage = _DATA_FREQ;
-	AppLora_Send(pData, length, DATA_UNCONFIRMED_DOWN, _DATA_FREQ, delay);
+	sModem.TypeDataMessage = _DATA_ACCEPT;
+	AppLora_Send(pData, length, DATA_UNCONFIRMED_DOWN, _DATA_ACCEPT, delay);
 }
-
 /* End of file ----------------------------------------------------------------*/

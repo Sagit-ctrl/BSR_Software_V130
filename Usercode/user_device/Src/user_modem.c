@@ -66,6 +66,7 @@ Struct_Modem_Variable		sModem =
 	.Mode_Station	= 0,
 	.SendAll		= 0,
 	.CheckInit		= 0,
+	.CheckJoin		= 0,
 };
 
 SModemFreqActionInformation     sFreqInfor =

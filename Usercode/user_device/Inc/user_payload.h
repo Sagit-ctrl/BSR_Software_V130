@@ -24,15 +24,15 @@
 
 /* GLOBAL FUNCTION PROTOTYPES ------------------------------------------------*/
 void USER_Payload_Init(void);
+void USER_Payload_Node_Join(uint32_t delay);
 void USER_Payload_Node_Single(uint32_t delay);
 void USER_Payload_Node_Calib(uint32_t delay);
 void USER_Payload_Node_Mode(uint32_t delay);
 void USER_Payload_Node_Confirm(uint32_t delay);
-void USER_Payload_Node_Frequency(uint32_t delay);
+void USER_Payload_Station_Accept(uint32_t delay);
 void USER_Payload_Station_RTC(uint32_t delay);
 void USER_Payload_Station_Mode(uint32_t delay);
 void USER_Payload_Station_Confirm(uint32_t delay);
-void USER_Payload_Station_Frequency(uint32_t delay);
 #endif /*USERCODE_USER_DEVICE_INC_USER_PAYLOAD_H_*/
 
 /* End of file ----------------------------------------------------------------*/

@@ -23,7 +23,7 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
     uint32_t 	NetAddrRx = 0;
     uint8_t 	i = 0;
 
-    LOG_Array(LOG_RECEI, pData, Length);
+//    LOG_Array(LOG_RECEI, pData, Length);
 
     //Frame Header
     sFrameRx->Header.Value 	= 	*(pData);
@@ -146,6 +146,13 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							break;
 					}
 				}
+				Reset_Buff(&sLoraVar.sIntanData);
+				for ( i = 0; i < (Length - 1); i++)
+					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
+				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
+				break;
+    		case _DATA_JOIN:
+    			USER_Payload_Station_Accept(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
 					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
@@ -285,11 +292,21 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							break;
 					}
 				}
-				if(sModem.Mode_Node != _MODE_SLEEP)
+				if(sModem.Mode_Node == _MODE_MEASURE)
 				{
-					sModem.Mode_Node = _MODE_WAKEUP;
+					UTIL_TIMER_Start (&TimerLoraTx);
+					sModem.Mode_Node = _MODE_SLEEP;
+				} else if(sModem.Mode_Node == _MODE_WAKEUP)
+				{
 					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 				}
+	       		break;
+	       	case _DATA_ACCEPT:
+	       		sModem.CheckJoin = 1;
+				sEventAppCom[_EVENT_IDLE_HANDLER].e_period = 1000;
+				fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
+				sModem.Mode_Node = _MODE_WAKEUP;
+				Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 	       		break;
 	    	case _DATA_NONE:
 	    		break;

@@ -172,7 +172,7 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
             *(sMessTx.Data_a8 + sMessTx.Length_u16++) = *(pData + i);
         }
 
-        LOG_Array(LOG_TRANS, sMessTx.Data_a8, sMessTx.Length_u16);
+//        LOG_Array(LOG_TRANS, sMessTx.Data_a8, sMessTx.Length_u16);
         for (i = 0; i < sMessTx.Length_u16; i++)
         {
         	*(sModem.sBackup.Data_a8 + i) = *(sMessTx.Data_a8 + i);
@@ -181,7 +181,6 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
 //        LOG_Array(LOG_INFOR, sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
 
         HAL_Delay(delay);
-        LOG(LOG_DEBUG, "Lora Send");
         Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
         return 1;
     }
@@ -328,10 +327,10 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 				sModem.TypeDataMessage = _DATA_NONE;
 				sModem.TimeTrySendAgain = 0;
 				Reset_Buff(&sModem.sBackup);
-	        	LOG(LOG_DEBUG, "OnRxDone");
+//	        	LOG(LOG_DEBUG, "OnRxDone");
 	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) == TRUE)
 				{
-					LOG(LOG_DEBUG, "Protocol Process Done!");
+//					LOG(LOG_DEBUG, "Protocol Process Done!");
 				} else {
 					if (sModem.Mode_Node == 0)
 					{
@@ -345,15 +344,15 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 			#endif
             break;
         case TX:
-        	LOG(LOG_DEBUG, "OnTxDone");
+//        	LOG(LOG_DEBUG, "OnTxDone");
         	sModem.RxTimeBefore = SysTimeGet();
             Radio.Rx(RX_TIMEOUT_VALUE);
             break;
         case TX_TIMEOUT:
-        	LOG(LOG_DEBUG, "OnTxTimeOut");
+//        	LOG(LOG_DEBUG, "OnTxTimeOut");
             break;
         case RX_TIMEOUT:
-        	LOG(LOG_DEBUG, "OnRxTimeOut");
+//        	LOG(LOG_DEBUG, "OnRxTimeOut");
 			#ifdef DEVICE_TYPE_STATION
 				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
 				{
@@ -398,7 +397,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 			#endif
 			break;
         case RX_ERROR:
-        	LOG(LOG_DEBUG, "OnRxError");
+//        	LOG(LOG_DEBUG, "OnRxError");
 			#ifdef DEVICE_TYPE_STATION
 				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
 				{

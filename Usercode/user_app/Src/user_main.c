@@ -43,12 +43,13 @@ void SysApp_Init (void)
 
 void SysApp_Start(void)
 {
+	LOG(LOG_DEBUG, "Main task start");
 	UTIL_TIMER_Create(&TimerLoraTx,  0xFFFFFFFFU, UTIL_TIMER_ONESHOT, _Cb_Active_Lora_Tx_Event, NULL);
-	UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 + sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+	UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
 	#ifdef DEVICE_TYPE_STATION
 		HAL_GPIO_WritePin(LED_BLUE_GPIO_Port, LED_BLUE_Pin, GPIO_PIN_SET);
 	#else
-		Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+		USER_Payload_Node_Join(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
 //		UTIL_TIMER_Start (&TimerLoraTx);
 	#endif
 }
@@ -59,7 +60,6 @@ void Main_Task (void)
 
     SysApp_Init();
     SysApp_Start();
-	LOG(LOG_DEBUG, "Main task start");
 	#ifdef DEVICE_TYPE_STATION
 		fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 		LED_OFF(__LED_MODE);
@@ -88,7 +88,7 @@ void Main_Task (void)
 
 			if ((TaskStatus_u8 == 0) && (sModem.Mode_Node == 0))
 			{
-				LOG(LOG_DEBUG, "Low power mode");
+//				LOG(LOG_DEBUG, "Low power mode");
 				UTIL_LPM_SetStopMode((UTIL_LPM_State_t) LPM_FALSE);
 				UTIL_LPM_EnterLowPower();
 			}

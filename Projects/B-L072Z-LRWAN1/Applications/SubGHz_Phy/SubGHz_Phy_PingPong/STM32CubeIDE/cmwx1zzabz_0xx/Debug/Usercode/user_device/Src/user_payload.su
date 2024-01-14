@@ -2,9 +2,9 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:39:6:USER_Payload_Node_Single	176	static
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:105:6:USER_Payload_Node_Calib	272	static
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:173:6:USER_Payload_Node_Mode	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:206:6:USER_Payload_Node_Confirm	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:237:6:USER_Payload_Node_Frequency	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:271:6:USER_Payload_Station_RTC	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:313:6:USER_Payload_Station_Mode	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:346:6:USER_Payload_Station_Confirm	168	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:377:6:USER_Payload_Station_Frequency	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:206:6:USER_Payload_Node_Join	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:239:6:USER_Payload_Node_Confirm	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:270:6:USER_Payload_Station_RTC	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:312:6:USER_Payload_Station_Mode	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:345:6:USER_Payload_Station_Confirm	168	static
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c:376:6:USER_Payload_Station_Accept	168	static
