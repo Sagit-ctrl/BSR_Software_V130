@@ -77,65 +77,21 @@ static uint8_t _Cb_Packet_Entry (uint8_t event)
 
 static uint8_t _Cb_Packet_Single (uint8_t event)
 {
-	#ifdef DEVICE_TYPE_STATION
-	#else
-    	APP_LOG(TS_OFF, VLEVEL_L, "user_packet.c: Packeting single message.\n\r");
-    	Packet_Single_Message();
-	    sModem.ValueMeasure_u8 = 0;
-		sModem.CountMeasure_u8 = 0;
-
-		#ifdef USING_APP_LORA
-			sMessVar.aMARK[_MESS_SINGLE] = TRUE;
-			AppLora_Set_Tx_Again(sModem.TimeDelayTx_u32);
-		#endif
-	#endif
     return 1;
 }
 
 static uint8_t _Cb_Packet_Multi (uint8_t event)
 {
-	#ifdef DEVICE_TYPE_STATION
-	#else
-		APP_LOG(TS_OFF, VLEVEL_L, "user_packet.c: Packeting multiple message.\n\r");
-		Packet_Multiple_Message();
-		Reset_Buff(&sModem.strMultiRespond);
-		sModem.CountMeasure_u8 = 0;
-
-		#ifdef USING_APP_LORA
-			sMessVar.aMARK[_MESS_MULTI] = TRUE;
-			AppLora_Set_Tx_Again(sModem.TimeDelayTx_u32);
-		#endif
-	#endif
     return 1;
 }
 
 static uint8_t _Cb_Packet_Mode (uint8_t event)
 {
-	#ifdef DEVICE_TYPE_STATION
-	#else
-		APP_LOG(TS_OFF, VLEVEL_L, "user_packet.c: Packeting mode message.\n\r");
-		Packet_Mode_Message();
-
-		#ifdef USING_APP_LORA
-			sMessVar.aMARK[_MESS_MODE] = TRUE;
-			AppLora_Set_Tx_Again(sModem.TimeDelayTx_u32);
-		#endif
-	#endif
 	return 1;
 }
 
 static uint8_t _Cb_Packet_RTC_Mode (uint8_t event)
 {
-	#ifdef DEVICE_TYPE_STATION
-		APP_LOG(TS_OFF, VLEVEL_L, "user_packet.c: Packeting RTC mode message.\n\r");
-		Packet_RTC_Mode_Message();
-
-		#ifdef USING_APP_LORA
-			sMessVar.aMARK[_MESS_RTC] = TRUE;
-			AppLora_Set_Tx_Again(0);
-		#endif
-	#else
-	#endif
 	return 1;
 }
 

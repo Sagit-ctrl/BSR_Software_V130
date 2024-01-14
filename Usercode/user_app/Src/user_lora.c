@@ -53,8 +53,8 @@ StructLoraManager    sLoraVar =
     .sIntanData = {&aINTAN_DATA[0], 0},
 };
 
-static UTIL_TIMER_Object_t TimerLed1;
-static void _Cb_Timer_Led_Event(void *context);
+static UTIL_TIMER_Object_t TimerSend;
+static void _Cb_Timer_Send_Event(void *context);
 
 static UTIL_TIMER_Object_t TimerLoraTxAgain;
 static void _Cb_Timer_Lora_Tx_Again(void *context);
@@ -124,8 +124,7 @@ void AppLora_Init(void)
 		#error "Please define a modulation in the subghz_phy_app.h file."
 	#endif /* USE_MODEM_LORA | USE_MODEM_FSK */
 
-	UTIL_TIMER_Create(&TimerLed1, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, _Cb_Timer_Led_Event, NULL);
-	UTIL_TIMER_SetPeriod(&TimerLed1, LED_PERIOD_MS);
+	UTIL_TIMER_Create(&TimerSend, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, _Cb_Timer_Send_Event, NULL);
     UTIL_TIMER_Create(&TimerLoraTxAgain, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, _Cb_Timer_Lora_Tx_Again, NULL);
 
 	#ifdef DEVICE_TYPE_STATION
@@ -180,8 +179,10 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
         sModem.sBackup.Length_u16 = sMessTx.Length_u16;
 //        LOG_Array(LOG_INFOR, sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
 
-        HAL_Delay(delay);
-        Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
+//        HAL_Delay(delay);
+//    	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
+    	UTIL_TIMER_SetPeriod(&TimerSend, delay);
+    	UTIL_TIMER_Start(&TimerSend);
         return 1;
     }
     return 0;
@@ -206,47 +207,6 @@ uint8_t AppLora_Task(void)
 		}
 	}
 	return Result;
-}
-
-uint8_t AppLora_Check_New_Mess_Of_Device (void)
-{
-	#ifdef DEVICE_TYPE_STATION
-		if (sRecMessage.IndexSend_u16 != sRecMessage.IndexSave_u16)
-		{
-			sMessVar.aMARK[_MESS_RTC] = TRUE;
-			return 1;
-		}
-	#else
-		if (sRecSingle.IndexSend_u16 != sRecSingle.IndexSave_u16)
-		{
-			sMessVar.aMARK[_MESS_SINGLE] = TRUE;
-			return 1;
-		}
-		if (sRecMultiple.IndexSend_u16 != sRecMultiple.IndexSave_u16)
-		{
-	        APP_LOG(TS_OFF, VLEVEL_L, "user_lora.c: Check new multi message\r\n");
-			sMessVar.aMARK[_MESS_MULTI] = TRUE;
-			return 1;
-		}
-		if (sRecMessage.IndexSend_u16 != sRecMessage.IndexSave_u16)
-		{
-			sMessVar.aMARK[_MESS_MODE] = TRUE;
-			return 1;
-		}
-	#endif
-    return 0;
-}
-
-void AppLora_Set_Tx_Again (uint32_t Time)
-{
-    if (Time != 0)
-    {
-        UTIL_TIMER_SetPeriod(&TimerLoraTxAgain, Time);
-        UTIL_TIMER_Start(&TimerLoraTxAgain);
-    } else
-    {
-        _Cb_Timer_Lora_Tx_Again(NULL);
-    }
 }
 
 void AppLora_Deinit_IO_Radio (void)
@@ -448,66 +408,6 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 }
 static uint8_t _Cb_Lora_Tx(uint8_t event)
 {
-    uint8_t RespondTypeDataSend_u8;
-
-    Radio.Sleep();
-
-	#ifdef DEVICE_TYPE_STATION
-		uint8_t TypeDataLora = _DATA_NONE;
-
-		sMessVar.sPayload.Length_u16 = 0;
-		sMessVar.DataType_u8 = mCheck_Mess_Mark();
-
-		switch(sMessVar.DataType_u8)
-		{
-			case _MESS_RTC:
-				RespondTypeDataSend_u8 = DATA_CONFIRMED_DOWN;
-				TypeDataLora = _DATA_RTC;
-				break;
-			default:
-				RespondTypeDataSend_u8 = DATA_UNCONFIRMED_DOWN;
-				TypeDataLora = _DATA_NONE;
-				break;
-		}
-		sMessVar.MessType_u8[sMessVar.DataType_u8] = RespondTypeDataSend_u8;
-		if (AppLora_Send(sMessVar.sPayload.Data_a8, sMessVar.sPayload.Length_u16, RespondTypeDataSend_u8, TypeDataLora, 0) == FALSE)
-		{
-			APP_LOG(TS_OFF, VLEVEL_L, "user_lora.c: No data send\n\r");
-		}
-	#else
-		uint8_t TypeDataLora = _DATA_NONE;
-		sMessVar.sPayload.Length_u16 = 0;
-		sMessVar.DataType_u8 = mCheck_Mess_Mark();
-		switch(sMessVar.DataType_u8)
-		{
-			case _MESS_SINGLE:
-				RespondTypeDataSend_u8 = DATA_CONFIRMED_UP;
-				TypeDataLora = _DATA_SINGLE;
-				break;
-			case _MESS_MULTI:
-				RespondTypeDataSend_u8 = DATA_CONFIRMED_UP;
-				TypeDataLora = _DATA_MULTI;
-				break;
-			case _MESS_MODE:
-				RespondTypeDataSend_u8 = DATA_UNCONFIRMED_UP;
-				TypeDataLora = _DATA_CONFIRM;
-				break;
-			default:
-				RespondTypeDataSend_u8 = DATA_UNCONFIRMED_UP;
-				TypeDataLora = _DATA_NONE;
-				APP_LOG(TS_OFF, VLEVEL_L, "user_lora.c: Event TX default\n\r");
-                if (AppLora_Check_New_Mess_Of_Device() != FALSE)
-                {
-                    fevent_enable(sEventAppLora, event);
-                }
-				break;
-		}
-		sMessVar.MessType_u8[sMessVar.DataType_u8] = RespondTypeDataSend_u8;
-		if (AppLora_Send(sMessVar.sPayload.Data_a8, sMessVar.sPayload.Length_u16, RespondTypeDataSend_u8, TypeDataLora, 100) == FALSE)
-		{
-			APP_LOG(TS_OFF, VLEVEL_L, "user_lora.c: No data send\n\r");
-		}
-	#endif
     return 1;
 }
 
@@ -518,15 +418,12 @@ static uint8_t 	_Cb_Lora_Led (uint8_t event)
 
 static void _Cb_Timer_Lora_Tx_Again(void *context)
 {
-    if (AppLora_Check_New_Mess_Of_Device() != FALSE)
-    {
-        fevent_active(sEventAppLora, _EVENT_LORA_TX);
-    }
+
 }
 
-static void _Cb_Timer_Led_Event(void *context)
+static void _Cb_Timer_Send_Event(void *context)
 {
-
+	Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
 }
 
 void LED_ON (eLed_TypeDef Led)
