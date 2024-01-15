@@ -94,6 +94,10 @@ void DCU_Response_AT(uint8_t *data, uint16_t length)
 {
 	HAL_UART_Transmit(&uart_debug, data, length, 1000);
 	HAL_UART_Transmit(&uart_debug, (uint8_t*)"\r\n", 2, 1000);
+#ifdef DEVICE_TYPE_STATION
+	HAL_UART_Transmit(&uart_debug, data, length, 1000);
+	HAL_UART_Transmit(&uart_debug, (uint8_t*)"\r\n", 2, 1000);
+#endif
 }
 
 void Modem_Deinit_Peripheral (void)
