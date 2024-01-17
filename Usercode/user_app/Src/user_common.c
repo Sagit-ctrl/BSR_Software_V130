@@ -119,8 +119,8 @@ static uint8_t _Cb_Uart_Debug(uint8_t event)
 		if (sUartDebug.Length_u16 == LastLengthRecv)
 		{
 			MarkFirstRecvUart = 0;
-			DCU_Response_AT((uint8_t*)"", 0);
-			DCU_Response_AT(sUartDebug.Data_a8, sUartDebug.Length_u16);
+//			DCU_Response_AT((uint8_t*)"", 0);
+//			DCU_Response_AT(sUartDebug.Data_a8, sUartDebug.Length_u16);
 			Check_AT_User(&sUartDebug);
 			Reset_Buff(&sUartDebug);
 		} else
@@ -199,13 +199,21 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 		LED_TOGGLE(__LED_MODE);
 	#else
 		LED_TOGGLE(__LED_MODE);
-		if (sModem.CheckInit == 0){
-			if (sModem.CheckJoin == 0)
-			{
-				USER_Payload_Node_Join(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+		sModem.CountSleep ++;
+		if(sModem.CountSleep <= 100){
+			if (sModem.CheckInit == 0){
+				if (sModem.CheckJoin == 0)
+				{
+					USER_Payload_Node_Join(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+				}
 			}
 			fevent_enable(sEventAppCom, event);
 			Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+		} else
+		{
+			sModem.CountSleep = 0;
+			sModem.Mode_Node = 0;
+			UTIL_TIMER_Start(&TimerLoraTx);
 		}
 	#endif
 	return 1;

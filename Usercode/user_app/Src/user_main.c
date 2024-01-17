@@ -44,6 +44,11 @@ void SysApp_Init (void)
 void SysApp_Start(void)
 {
 	LOG(LOG_DEBUG, "Main task start");
+	LOG(LOG_TRANS, "NETID: ");
+	LOG_Array(LOG_INFOR, sModem.sNET_id.Data_a8, sModem.sNET_id.Length_u16);
+	LOG(LOG_TRANS, "DCUID: ");
+	LOG_Array(LOG_INFOR, sModem.sDCU_id.Data_a8, sModem.sDCU_id.Length_u16);
+
 	UTIL_TIMER_Create(&TimerLoraTx,  0xFFFFFFFFU, UTIL_TIMER_ONESHOT, _Cb_Active_Lora_Tx_Event, NULL);
 	UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
 	#ifdef DEVICE_TYPE_STATION

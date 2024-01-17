@@ -56,7 +56,7 @@
     #define DCUID										"S001"
 #else
     #define NETID                                   	"N001"
-	#define DCUID										"T001"
+	#define DCUID										"T081"
 #endif
 
 #endif /* INC_USER_DEFINE_H_ */

@@ -59,6 +59,7 @@ typedef struct
     uint8_t         SendAll;
     uint8_t			CheckInit;
     uint8_t			CheckJoin;
+    uint8_t			CountSleep;
 }Struct_Modem_Variable;
 
 typedef struct

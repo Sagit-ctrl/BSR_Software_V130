@@ -15,7 +15,7 @@
 /* MACROS AND DEFINES --------------------------------------------------------*/
 #define TIME_MEASURE_SINGLE			10
 #define DELAY_MEASURE_SINGLE		100
-#define	TIME_MEASURE_CALIB			50
+#define	TIME_MEASURE_CALIB			56
 #define DELAY_MEASURE_CALIB			100
 
 /* TYPEDEFS ------------------------------------------------------------------*/

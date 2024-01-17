@@ -79,7 +79,7 @@ void USER_Payload_Node_Single(uint32_t delay)
 		pData[length++] = OBIS_VOL_VNA;
 	} else if (sModem.TypeModem_u8 == _LORA_NODE_VP)
 	{
-		pData[length++] = OBIS_VOL_VNA;
+		pData[length++] = OBIS_VOL_VP;
 	}
 	pData[length++] = 0x02;
 	pData[length++] = (Value_Measure_Single >> 8) & 0xFF;
@@ -149,7 +149,7 @@ void USER_Payload_Node_Calib(uint32_t delay)
 		pData[length++] = OBIS_VOL_VNA;
 	} else if (sModem.TypeModem_u8 == _LORA_NODE_VP)
 	{
-		pData[length++] = OBIS_VOL_VNA;
+		pData[length++] = OBIS_VOL_VP;
 	}
 	pData[length++] = 0x64;
 	for (i = 0; i < 100; i++)

@@ -62,11 +62,12 @@ Struct_Modem_Variable		sModem =
 	.CountMeasure_u8    = 0,
 	.TimeTrySendAgain	= 0,
 	.TypeDataMessage	= _DATA_NONE,
-	.Mode_Node		= 0,
+	.Mode_Node		= 1,
 	.Mode_Station	= 0,
 	.SendAll		= 0,
 	.CheckInit		= 0,
 	.CheckJoin		= 0,
+	.CountSleep		= 0,
 };
 
 SModemFreqActionInformation     sFreqInfor =
@@ -95,8 +96,7 @@ void DCU_Response_AT(uint8_t *data, uint16_t length)
 	HAL_UART_Transmit(&uart_debug, data, length, 1000);
 	HAL_UART_Transmit(&uart_debug, (uint8_t*)"\r\n", 2, 1000);
 #ifdef DEVICE_TYPE_STATION
-	HAL_UART_Transmit(&uart_debug, data, length, 1000);
-	HAL_UART_Transmit(&uart_debug, (uint8_t*)"\r\n", 2, 1000);
+	HAL_UART_Transmit(&uart_mcu, data, length, 1000);
 #endif
 }
 

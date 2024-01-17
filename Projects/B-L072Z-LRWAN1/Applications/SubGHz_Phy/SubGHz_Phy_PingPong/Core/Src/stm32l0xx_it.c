@@ -84,17 +84,17 @@ void USART1_IRQHandler(void)
 {
 	#ifdef DEVICE_TYPE_STATION
 		uint8_t	TempRecieve_u8 = 0;
-		TempRecieve_u8 = (uint8_t)(huart2.Instance->RDR & 0x00FF);
+		TempRecieve_u8 = (uint8_t)(huart1.Instance->RDR & 0x00FF);
 		*(sUartDebug.Data_a8 + sUartDebug.Length_u16++) = TempRecieve_u8;
 		if (sUartDebug.Length_u16 > (sizeof (UartDebugBuff) - 1))
-		sUartDebug.Length_u16 = 0;
+			sUartDebug.Length_u16 = 0;
 		sEventAppCom[_EVENT_UART_DEBUG].e_status = 1;
 	#else
 		uint8_t	TempRecieve_u8 = 0;
 		TempRecieve_u8 = (uint8_t)(huart1.Instance->RDR & 0x00FF);
 		*(sUartDebug.Data_a8 + sUartDebug.Length_u16++) = TempRecieve_u8;
 		if (sUartDebug.Length_u16 > (sizeof (UartDebugBuff) - 1))
-		sUartDebug.Length_u16 = 0;
+			sUartDebug.Length_u16 = 0;
 		sEventAppCom[_EVENT_UART_DEBUG].e_status = 1;
 	#endif
 	HAL_UART_IRQHandler(&huart1);
