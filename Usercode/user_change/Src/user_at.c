@@ -384,7 +384,7 @@ void _fAT_SET_MODE(sData *str_Receiv, uint16_t Pos)
 				sModem.Mode_Station = _MODE_SLEEP;
 				sModem.SendAll = 1;
 				DCU_Response_AT((uint8_t *)"OK", 2);
-				USER_Payload_Station_Mode(sModem.TimeDelayTx_u32 / 10);
+				USER_Payload_Station_Mode((*(sModem.sNET_id.Data_a8 + 3) - 0x30));
 				sModem.SendAll = 0;
 				break;
 			case _MODE_WAKEUP:
@@ -397,7 +397,7 @@ void _fAT_SET_MODE(sData *str_Receiv, uint16_t Pos)
 				if (sModem.Mode_Node == 1)
 				{
 					sModem.SendAll = 1;
-					USER_Payload_Station_Mode(sModem.TimeDelayTx_u32 / 10);
+					USER_Payload_Station_Mode((*(sModem.sNET_id.Data_a8 + 3) - 0x30));
 					sModem.SendAll = 0;
 				}
 				break;
