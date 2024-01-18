@@ -71,20 +71,18 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
 		// Check DCU ID without send all node
 		if (sFrameRx->Header.Bits.SendAll == 0){
 			for (i = 0; i < 4; i++){
-				if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
-				{
-					return FALSE;
-				}
-			}
-
-			for (i = 0; i < 4; i++){
 				if ( *(pData + 1 + i) != *(sModem.sDCU_id.Data_a8 + i))
 				{
 					return FALSE;
 				}
 			}
 		}
-
+		for (i = 0; i < 4; i++){
+			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
+			{
+				return FALSE;
+			}
+		}
 		// Check ACK answer
 		if (sFrameRx->Header.Bits.RespondType_u8 == DATA_CONFIRMED_DOWN )
 		{
