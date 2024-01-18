@@ -253,6 +253,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_OFF(__LED_MODE);
 						sModem.CheckInit = 1;
 						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
+						HAL_Delay((9-(*(sModem.sNET_id.Data_a8 + 3) - 0x30))*1000);
 						USER_Payload_Node_Mode(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
@@ -264,6 +265,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						break;
 					case _MODE_MEASURE:
 						LED_ON(__LED_MODE);
+						HAL_Delay((9-(*(sModem.sNET_id.Data_a8 + 3) - 0x30))*1000);
 						USER_Payload_Node_Calib(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_CALIB);
 						break;
 					default:
