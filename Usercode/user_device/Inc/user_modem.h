@@ -38,8 +38,7 @@ typedef struct
 	// Variable
 	sData 			sPayload;
 	uint8_t			TypeModem_u8;		            //loai DCU
-	uint8_t			Mode_Node;
-	uint8_t			Mode_Station;
+	uint8_t			Mode;
 
 	sData			sBackup;
 	uint8_t			bNeedConfirm;
@@ -47,14 +46,12 @@ typedef struct
 	uint8_t			TimeTrySendAgain;
 
 	SysTime_t		RxTimeBefore, RxTimeAfter;
-    sData           strMultiRespond;
     sData           strATCmd;
 
-    uint8_t         CountMeasure_u8;
-    uint16_t		ValueMeasure_u8;
-    uint16_t		ValueBattery_u8;
-
     uint32_t        TimeDelayTx_u32;
+    uint32_t		TimeDelaySingle_u32;
+    uint32_t		TimeDelayCalib_u32;
+    uint32_t		TimeDelayNetwork_u32;
 
     uint8_t         SendAll;
     uint8_t			CheckInit;

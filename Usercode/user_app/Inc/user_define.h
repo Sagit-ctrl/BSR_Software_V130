@@ -15,12 +15,6 @@
     #include "user_lora.h"
 #endif
 
-#define INC_APP_PACKET_FEATURE
-
-#ifdef INC_APP_PACKET_FEATURE
-	#include "user_packet.h"
-#endif
-
 #include "user_at.h"
 #include "user_internal_mem.h"
 #include "user_obis.h"
@@ -44,7 +38,8 @@
 #define DEFAULT_OFFSET_ADC_VBAT							0		// unit mV
 
 #define DEFAULT_TIME_SINGLE_DELAY						8
-#define DEFAULT_TIME_SINGLE_CALIB						8
+#define DEFAULT_TIME_CALIB_DELAY						8
+#define DEFAULT_TIME_NETWORK_DELAY						8
 
 #define MAX_NUMBER_WAKE_UP                              10
 #define MAX_NUNBER_SEND_INIT                            1
@@ -52,11 +47,11 @@
 
 /*--- ID cua thiet bi -------*/
 #ifdef DEVICE_TYPE_STATION
-    #define NETID                                    	"N001"
-    #define DCUID										"S001"
+    #define NETID                                    	"N000"
+    #define DCUID										"S000"
 #else
-    #define NETID                                   	"N001"
-	#define DCUID										"T081"
+    #define NETID                                   	"N000"
+	#define DCUID										"T000"
 #endif
 
 #endif /* INC_USER_DEFINE_H_ */

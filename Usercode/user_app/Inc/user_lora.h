@@ -4,7 +4,6 @@
 #include "radio_board_if.h"
 #include "user_adc.h"
 #include "user_define.h"
-#include "user_message.h"
 #include "user_protocol.h"
 #include "user_event_drive.h"
 #include "user_util.h"
@@ -60,12 +59,6 @@ typedef enum
 	TX_TIMEOUT,
 } States_t;
 
-typedef enum
-{
-    __LED_MODE,
-    __LED_MEASURE,
-}eLed_TypeDef;
-
 /* External variables --------------------------------------------------------*/
 typedef enum
 {
@@ -107,9 +100,5 @@ void 		AppLora_Set_Tx_Again (uint32_t Time);
 
 void        AppLora_Deinit_IO_Radio (void);
 void        AppLora_Init_IO_Radio (void);
-
-void LED_ON (eLed_TypeDef Led);
-void LED_OFF (eLed_TypeDef Led);
-void LED_TOGGLE (eLed_TypeDef Led);
 
 #endif	/* USER_LORA_H */

@@ -69,12 +69,10 @@ Usercode/user_change/Src/user_adc.o: \
  ../../../Core/Inc/utilities_def.h ../../../Core/Inc/sys_debug.h \
  ../../../Core/Inc/sys_conf.h ../../../Core/Inc/platform.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_message.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
@@ -158,12 +156,10 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h:
 ../../../Core/Inc/sys_conf.h:
 ../../../Core/Inc/platform.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_message.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:

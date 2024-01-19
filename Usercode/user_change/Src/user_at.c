@@ -320,7 +320,7 @@ void _fAT_SET_RTC(sData *str_Receiv, uint16_t Pos)
 			sRTCSet.min     = sRTC_temp.min;
 			sRTCSet.sec     = sRTC_temp.sec;
 
-			fevent_active(sEventAppCom, _EVENT_SET_RTC);
+			Set_RTC(sRTCSet);
 			DCU_Response_AT((uint8_t *)"OK", 2);
 		}
 	}
@@ -381,38 +381,35 @@ void _fAT_SET_MODE(sData *str_Receiv, uint16_t Pos)
 		switch (TempMode)
 		{
 			case _MODE_SLEEP:
-				sModem.Mode_Station = _MODE_SLEEP;
+				sModem.Mode = _MODE_SLEEP;
 				sModem.SendAll = 1;
 				DCU_Response_AT((uint8_t *)"OK", 2);
-				USER_Payload_Station_Mode((*(sModem.sNET_id.Data_a8 + 3) - 0x30)*1000);
+				USER_Payload_Station_Mode(sModem.TimeDelayNetwork_u32);
 				sModem.SendAll = 0;
 				break;
 			case _MODE_WAKEUP:
-				sModem.Mode_Station = _MODE_WAKEUP;
+				sModem.Mode = _MODE_WAKEUP;
 				DCU_Response_AT((uint8_t *)"OK", 2);
 				break;
 			case _MODE_MEASURE:
-				sModem.Mode_Station = _MODE_MEASURE;
+				sModem.Mode = _MODE_MEASURE;
 				DCU_Response_AT((uint8_t *)"OK", 2);
-				if (sModem.Mode_Node == 1)
-				{
-					sModem.SendAll = 1;
-					USER_Payload_Station_Mode((*(sModem.sNET_id.Data_a8 + 3) - 0x30)*1000);
-					sModem.SendAll = 0;
-				}
+				sModem.SendAll = 1;
+				USER_Payload_Station_Mode(sModem.TimeDelayNetwork_u32);
+				sModem.SendAll = 0;
 				break;
 			default:
 				DCU_Response_AT((uint8_t *)"ERROR", 5);
 				break;
 		}
 	#else
-		sModem.Mode_Node = TempMode;
+		sModem.Mode = TempMode;
 	#endif
 }
 
 void _fAT_GET_FIRM_VER(sData *str_Receiv, uint16_t Pos)
 {
-    DCU_Response_AT(sFirmVersion.Data_a8, sFirmVersion.Length_u16);
+//    DCU_Response_AT(sFirmVersion.Data_a8, sFirmVersion.Length_u16);
 }
 
 void _fAT_GET_AUTHOR(sData *str_Receiv, uint16_t Pos)

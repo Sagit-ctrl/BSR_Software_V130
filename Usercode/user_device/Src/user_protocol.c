@@ -5,7 +5,6 @@
 
 #include "user_lora.h"
 #include "user_define.h"
-#include "user_message.h"
 #include "user_time.h"
 #include "user_payload.h"
 #include "radio.h"
@@ -123,27 +122,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
 				break;
     		case _DATA_MODE:
-				while (Pos < (Length - 1))  //bo crc
-				{
-					Obis = *(pData + Pos++);
-					switch (Obis)
-					{
-						case OBIS_ID_SENSOR:
-							length_data = *(pData + Pos++);
-							Pos++;
-							Pos++;
-							Pos++;
-							Pos++;
-							break;
-						case OBIS_MODE:
-							length_data = *(pData + Pos++);
-							sModem.Mode_Node = *(pData + Pos++);
-							USER_Payload_Station_Confirm(0);
-							break;
-						default:
-							break;
-					}
-				}
+				USER_Payload_Station_Confirm(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
 					*(sLoraVar.sIntanData.Data_a8 + sLoraVar.sIntanData.Length_u16++) = *(pData + i);
@@ -176,7 +155,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							break;
 					}
 				}
-				if (sModem.Mode_Station == _MODE_WAKEUP)
+				if (sModem.Mode == _MODE_WAKEUP)
 				{
 					USER_Payload_Station_Mode(0);
 				}
@@ -241,20 +220,20 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							break;
 						case OBIS_MODE:
 							length_data = *(pData + Pos++);
-							sModem.Mode_Node = *(pData + Pos++);
+							sModem.Mode = *(pData + Pos++);
 							break;
 						default:
 							break;
 					}
 				}
-				switch(sModem.Mode_Node)
+				switch(sModem.Mode)
 				{
 					case _MODE_SLEEP:
 						LED_OFF(__LED_MODE);
 						sModem.CheckInit = 1;
 						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
-						HAL_Delay((10-(*(sModem.sNET_id.Data_a8 + 3) - 0x30))*1000);
-						USER_Payload_Node_Mode(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY);
+						HAL_Delay(10000 - sModem.TimeDelayNetwork_u32);
+						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
 					case _MODE_WAKEUP:
@@ -265,8 +244,8 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						break;
 					case _MODE_MEASURE:
 						LED_ON(__LED_MODE);
-						HAL_Delay((10-(*(sModem.sNET_id.Data_a8 + 3) - 0x30))*1000);
-						USER_Payload_Node_Calib(sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_CALIB);
+						HAL_Delay(10000 - sModem.TimeDelayNetwork_u32);
+						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
 						break;
 					default:
 						break;
@@ -292,11 +271,11 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							break;
 					}
 				}
-				if(sModem.Mode_Node == _MODE_MEASURE)
+				if(sModem.Mode == _MODE_MEASURE)
 				{
-					UTIL_TIMER_Start (&TimerLoraTx);
-					sModem.Mode_Node = _MODE_SLEEP;
-				} else if(sModem.Mode_Node == _MODE_WAKEUP)
+//					UTIL_TIMER_Start (&TimerLoraTx);
+//					sModem.Mode = _MODE_SLEEP;
+				} else if(sModem.Mode == _MODE_WAKEUP)
 				{
 					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 				}
@@ -305,7 +284,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 	       		sModem.CheckJoin = 1;
 				sEventAppCom[_EVENT_IDLE_HANDLER].e_period = 1000;
 				fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
-				sModem.Mode_Node = _MODE_WAKEUP;
+				sModem.Mode = _MODE_WAKEUP;
 				Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 	       		break;
 	    	case _DATA_NONE:

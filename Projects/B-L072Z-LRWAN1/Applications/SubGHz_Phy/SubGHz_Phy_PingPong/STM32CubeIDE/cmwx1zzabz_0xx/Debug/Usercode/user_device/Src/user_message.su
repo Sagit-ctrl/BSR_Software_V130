@@ -1,8 +1,0 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:133:16:_mDATA_MODE	16	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:176:16:_mDATA_RTC_MODE	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:38:16:_mDATA_SINGLE	16	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:81:16:_mDATA_MULTI	40	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:220:8:mCheck_Mess_Mark	24	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:243:6:mCallback_Send_OK	16	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:269:6:mMess_Handle_Reset	0	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_message.c:275:9:mCallback_Send_Fail	0	static

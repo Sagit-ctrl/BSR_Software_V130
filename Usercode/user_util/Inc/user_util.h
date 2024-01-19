@@ -57,6 +57,12 @@ typedef enum {
 	LOG_INFOR
 } log_level_t;
 
+typedef enum
+{
+    __LED_MODE,
+    __LED_MEASURE,
+}eLed_TypeDef;
+
 typedef struct
 {
 	uint8_t hour;  // read hour
@@ -68,12 +74,6 @@ typedef struct
     uint8_t year;  // read year
     uint32_t SubSeconds;
 } ST_TIME_FORMAT;
-
-typedef enum
-{
-    _POWER_MODE_SAVE = 0,
-    _POWER_MODE_ONLINE,
-}sKind_Mode_Modem;
 
 extern uint8_t (*pFunc_Log_To_Mem) (uint8_t *pData, uint16_t Length);
 
@@ -110,4 +110,7 @@ uint8_t         Convert_Hex_To_StringHex (uint8_t Hex);
 void 			LOG(log_level_t level, const char* message, ...);
 void 			LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length);
 
+void 			LED_ON (eLed_TypeDef Led);
+void 			LED_OFF (eLed_TypeDef Led);
+void 			LED_TOGGLE (eLed_TypeDef Led);
 #endif	/* USER_UTIL_H */

@@ -3,6 +3,7 @@
 #include "user_main.h"
 #include "sys_app.h"
 #include "gpio.h"
+#include "user_util.h"
 #include "user_adc.h"
 
 void SystemClock_Config(void);
@@ -149,6 +150,7 @@ void Error_Handler(void)
 {
 	__disable_irq();
 	MX_GPIO_Init();
+	LOG(LOG_INFOR, "Error");
 	while (1){}
 }
 

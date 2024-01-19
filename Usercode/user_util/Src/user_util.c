@@ -3,11 +3,21 @@
 #include <stdarg.h>
 #include <string.h>
 #include "stm32_systime.h"
+#include "main.h"
+#include "platform.h"
 
 /* Private variables ---------------------------------------------------------*/
 uint32_t        RtCountSystick_u32;
 ST_TIME_FORMAT  sRTC;
 uint8_t 		(*pFunc_Log_To_Mem) (uint8_t *pData, uint16_t Length); // Func Pointer to Save Log to mem
+
+#ifdef DEVICE_TYPE_STATION
+    GPIO_TypeDef *aLED_PORT[LEDn] = {LED_BLUE_GPIO_Port};
+    const uint16_t aLED_PIN[LEDn] = {LED_BLUE_Pin};
+#else
+    GPIO_TypeDef *aLED_PORT[LEDn] = {LED_BLUE_GPIO_Port, LED_GREEN_GPIO_Port};
+    const uint16_t aLED_PIN[LEDn] = {LED_BLUE_Pin, LED_GREEN_Pin};
+#endif
 
 /* Exported functions --------------------------------------------------------*/
 uint8_t Check_Time_Out (uint32_t Millstone_Time, uint32_t Time_Period_ms)
@@ -381,5 +391,20 @@ void LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length){
 	Convert_Hex_To_String_Hex(&sTarget, &sSoucre);
 	HAL_UART_Transmit(&uart_debug, buffer, Length * 2, LOG_TIMEOUT);
     HAL_UART_Transmit(&uart_debug, (uint8_t*)"\r\n" , 2, LOG_TIMEOUT);
+}
+
+void LED_ON (eLed_TypeDef Led)
+{
+	HAL_GPIO_WritePin(aLED_PORT[Led], aLED_PIN[Led], GPIO_PIN_RESET);
+}
+
+void LED_OFF (eLed_TypeDef Led)
+{
+    HAL_GPIO_WritePin(aLED_PORT[Led], aLED_PIN[Led], GPIO_PIN_SET);
+}
+
+void LED_TOGGLE (eLed_TypeDef Led)
+{
+    HAL_GPIO_TogglePin(aLED_PORT[Led], aLED_PIN[Led]);
 }
 /* End of file ----------------------------------------------------------------*/

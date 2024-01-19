@@ -1,10 +1,11 @@
 #include "user_rtc.h"
 #include "user_modem.h"
-
+#include "user_payload.h"
 #include "user_adc.h"
 #include "user_define.h"
 #include "i2c.h"
 #include "user_flash.h"
+#include "radio.h"
 
 /* External variables ---------------------------------------------------------*/
 ST_TIME_FORMAT          sRTCSet = {0};
@@ -15,59 +16,20 @@ uint8_t aAT_CMD [LEGNTH_AT_SERIAL];
 uint8_t aMULTI_MESS [LENGTH_MULTI_TX];
 uint8_t aBACKUP[255];
 
-StructManageRecordFlash     sRecSingle =
-{
-	.AddStart_u32       = ADDR_SINGLE_START,
-	.AddStop_u32        = ADDR_SINGLE_STOP,
-
-	.AddIndexSend_u32   = ADDR_INDEX_SINGLE_SEND,
-	.AddIndexSave_u32   = ADDR_INDEX_SINGLE_SAVE,
-
-	.MaxRecord_u16      = FLASH_MAX_SINGLE_SAVE,
-	.SizeRecord_u16     = SIZE_DATA_SINGLE,
-};
-
-StructManageRecordFlash     sRecMultiple =
-{
-	.AddStart_u32       = ADDR_MULTIPLE_START,
-	.AddStop_u32        = ADDR_MULTIPLE_STOP,
-
-	.AddIndexSend_u32   = ADDR_INDEX_MULTIPLE_SEND,
-	.AddIndexSave_u32   = ADDR_INDEX_MULTIPLE_SAVE,
-
-	.MaxRecord_u16      = FLASH_MAX_MULTIPLE_SAVE,
-	.SizeRecord_u16     = SIZE_DATA_MULTIPLE,
-};
-
-StructManageRecordFlash     sRecMessage =
-{
-	.AddStart_u32       = ADDR_MESSAGE_START,
-	.AddStop_u32        = ADDR_MESSAGE_STOP,
-
-	.AddIndexSend_u32   = ADDR_INDEX_MESSAGE_SEND,
-	.AddIndexSave_u32   = ADDR_INDEX_MESSAGE_SAVE,
-
-	.MaxRecord_u16      = FLASH_MAX_MESSAGE_SAVE,
-	.SizeRecord_u16     = SIZE_DATA_MESSAGE,
-};
-
 Struct_Modem_Variable		sModem =
 {
 	.sDCU_id    		= {&aDCU_ID[0], 4},
 	.sNET_id			= {&aNET_ID[0], 4},
-	.strMultiRespond  	= {&aMULTI_MESS[0], 0},
 	.strATCmd   		= {&aAT_CMD[0], 0},
 	.sBackup			= {&aBACKUP[0], 0},
 	.bNeedConfirm		= 0,
-	.CountMeasure_u8    = 0,
 	.TimeTrySendAgain	= 0,
 	.TypeDataMessage	= _DATA_NONE,
-	.Mode_Node		= 1,
-	.Mode_Station	= 0,
-	.SendAll		= 0,
-	.CheckInit		= 0,
-	.CheckJoin		= 0,
-	.CountSleep		= 0,
+	.Mode				= 1,
+	.SendAll			= 0,
+	.CheckInit			= 0,
+	.CheckJoin			= 0,
+	.CountSleep			= 0,
 };
 
 SModemFreqActionInformation     sFreqInfor =
@@ -143,16 +105,12 @@ void Modem_Init_Peripheral (void)
 
 void Modem_Init_Before_IRQ_Handle (void)
 {
-	#ifdef USING_APP_LORA
-		AppLora_Init_IO_Radio();
-	#endif
+	AppLora_Init_IO_Radio();
 }
 
 void Modem_Deinit_Before_IRQ_Handle (void)
 {
-	#ifdef USING_APP_LORA
-		AppLora_Deinit_IO_Radio();
-	#endif
+	AppLora_Deinit_IO_Radio();
 }
 
 void MX_GPIO_DeInit(void)
@@ -236,13 +194,6 @@ void Init_Memory_Infor(void)
     Init_Device_Type();
 	Init_ID(0);
 	Init_ID(1);
-}
-
-void Init_Index_Packet (void)
-{
-	Flash_Init_Record_Index (&sRecSingle);
-	Flash_Init_Record_Index (&sRecMultiple);
-	Flash_Init_Record_Index (&sRecMessage);
 }
 
 /**

@@ -6,11 +6,9 @@
   */
 
 /* INCLUDES ------------------------------------------------------------------*/
-#include "user_packet.h"
 #include "user_time.h"
 #include "sys_app.h"
 #include "user_define.h"
-#include "user_message.h"
 #include "user_modem.h"
 #include "user_time.h"
 #include "user_lora.h"
@@ -188,7 +186,7 @@ void USER_Payload_Node_Mode(uint32_t delay)
 
 	pData[length++] = OBIS_MODE;
 	pData[length++] = 0x01;
-	pData[length++] = sModem.Mode_Node & 0xFF;
+	pData[length++] = sModem.Mode & 0xFF;
 	pData[length++] = 0x00;
 
 	length++;
@@ -221,7 +219,7 @@ void USER_Payload_Node_Join(uint32_t delay)
 
 	pData[length++] = OBIS_MODE;
 	pData[length++] = 0x01;
-	pData[length++] = sModem.Mode_Node & 0xFF;
+	pData[length++] = sModem.Mode & 0xFF;
 	pData[length++] = 0x00;
 
 	length++;
@@ -327,7 +325,7 @@ void USER_Payload_Station_Mode(uint32_t delay)
 
 	pData[length++] = OBIS_MODE;
 	pData[length++] = 0x01;
-	pData[length++] = sModem.Mode_Station & 0xFF;
+	pData[length++] = sModem.Mode & 0xFF;
 	pData[length++] = 0x00;
 
 	length++;

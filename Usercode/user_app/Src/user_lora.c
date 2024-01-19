@@ -4,11 +4,9 @@
 #include "sys_app.h"
 #include "radio.h"
 #include "app_version.h"
-
+#include "user_payload.h"
 #include "stm32_seq.h"
 #include "utilities_def.h"
-
-#include "user_message.h"
 #include "user_time.h"
 #include "user_timer.h"
 
@@ -37,15 +35,6 @@ static uint16_t 		RxBufferSize = 0;
 
 static uint8_t 			aLORA_TX[MAX_APP_BUFFER_SIZE];
 uint8_t 				aINTAN_DATA[MAX_APP_BUFFER_SIZE];
-
-#ifdef DEVICE_TYPE_STATION
-    GPIO_TypeDef *aLED_PORT[LEDn] = {LED_BLUE_GPIO_Port};
-    const uint16_t aLED_PIN[LEDn] = {LED_BLUE_Pin};
-#else
-    GPIO_TypeDef *aLED_PORT[LEDn] = {LED_BLUE_GPIO_Port, LED_GREEN_GPIO_Port};
-    const uint16_t aLED_PIN[LEDn] = {LED_BLUE_Pin, LED_GREEN_Pin};
-#endif
-
 
 StructLoraManager    sLoraVar =
 {
@@ -181,13 +170,14 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
 
 //        HAL_Delay(delay);
 //    	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
+        LED_ON(__LED_MEASURE);
         if (delay != 0)
         {
         	UTIL_TIMER_SetPeriod(&TimerSend, delay);
         	UTIL_TIMER_Start(&TimerSend);
         } else {
-        	LOG(LOG_INFOR, "LoRa Send");
         	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
+            LED_OFF(__LED_MEASURE);
         }
         return 1;
     }
@@ -298,7 +288,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 				{
 					LOG(LOG_DEBUG, "Protocol Process Done!");
 				} else {
-					if (sModem.Mode_Node == 0)
+					if (sModem.Mode == 0)
 					{
 			        	sModem.RxTimeAfter = SysTimeGet();
 			        	Radio.Rx(RX_TIMEOUT_VALUE - (sModem.RxTimeAfter.Seconds - sModem.RxTimeBefore.Seconds) * 1000 - (sModem.RxTimeAfter.SubSeconds - sModem.RxTimeBefore.SubSeconds));
@@ -312,7 +302,16 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
         case TX:
         	LOG(LOG_DEBUG, "OnTxDone");
         	sModem.RxTimeBefore = SysTimeGet();
-            Radio.Rx(RX_TIMEOUT_VALUE);
+			#ifdef DEVICE_TYPE_STATION
+				Radio.Rx(RX_TIMEOUT_VALUE);
+			#else
+				if(sModem.CheckInit == 0)
+				{
+					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+				} else {
+					Radio.Rx(RX_TIMEOUT_VALUE);
+				}
+			#endif
             break;
         case TX_TIMEOUT:
         	LOG(LOG_DEBUG, "OnTxTimeOut");
@@ -329,12 +328,12 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TimeTrySendAgain++;
 					} else
 					{
-						sModem.Mode_Node = 0;
+						sModem.Mode = 0;
 						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-						UTIL_TIMER_Start (&TimerLoraTx);
+//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
 					Radio.Rx(RX_TIMEOUT_VALUE);
@@ -349,16 +348,19 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TimeTrySendAgain++;
 					} else
 					{
-						sModem.Mode_Node = 0;
+						sModem.Mode = 0;
 						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-						UTIL_TIMER_Start (&TimerLoraTx);
+//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
-					sModem.Mode_Node = 0;
-					UTIL_TIMER_Start (&TimerLoraTx);
+					if (sModem.CheckInit == 1)
+					{
+						sModem.Mode = 0;
+//						UTIL_TIMER_Start (&TimerLoraTx);
+					}
 				}
 			#endif
 			break;
@@ -374,12 +376,12 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TimeTrySendAgain++;
 					} else
 					{
-						sModem.Mode_Node = 0;
+						sModem.Mode = 0;
 						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-						UTIL_TIMER_Start (&TimerLoraTx);
+//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
 					Radio.Rx(RX_TIMEOUT_VALUE);
@@ -394,16 +396,16 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TimeTrySendAgain++;
 					} else
 					{
-						sModem.Mode_Node = 0;
+						sModem.Mode = 0;
 						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-						UTIL_TIMER_Start (&TimerLoraTx);
+//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
-					sModem.Mode_Node = 0;
-					UTIL_TIMER_Start (&TimerLoraTx);
+					sModem.Mode = 0;
+//					UTIL_TIMER_Start (&TimerLoraTx);
 				}
 			#endif
 			break;
@@ -429,21 +431,6 @@ static void _Cb_Timer_Lora_Tx_Again(void *context)
 
 static void _Cb_Timer_Send_Event(void *context)
 {
-	LOG(LOG_INFOR, "LoRa Send");
 	Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
-}
-
-void LED_ON (eLed_TypeDef Led)
-{
-	HAL_GPIO_WritePin(aLED_PORT[Led], aLED_PIN[Led], GPIO_PIN_RESET);
-}
-
-void LED_OFF (eLed_TypeDef Led)
-{
-    HAL_GPIO_WritePin(aLED_PORT[Led], aLED_PIN[Led], GPIO_PIN_SET);
-}
-
-void LED_TOGGLE (eLed_TypeDef Led)
-{
-    HAL_GPIO_TogglePin(aLED_PORT[Led], aLED_PIN[Led]);
+    LED_OFF(__LED_MEASURE);
 }

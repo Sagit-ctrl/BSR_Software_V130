@@ -19,6 +19,17 @@
 #define DELAY_MEASURE_CALIB			100
 
 /* TYPEDEFS ------------------------------------------------------------------*/
+typedef enum eDataDeviceType
+{
+    _DATA_NONE = 0x00,
+	_DATA_JOIN,
+	_DATA_ACCEPT,
+	_DATA_SINGLE,
+	_DATA_MULTI,
+	_DATA_MODE,
+	_DATA_RTC,
+	_DATA_CONFIRM,
+}eDataDeviceType_t;
 
 /* EXTERNAL VARIABLES --------------------------------------------------------*/
 

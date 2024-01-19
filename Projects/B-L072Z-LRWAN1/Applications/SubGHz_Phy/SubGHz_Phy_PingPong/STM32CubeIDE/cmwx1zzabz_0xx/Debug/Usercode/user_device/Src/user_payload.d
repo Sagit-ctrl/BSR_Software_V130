@@ -1,9 +1,12 @@
 Usercode/user_device/Src/user_payload.o: \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Src/user_payload.c \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h \
- ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
+ ../../../Core/Inc/stm32l0xx_hal_conf.h \
+ ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h \
@@ -14,12 +17,6 @@ Usercode/user_device/Src/user_payload.o: \
  ../../../../../../../../Drivers/CMSIS/Include/mpu_armv7.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
- ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h \
- ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
- ../../../Core/Inc/stm32l0xx_hal_conf.h \
- ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h \
@@ -30,6 +27,9 @@ Usercode/user_device/Src/user_payload.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h \
+ ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h \
+ ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h \
+ ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_lptim.h \
@@ -45,11 +45,6 @@ Usercode/user_device/Src/user_payload.o: \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h ../../../Core/Inc/main.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
  ../../../Core/Inc/sys_app.h ../../../Core/Inc/sys_conf.h \
  ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h \
  ../../../Core/Inc/utilities_conf.h \
@@ -58,7 +53,9 @@ Usercode/user_device/Src/user_payload.o: \
  ../../../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h \
  ../../../SubGHz_Phy/Target/radio_board_if.h \
@@ -76,10 +73,10 @@ Usercode/user_device/Src/user_payload.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h \
  ../../../Core/Inc/adc.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_message.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
@@ -89,10 +86,13 @@ Usercode/user_device/Src/user_payload.o: \
  ../../../Core/Inc/main.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h \
  C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_payload.h
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
-../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
+../../../Core/Inc/stm32l0xx_hal_conf.h:
+../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h:
@@ -103,12 +103,6 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
 ../../../../../../../../Drivers/CMSIS/Include/mpu_armv7.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
-../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h:
-../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
-../../../Core/Inc/stm32l0xx_hal_conf.h:
-../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h:
@@ -119,6 +113,9 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h:
+../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h:
+../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h:
+../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_lptim.h:
@@ -135,11 +132,6 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
 ../../../Core/Inc/main.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
 ../../../Core/Inc/sys_app.h:
 ../../../Core/Inc/sys_conf.h:
 ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h:
@@ -149,7 +141,9 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
 ../../../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h:
 ../../../SubGHz_Phy/Target/radio_board_if.h:
@@ -168,10 +162,10 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_adc.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h:
 ../../../Core/Inc/adc.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_message.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_packet.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h:
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:
