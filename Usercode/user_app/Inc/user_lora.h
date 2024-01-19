@@ -18,7 +18,7 @@
 #else
     #define RX_TIMEOUT_VALUE                5000
     #define TX_TIMEOUT_VALUE                5000
-	#define RX_TIMEOUT_VALUE_ACTIVE			100000
+	#define RX_TIMEOUT_VALUE_ACTIVE			300000
 #endif
 
 #define TIME_RETRY_SEND_CONFIRM             5000
