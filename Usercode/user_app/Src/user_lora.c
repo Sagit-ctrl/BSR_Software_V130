@@ -170,7 +170,7 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
 
 //        HAL_Delay(delay);
 //    	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
-        LED_ON(__LED_MEASURE);
+    	LED_ON(__LED_MEASURE);
         if (delay != 0)
         {
         	UTIL_TIMER_SetPeriod(&TimerSend, delay);
@@ -325,6 +325,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					if (sModem.TimeTrySendAgain < 2)
 					{
 						Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+						LED_OFF(__LED_MEASURE);
 						sModem.TimeTrySendAgain++;
 					} else
 					{
@@ -345,6 +346,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					if (sModem.TimeTrySendAgain < 2)
 					{
 						Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+						LED_OFF(__LED_MEASURE);
 						sModem.TimeTrySendAgain++;
 					} else
 					{
@@ -358,8 +360,11 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 				} else {
 					if (sModem.CheckInit == 1)
 					{
-						sModem.Mode = 0;
-//						UTIL_TIMER_Start (&TimerLoraTx);
+						if(sModem.Mode == _MODE_WAKEUP)
+						{
+							UTIL_TIMER_Start (&TimerLoraTx);
+							sModem.Mode = 0;
+						}
 					}
 				}
 			#endif
@@ -373,6 +378,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					if (sModem.TimeTrySendAgain < 2)
 					{
 						Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+						LED_OFF(__LED_MEASURE);
 						sModem.TimeTrySendAgain++;
 					} else
 					{
@@ -393,6 +399,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					if (sModem.TimeTrySendAgain < 2)
 					{
 						Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+						LED_OFF(__LED_MEASURE);
 						sModem.TimeTrySendAgain++;
 					} else
 					{
@@ -404,8 +411,15 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 //						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
-					sModem.Mode = 0;
-//					UTIL_TIMER_Start (&TimerLoraTx);
+					if (sModem.CheckInit == 1)
+					{
+						if(sModem.Mode == _MODE_WAKEUP)
+						{
+							UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelayTx_u32);
+							UTIL_TIMER_Start (&TimerLoraTx);
+							sModem.Mode = 0;
+						}
+					}
 				}
 			#endif
 			break;

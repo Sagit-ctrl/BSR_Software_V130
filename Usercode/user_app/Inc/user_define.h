@@ -39,7 +39,7 @@
 
 #define DEFAULT_TIME_SINGLE_DELAY						8
 #define DEFAULT_TIME_CALIB_DELAY						8
-#define DEFAULT_TIME_NETWORK_DELAY						8
+#define DEFAULT_TIME_NETWORK_DELAY						2
 
 #define MAX_NUMBER_WAKE_UP                              10
 #define MAX_NUNBER_SEND_INIT                            1

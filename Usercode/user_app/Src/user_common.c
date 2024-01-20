@@ -84,6 +84,7 @@ void AppCom_Cacul_Random_Delay (void)
 	sModem.TimeDelaySingle_u32 = sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY;
 	sModem.TimeDelayCalib_u32 = sModem.TimeDelayTx_u32 * DEFAULT_TIME_CALIB_DELAY;
 	sModem.TimeDelayNetwork_u32 = (*(sModem.sNET_id.Data_a8 + Index) - 0x30) * 1000 * DEFAULT_TIME_NETWORK_DELAY;
+	LOG(LOG_INFOR, "Network delay: %d", sModem.TimeDelayNetwork_u32);
 }
 
 /* Private function prototypes -----------------------------------------------*/
@@ -153,6 +154,7 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 				sModem.CountSleep ++;
 				if(sModem.CountSleep <= (100 - sModem.TimeDelayTx_u32 / 1000)){
 					LED_TOGGLE(__LED_MODE);
+					Radio.Rx(RX_TIMEOUT_VALUE);
 					fevent_enable(sEventAppCom, event);
 				} else
 				{

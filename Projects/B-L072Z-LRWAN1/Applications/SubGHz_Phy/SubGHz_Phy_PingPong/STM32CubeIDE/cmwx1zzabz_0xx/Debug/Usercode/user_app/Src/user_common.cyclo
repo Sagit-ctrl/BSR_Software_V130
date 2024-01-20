@@ -1,9 +1,9 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:129:16:_Cb_Idle_Handler	1
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:96:16:_Cb_Timer_Lora_Tx	1
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:90:16:_Cb_Timer_Start	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:97:16:_Cb_Timer_Lora_Tx	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:91:16:_Cb_Timer_Start	1
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:49:6:AppCom_IRQ_Timer_CallBack	1
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:104:16:_Cb_Uart_Debug	3
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:130:16:_Cb_Idle_Handler	5
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:105:16:_Cb_Uart_Debug	3
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:54:9:AppCom_Task	5
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:75:6:AppCom_Cacul_Random_Delay	2
 C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:37:6:AppCom_Init	1
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:174:6:_Cb_Active_Lora_Tx_Event	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:176:6:_Cb_Active_Lora_Tx_Event	1

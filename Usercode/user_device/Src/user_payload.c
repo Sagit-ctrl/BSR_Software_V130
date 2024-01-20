@@ -115,22 +115,19 @@ void USER_Payload_Node_Calib(uint32_t delay)
 	/* Measure */
 	for(i = 0; i < TIME_MEASURE_CALIB; i++)
 	{
-		if (i >= 6)
+		switch(sModem.TypeModem_u8)
 		{
-			switch(sModem.TypeModem_u8)
-			{
-				case _LORA_NODE_VNA:
-					Value = Get_Vol_VNA();
-					break;
-				case _LORA_NODE_VP:
-					Value = Get_Vol_VP();
-					break;
-				default:
-					break;
-			}
-			Value_Measure_Calib[Pos++] = (uint8_t) (Value >> 8);
-			Value_Measure_Calib[Pos++] = (uint8_t) Value;
+			case _LORA_NODE_VNA:
+				Value = Get_Vol_VNA();
+				break;
+			case _LORA_NODE_VP:
+				Value = Get_Vol_VP();
+				break;
+			default:
+				break;
 		}
+		Value_Measure_Calib[Pos++] = (uint8_t) (Value >> 8);
+		Value_Measure_Calib[Pos++] = (uint8_t) Value;
 		HAL_Delay(DELAY_MEASURE_CALIB);
 		LED_TOGGLE(__LED_MEASURE);
 	}

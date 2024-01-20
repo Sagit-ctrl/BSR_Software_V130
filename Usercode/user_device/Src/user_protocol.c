@@ -275,6 +275,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				{
 //					UTIL_TIMER_Start (&TimerLoraTx);
 //					sModem.Mode = _MODE_SLEEP;
+					Radio.Rx(RX_TIMEOUT_VALUE);
 				} else if(sModem.Mode == _MODE_WAKEUP)
 				{
 					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
