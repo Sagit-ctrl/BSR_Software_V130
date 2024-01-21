@@ -25,7 +25,11 @@ Struct_Modem_Variable		sModem =
 	.bNeedConfirm		= 0,
 	.TimeTrySendAgain	= 0,
 	.TypeDataMessage	= _DATA_NONE,
-	.Mode				= 1,
+	#ifdef DEVICE_TYPE_STATION
+		.Mode				= _MODE_SLEEP,
+	#else
+		.Mode				= _MODE_WAKEUP,
+	#endif
 	.SendAll			= 0,
 	.CheckInit			= 0,
 	.CheckJoin			= 0,

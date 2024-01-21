@@ -15,8 +15,8 @@
     #define RX_TIMEOUT_VALUE                3650000
     #define TX_TIMEOUT_VALUE                10000
 #else
-    #define RX_TIMEOUT_VALUE                5000
-    #define TX_TIMEOUT_VALUE                5000
+    #define RX_TIMEOUT_VALUE                5500
+    #define TX_TIMEOUT_VALUE                5500
 	#define RX_TIMEOUT_VALUE_ACTIVE			300000
 #endif
 

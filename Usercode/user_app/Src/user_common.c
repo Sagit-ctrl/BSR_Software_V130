@@ -96,9 +96,14 @@ static uint8_t _Cb_Timer_Start(uint8_t event)
 
 static uint8_t _Cb_Timer_Lora_Tx(uint8_t event)
 {
-	UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
-	UTIL_TIMER_Start (&TimerLoraTx);
-	USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+	#ifdef DEVICE_TYPE_STATION
+		sModem.Mode = _MODE_SLEEP;
+	#else
+		UTIL_TIMER_Stop (&TimerLoraTx);
+		UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
+		UTIL_TIMER_Start (&TimerLoraTx);
+		USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+	#endif
     return 1;
 }
 
@@ -147,14 +152,15 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 					sModem.CheckJoin = 1;
 					sModem.CountSleep = 0;
 					sModem.Mode = 0;
-					USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
 					UTIL_TIMER_Start(&TimerLoraTx);
 				}
 			} else {
 				sModem.CountSleep ++;
-				if(sModem.CountSleep <= (100 - sModem.TimeDelayTx_u32 / 1000)){
+				if(sModem.CountSleep < 100){
 					LED_TOGGLE(__LED_MODE);
-					Radio.Rx(RX_TIMEOUT_VALUE);
+					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 					fevent_enable(sEventAppCom, event);
 				} else
 				{
@@ -164,7 +170,8 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 					sModem.CountSleep = 0;
 					sModem.Mode = 0;
 					Radio.Sleep();
-					USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
 					UTIL_TIMER_Start(&TimerLoraTx);
 				}
 			}

@@ -94,10 +94,11 @@ void USER_Payload_Node_Single(uint32_t delay)
 
 	pData[length-1] = TempCrc;
 
+	LED_OFF(__LED_MEASURE);
 	/* Send */
 	sModem.bNeedConfirm = DATA_CONFIRMED_UP;
 	sModem.TypeDataMessage = _DATA_SINGLE;
-	AppLora_Send(pData, length, DATA_CONFIRMED_UP, _DATA_SINGLE, delay);
+	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_SINGLE, delay);
 }
 
 void USER_Payload_Node_Calib(uint32_t delay)
@@ -158,6 +159,7 @@ void USER_Payload_Node_Calib(uint32_t delay)
 		TempCrc ^= pData[i];
 
 	pData[length-1] = TempCrc;
+	LED_OFF(__LED_MEASURE);
 
 	/* Send */
 	sModem.bNeedConfirm = DATA_CONFIRMED_UP;

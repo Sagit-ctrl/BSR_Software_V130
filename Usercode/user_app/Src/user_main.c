@@ -60,6 +60,8 @@ void Main_Task (void)
 
 			if ((TaskStatus_u8 == 0) && (sModem.Mode == 0))
 			{
+				LED_OFF(__LED_MODE);
+				LED_OFF(__LED_MEASURE);
 				LOG(LOG_DEBUG, "Low power mode");
 				UTIL_LPM_SetStopMode((UTIL_LPM_State_t) LPM_FALSE);
 				UTIL_LPM_EnterLowPower();

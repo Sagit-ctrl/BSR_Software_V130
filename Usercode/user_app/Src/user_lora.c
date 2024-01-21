@@ -160,7 +160,7 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
             *(sMessTx.Data_a8 + sMessTx.Length_u16++) = *(pData + i);
         }
 
-        LOG_Array(LOG_TRANS, sMessTx.Data_a8, sMessTx.Length_u16);
+//        LOG_Array(LOG_TRANS, sMessTx.Data_a8, sMessTx.Length_u16);
         for (i = 0; i < sMessTx.Length_u16; i++)
         {
         	*(sModem.sBackup.Data_a8 + i) = *(sMessTx.Data_a8 + i);
@@ -271,10 +271,10 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 				sModem.TypeDataMessage = _DATA_NONE;
 				sModem.TimeTrySendAgain = 0;
 				Reset_Buff(&sModem.sBackup);
-	        	LOG(LOG_DEBUG, "OnRxDone");
+//	        	LOG(LOG_DEBUG, "OnRxDone");
 	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) == TRUE)
 				{
-					LOG(LOG_DEBUG, "Protocol Process Done!");
+//					LOG(LOG_DEBUG, "Protocol Process Done!");
 				} else {
 		            Radio.Rx(RX_TIMEOUT_VALUE);
 				}
@@ -300,7 +300,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 			#endif
             break;
         case TX:
-        	LOG(LOG_DEBUG, "OnTxDone");
+//        	LOG(LOG_DEBUG, "OnTxDone");
         	sModem.RxTimeBefore = SysTimeGet();
 			#ifdef DEVICE_TYPE_STATION
 				Radio.Rx(RX_TIMEOUT_VALUE);
@@ -319,7 +319,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
         case RX_TIMEOUT:
         	LOG(LOG_DEBUG, "OnRxTimeOut");
 			#ifdef DEVICE_TYPE_STATION
-				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
+				if (sModem.bNeedConfirm == DATA_CONFIRMED_DOWN)
 				{
 					LOG(LOG_INFOR, "Time retry: %d", sModem.TimeTrySendAgain);
 					if (sModem.TimeTrySendAgain < 2)
@@ -330,7 +330,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					} else
 					{
 						sModem.Mode = 0;
-						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+						sModem.bNeedConfirm = DATA_UNCONFIRMED_DOWN;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
@@ -338,6 +338,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					}
 				} else {
 					Radio.Rx(RX_TIMEOUT_VALUE);
+					sModem.Mode = 0;
 				}
 			#else
 				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
@@ -363,7 +364,8 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						if(sModem.Mode == _MODE_WAKEUP)
 						{
 							UTIL_TIMER_Start (&TimerLoraTx);
-							sModem.Mode = 0;
+							sModem.Mode = _MODE_SLEEP;
+							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						}
 					}
 				}
@@ -372,7 +374,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
         case RX_ERROR:
         	LOG(LOG_DEBUG, "OnRxError");
 			#ifdef DEVICE_TYPE_STATION
-				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
+				if (sModem.bNeedConfirm == DATA_CONFIRMED_DOWN)
 				{
 					LOG(LOG_INFOR, "Time retry: %d", sModem.TimeTrySendAgain);
 					if (sModem.TimeTrySendAgain < 2)
@@ -383,7 +385,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					} else
 					{
 						sModem.Mode = 0;
-						sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+						sModem.bNeedConfirm = DATA_UNCONFIRMED_DOWN;
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
@@ -391,6 +393,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					}
 				} else {
 					Radio.Rx(RX_TIMEOUT_VALUE);
+					sModem.Mode = 0;
 				}
 			#else
 				if (sModem.bNeedConfirm == DATA_CONFIRMED_UP)
@@ -417,7 +420,8 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						{
 							UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelayTx_u32);
 							UTIL_TIMER_Start (&TimerLoraTx);
-							sModem.Mode = 0;
+							sModem.Mode = _MODE_SLEEP;
+							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						}
 					}
 				}

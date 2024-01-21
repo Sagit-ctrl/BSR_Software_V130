@@ -108,6 +108,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
     	switch(DataType)
     	{
     		case _DATA_SINGLE:
+    			LOG(LOG_RECEI, "Single shot NodeID: %d%d", pData[4]-0x30, pData[5]-0x30);
 				USER_Payload_Station_RTC(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
@@ -115,6 +116,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
 				break;
     		case _DATA_MULTI:
+    			LOG(LOG_RECEI, "Calib shot NodeID: %d%d", pData[4]-0x30, pData[5]-0x30);
 				USER_Payload_Station_Confirm(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
@@ -122,6 +124,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
 				break;
     		case _DATA_MODE:
+    			LOG(LOG_RECEI, "Mode shot NodeID: %d%d, Mode: %d", pData[4]-0x30, pData[5]-0x30, pData[8]);
 				USER_Payload_Station_Confirm(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
@@ -129,6 +132,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				HAL_UART_Transmit(&uart_mcu, sLoraVar.sIntanData.Data_a8, sLoraVar.sIntanData.Length_u16 , 1000);
 				break;
     		case _DATA_JOIN:
+    			LOG(LOG_RECEI, "Join shot NodeID: %d%d", pData[4]-0x30, pData[5]-0x30);
     			USER_Payload_Station_Accept(0);
 				Reset_Buff(&sLoraVar.sIntanData);
 				for ( i = 0; i < (Length - 1); i++)
@@ -246,6 +250,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_ON(__LED_MODE);
 						HAL_Delay(10000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
+						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
 					default:
 						break;
@@ -273,9 +278,8 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 				}
 				if(sModem.Mode == _MODE_MEASURE)
 				{
-//					UTIL_TIMER_Start (&TimerLoraTx);
-//					sModem.Mode = _MODE_SLEEP;
-					Radio.Rx(RX_TIMEOUT_VALUE);
+					sModem.Mode = _MODE_SLEEP;
+					USER_Payload_Node_Mode(0);
 				} else if(sModem.Mode == _MODE_WAKEUP)
 				{
 					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
