@@ -359,7 +359,12 @@ void LOG(log_level_t level, const char* message, ...){
 	HAL_UART_Transmit(&uart_debug, (uint8_t*) log_message, strlen(log_message), LOG_TIMEOUT);
 }
 
-void LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length){
+void LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length, const char* message, ...){
+	va_list args;
+	va_start(args, message);
+	char buffer_mess[LOG_BUFFER_SIZE];
+	vsnprintf(buffer_mess, LOG_BUFFER_SIZE, message, args);
+	va_end(args);
 	SysTime_t curtime = SysTimeGet();
 	uint16_t second = curtime.Seconds % 1000;
 	const char* level_prefix = "";
@@ -383,8 +388,9 @@ void LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length){
 			break;
 	}
 	char log_message[LOG_BUFFER_SIZE + 16];
-	snprintf(log_message, sizeof(log_message), "%03ds%03d: %s ", second, curtime.SubSeconds, level_prefix);
+	snprintf(log_message, sizeof(log_message), "%03ds%03d: %s %s", second, curtime.SubSeconds, level_prefix, buffer_mess);
 	HAL_UART_Transmit(&uart_debug, (uint8_t*) log_message, strlen(log_message), LOG_TIMEOUT);
+
 	uint8_t buffer[LOG_BUFFER_SIZE];
 	sData sSoucre = {&pData[0], Length * 2};
 	sData sTarget = {&buffer[0], LOG_BUFFER_SIZE};

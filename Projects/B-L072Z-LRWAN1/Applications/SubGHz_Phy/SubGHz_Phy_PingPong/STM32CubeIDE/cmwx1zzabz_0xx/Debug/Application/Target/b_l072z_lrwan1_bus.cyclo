@@ -1,7 +1,7 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:116:9:BSP_SPI1_DeInit	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:138:9:BSP_SPI1_Send	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:155:10:BSP_SPI1_Recv	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:172:9:BSP_SPI1_SendRecv	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:241:9:BSP_GetTick	1
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:248:26:MX_SPI1_Init	3
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/Target/b_l072z_lrwan1_bus.c:81:9:BSP_SPI1_Init	3
+b_l072z_lrwan1_bus.c:116:9:BSP_SPI1_DeInit	2
+b_l072z_lrwan1_bus.c:138:9:BSP_SPI1_Send	2
+b_l072z_lrwan1_bus.c:155:10:BSP_SPI1_Recv	2
+b_l072z_lrwan1_bus.c:172:9:BSP_SPI1_SendRecv	2
+b_l072z_lrwan1_bus.c:241:9:BSP_GetTick	1
+b_l072z_lrwan1_bus.c:248:26:MX_SPI1_Init	3
+b_l072z_lrwan1_bus.c:81:9:BSP_SPI1_Init	3

@@ -44,6 +44,8 @@ void AppCom_Init (void)
     pModemProcessIRQTimer = AppCom_IRQ_Timer_CallBack;
     sLPMFeatureHandler = &sModemLPMHandler;
     AppCom_Cacul_Random_Delay();
+    LOG_Array(LOG_INFOR, sModem.sDCU_id.Data_a8, sModem.sDCU_id.Length_u16, "DCU ID:");
+    LOG_Array(LOG_INFOR, sModem.sNET_id.Data_a8, sModem.sNET_id.Length_u16, "NET ID:");
 }
 
 void AppCom_IRQ_Timer_CallBack (void)

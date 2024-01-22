@@ -108,7 +108,7 @@ uint32_t        Convert_String_To_Dec(uint8_t *pData, uint8_t lenData);
 void            UTIL_MEM_set( void *dst, uint8_t value, uint16_t size );
 uint8_t         Convert_Hex_To_StringHex (uint8_t Hex);
 void 			LOG(log_level_t level, const char* message, ...);
-void 			LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length);
+void 			LOG_Array(log_level_t level, uint8_t *pData, uint16_t Length, const char* message, ...);
 
 void 			LED_ON (eLed_TypeDef Led);
 void 			LED_OFF (eLed_TypeDef Led);

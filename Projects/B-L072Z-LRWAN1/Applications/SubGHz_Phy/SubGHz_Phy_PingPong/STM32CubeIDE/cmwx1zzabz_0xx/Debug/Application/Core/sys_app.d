@@ -1,5 +1,5 @@
 Application/Core/sys_app.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_app.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_app.c \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h \
@@ -58,14 +58,14 @@ Application/Core/sys_app.o: \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Utilities/sequencer/stm32_seq.h \
  ../../../../../../../../Utilities/misc/stm32_systime.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h
 ../../../Core/Inc/platform.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h:
@@ -126,11 +126,11 @@ Application/Core/sys_app.o: \
 ../../../Core/Inc/platform.h:
 ../../../../../../../../Utilities/sequencer/stm32_seq.h:
 ../../../../../../../../Utilities/misc/stm32_systime.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:

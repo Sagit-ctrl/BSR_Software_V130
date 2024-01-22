@@ -271,7 +271,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 				sModem.TypeDataMessage = _DATA_NONE;
 				sModem.TimeTrySendAgain = 0;
 				Reset_Buff(&sModem.sBackup);
-//	        	LOG(LOG_DEBUG, "OnRxDone");
+	        	LOG(LOG_DEBUG, "OnRxDone");
 	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) == TRUE)
 				{
 //					LOG(LOG_DEBUG, "Protocol Process Done!");
@@ -300,7 +300,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 			#endif
             break;
         case TX:
-//        	LOG(LOG_DEBUG, "OnTxDone");
+        	LOG(LOG_DEBUG, "OnTxDone");
         	sModem.RxTimeBefore = SysTimeGet();
 			#ifdef DEVICE_TYPE_STATION
 				Radio.Rx(RX_TIMEOUT_VALUE);

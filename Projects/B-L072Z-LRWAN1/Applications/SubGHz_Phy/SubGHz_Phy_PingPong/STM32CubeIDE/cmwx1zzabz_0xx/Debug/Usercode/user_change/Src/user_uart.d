@@ -1,6 +1,6 @@
 Usercode/user_change/Src/user_uart.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_uart.c \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_uart.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h ../../../Core/Inc/main.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
@@ -40,8 +40,8 @@ Usercode/user_change/Src/user_uart.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
 ../../../Core/Inc/main.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
@@ -82,4 +82,4 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:

@@ -1,5 +1,5 @@
 Application/App/subghz_phy_app.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.c \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h \
@@ -48,14 +48,14 @@ Application/App/subghz_phy_app.o: \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../../../../../../../Utilities/misc/stm32_mem.h \
  ../../../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.h \
  ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/app_version.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/app_version.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
  ../../../../../../../../Utilities/sequencer/stm32_seq.h \
  ../../../Core/Inc/utilities_def.h
 ../../../Core/Inc/platform.h:
@@ -107,13 +107,13 @@ Application/App/subghz_phy_app.o: \
 ../../../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../../../../../../../../Utilities/misc/stm32_mem.h:
 ../../../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/subghz_phy_app.h:
 ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/app_version.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/SubGHz_Phy/App/app_version.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
 ../../../../../../../../Utilities/sequencer/stm32_seq.h:
 ../../../Core/Inc/utilities_def.h:
