@@ -1,6 +1,6 @@
 Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.c \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h \
  ../../../SubGHz_Phy/Target/cmwx1zzabz_0xx_conf.h \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
@@ -55,7 +55,7 @@ Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.o: \
  ../../../../../../../../Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h \
  ../../../Core/Inc/utilities_def.h ../../../Core/Inc/sys_debug.h \
  ../../../Core/Inc/sys_conf.h ../../../Core/Inc/platform.h
-C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h:
 ../../../SubGHz_Phy/Target/cmwx1zzabz_0xx_conf.h:
 ../../../Core/Inc/platform.h:
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h:

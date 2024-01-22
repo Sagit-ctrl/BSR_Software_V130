@@ -1,6 +1,6 @@
 Usercode/user_generate/Src/i2c.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Src/i2c.c \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/i2c.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h \
  ../../../Core/Inc/main.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
@@ -40,7 +40,7 @@ Usercode/user_generate/Src/i2c.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h:
 ../../../Core/Inc/main.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 ../../../Core/Inc/stm32l0xx_hal_conf.h:

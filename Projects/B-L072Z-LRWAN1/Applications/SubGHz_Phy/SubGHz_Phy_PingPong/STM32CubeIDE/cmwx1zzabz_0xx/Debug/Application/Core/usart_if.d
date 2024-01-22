@@ -1,5 +1,5 @@
 Application/Core/usart_if.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/usart_if.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/usart_if.c \
  ../../../Core/Inc/usart_if.h \
  ../../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h \
  ../../../Core/Inc/utilities_conf.h \

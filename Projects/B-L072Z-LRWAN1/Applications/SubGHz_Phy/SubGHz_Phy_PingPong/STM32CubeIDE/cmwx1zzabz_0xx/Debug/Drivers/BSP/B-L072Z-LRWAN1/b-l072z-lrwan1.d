@@ -1,6 +1,6 @@
 Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.c \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -39,7 +39,7 @@ Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
-C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 ../../../Core/Inc/stm32l0xx_hal_conf.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:

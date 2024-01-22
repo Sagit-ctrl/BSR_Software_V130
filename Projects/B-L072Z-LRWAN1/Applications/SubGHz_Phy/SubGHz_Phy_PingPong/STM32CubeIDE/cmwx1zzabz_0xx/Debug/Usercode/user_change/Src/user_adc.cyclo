@@ -1,7 +1,7 @@
-user_adc.c:9:6:STM32_MX_ADC1_Init	4
-user_adc.c:46:10:HW_AdcReadChannel	3
-user_adc.c:88:6:ADC_Desequence_Powerhungry_Channels	1
-user_adc.c:103:10:Get_Vol_VNA	1
-user_adc.c:112:10:Get_Vol_VP	1
-user_adc.c:121:9:Get_Vol_BAT	1
-user_adc.c:132:10:Get_Level_Voltage	3
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:9:6:STM32_MX_ADC1_Init	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:46:10:HW_AdcReadChannel	3
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:88:6:ADC_Desequence_Powerhungry_Channels	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:103:10:Get_Vol_VNA	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:112:10:Get_Vol_VP	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:121:9:Get_Vol_BAT	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_adc.c:132:10:Get_Level_Voltage	3

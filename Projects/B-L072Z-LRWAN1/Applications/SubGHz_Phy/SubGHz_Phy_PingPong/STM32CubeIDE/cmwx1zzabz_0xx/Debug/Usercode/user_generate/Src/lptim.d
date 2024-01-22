@@ -1,6 +1,6 @@
 Usercode/user_generate/Src/lptim.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Src/lptim.c \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/lptim.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -39,7 +39,7 @@ Usercode/user_generate/Src/lptim.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 ../../../Core/Inc/stm32l0xx_hal_conf.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:

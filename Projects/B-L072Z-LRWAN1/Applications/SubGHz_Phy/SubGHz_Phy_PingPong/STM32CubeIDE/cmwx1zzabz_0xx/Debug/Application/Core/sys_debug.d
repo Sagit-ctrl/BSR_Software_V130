@@ -1,5 +1,5 @@
 Application/Core/sys_debug.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l072xx.h \

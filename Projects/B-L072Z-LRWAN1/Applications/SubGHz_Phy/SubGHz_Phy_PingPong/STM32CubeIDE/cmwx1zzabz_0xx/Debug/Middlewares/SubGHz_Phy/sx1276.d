@@ -1,5 +1,5 @@
 Middlewares/SubGHz_Phy/sx1276.o: \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.c \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.c \
  ../../../Core/Inc/sys_debug.h ../../../Core/Inc/sys_conf.h \
  ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h \
@@ -44,15 +44,15 @@ Middlewares/SubGHz_Phy/sx1276.o: \
  ../../../../../../../../Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
  ../../../SubGHz_Phy/Target/b_l072z_lrwan1_bus.h \
  ../../../SubGHz_Phy/Target/timer.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
  ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-Fsk.h \
- C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-LoRa.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-Fsk.h \
+ C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-LoRa.h \
  ../../../SubGHz_Phy/Target/radio_conf.h ../../../Core/Inc/platform.h \
  ../../../../../../../../Utilities/misc/stm32_mem.h \
  ../../../Core/Inc/utilities_conf.h \
@@ -110,15 +110,15 @@ Middlewares/SubGHz_Phy/sx1276.o: \
 ../../../../../../../../Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h:
 ../../../SubGHz_Phy/Target/b_l072z_lrwan1_bus.h:
 ../../../SubGHz_Phy/Target/timer.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
 ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-Fsk.h:
-C:/Users/MDBK/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-LoRa.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-Fsk.h:
+C:/Users/Sagit/Desktop/BSR_Software_V130/Middlewares/Third_Party/SubGHz_Phy/sx1276/sx1276Regs-LoRa.h:
 ../../../SubGHz_Phy/Target/radio_conf.h:
 ../../../Core/Inc/platform.h:
 ../../../../../../../../Utilities/misc/stm32_mem.h:

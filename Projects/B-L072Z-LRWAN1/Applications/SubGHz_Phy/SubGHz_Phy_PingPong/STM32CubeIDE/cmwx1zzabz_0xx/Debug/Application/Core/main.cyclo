@@ -1,4 +1,4 @@
-main.c:149:6:Error_Handler	1
-main.c:39:6:SystemClock_Config	4
-main.c:93:6:SystemClock_Config_MSI	3
-main.c:12:5:main	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:149:6:Error_Handler	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:39:6:SystemClock_Config	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:12:5:main	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:93:6:SystemClock_Config_MSI	3

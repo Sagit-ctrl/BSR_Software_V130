@@ -238,8 +238,8 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_OFF(__LED_MODE);
 						sModem.CheckInit = 1;
 						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
-						LOG(LOG_INFOR, "Time delay: %ld", 10000 - sModem.TimeDelayNetwork_u32);
-						HAL_Delay(10000 - sModem.TimeDelayNetwork_u32);
+						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
+						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
@@ -251,8 +251,8 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						break;
 					case _MODE_MEASURE:
 						LED_ON(__LED_MODE);
-						LOG(LOG_INFOR, "Time delay: %ld", 10000 - sModem.TimeDelayNetwork_u32);
-						HAL_Delay(10000 - sModem.TimeDelayNetwork_u32);
+						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
+						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
