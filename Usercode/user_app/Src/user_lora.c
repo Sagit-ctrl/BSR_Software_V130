@@ -363,6 +363,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 					{
 						if(sModem.Mode == _MODE_WAKEUP)
 						{
+							UTIL_TIMER_Stop (&TimerLoraTx);
 							UTIL_TIMER_Start (&TimerLoraTx);
 							sModem.Mode = _MODE_SLEEP;
 							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
@@ -419,6 +420,7 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						if(sModem.Mode == _MODE_WAKEUP)
 						{
 							UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelayTx_u32);
+							UTIL_TIMER_Stop (&TimerLoraTx);
 							UTIL_TIMER_Start (&TimerLoraTx);
 							sModem.Mode = _MODE_SLEEP;
 							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);

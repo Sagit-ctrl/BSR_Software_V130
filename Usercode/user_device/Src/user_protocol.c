@@ -241,6 +241,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
 						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
 					case _MODE_WAKEUP:
@@ -254,6 +255,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
 						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
+						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;
 					default:

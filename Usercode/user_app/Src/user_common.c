@@ -156,6 +156,7 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 					sModem.Mode = 0;
 					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
+					UTIL_TIMER_Stop (&TimerLoraTx);
 					UTIL_TIMER_Start(&TimerLoraTx);
 				}
 			} else {
@@ -174,6 +175,7 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 					Radio.Sleep();
 					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
+					UTIL_TIMER_Stop (&TimerLoraTx);
 					UTIL_TIMER_Start(&TimerLoraTx);
 				}
 			}

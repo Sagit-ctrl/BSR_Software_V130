@@ -391,6 +391,7 @@ void _fAT_SET_MODE(sData *str_Receiv, uint16_t Pos)
 				sModem.Mode = _MODE_WAKEUP;
 				DCU_Response_AT((uint8_t *)"OK", 2);
 				UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 * 3);
+				UTIL_TIMER_Stop (&TimerLoraTx);
 				UTIL_TIMER_Start (&TimerLoraTx);
 				break;
 			case _MODE_MEASURE:
