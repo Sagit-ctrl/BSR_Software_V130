@@ -46,6 +46,15 @@ void AppCom_Init (void)
     AppCom_Cacul_Random_Delay();
     LOG_Array(LOG_INFOR, sModem.sDCU_id.Data_a8, sModem.sDCU_id.Length_u16, "DCU ID:");
     LOG_Array(LOG_INFOR, sModem.sNET_id.Data_a8, sModem.sNET_id.Length_u16, "NET ID:");
+    sRTCSet.SubSeconds = 0;
+    sRTCSet.sec = 0;
+    sRTCSet.min = 0;
+    sRTCSet.hour = 0;
+    sRTCSet.date = 2;
+    sRTCSet.day = 1;
+    sRTCSet.month = 1;
+    sRTCSet.year = 24;
+    UTIL_Set_RTC(sRTCSet);
 }
 
 void AppCom_IRQ_Timer_CallBack (void)
@@ -85,7 +94,7 @@ void AppCom_Cacul_Random_Delay (void)
 	sModem.TimeDelayTx_u32 *= 1000;
 	sModem.TimeDelaySingle_u32 = sModem.TimeDelayTx_u32 * DEFAULT_TIME_SINGLE_DELAY;
 	sModem.TimeDelayCalib_u32 = sModem.TimeDelayTx_u32 * DEFAULT_TIME_CALIB_DELAY;
-	sModem.TimeDelayNetwork_u32 = (*(sModem.sNET_id.Data_a8 + Index) - 0x30) * 1000 * DEFAULT_TIME_NETWORK_DELAY;
+	sModem.TimeDelayNetwork_u32 = (*(sModem.sNET_id.Data_a8 + Index) - 0x30) * 1000 * sFreqInfor.FreqWakeup_u32;
 	LOG(LOG_INFOR, "Network delay: %d", sModem.TimeDelayNetwork_u32);
 }
 

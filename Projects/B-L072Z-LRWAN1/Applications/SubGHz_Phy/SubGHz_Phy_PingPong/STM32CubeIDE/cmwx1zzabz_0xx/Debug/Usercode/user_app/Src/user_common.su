@@ -1,9 +1,0 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:99:16:_Cb_Timer_Lora_Tx	0	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:137:16:_Cb_Idle_Handler	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:93:16:_Cb_Timer_Start	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:51:6:AppCom_IRQ_Timer_CallBack	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:112:16:_Cb_Uart_Debug	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:56:9:AppCom_Task	24	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:77:6:AppCom_Cacul_Random_Delay	16	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:37:6:AppCom_Init	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c:185:6:_Cb_Active_Lora_Tx_Event	8	static

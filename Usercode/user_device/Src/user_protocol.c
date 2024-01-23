@@ -41,17 +41,10 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
     sFrameRx->NetAddr = NetAddrRx;
 
 	#ifdef DEVICE_TYPE_STATION
-		if ((*(pData + 1) != 0x54) || (*(pData + 11) != 0x54))
-		{
-			LOG(LOG_DEBUG, "Fail device");
-			return FALSE;
-		}
-
 		for (i = 0; i < 4; i++)
 		{
 			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
 			{
-				LOG(LOG_DEBUG, "Fail network id");
 				return FALSE;
 			}
 		}
@@ -68,7 +61,12 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
 		}
 	#else
 		// Check NET ID
-
+		for (i = 0; i < 4; i++){
+			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
+			{
+				return FALSE;
+			}
+		}
 		// Check DCU ID without send all node
 		if (sFrameRx->Header.Bits.SendAll == 0){
 			for (i = 0; i < 4; i++){
@@ -76,12 +74,6 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
 				{
 					return FALSE;
 				}
-			}
-		}
-		for (i = 0; i < 4; i++){
-			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
-			{
-				return FALSE;
 			}
 		}
 		// Check ACK answer
@@ -203,7 +195,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 								sRTCSet.sec     = *(pData + Pos++);
 
 							}
-						    UTIL_Set_RTC(sRTCSet);
+//						    UTIL_Set_RTC(sRTCSet);
 						    USER_Payload_Node_Confirm(0);
 							break;
 						default:
@@ -238,8 +230,6 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_OFF(__LED_MODE);
 						sModem.CheckInit = 1;
 						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
-						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
-						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
@@ -252,8 +242,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						break;
 					case _MODE_MEASURE:
 						LED_ON(__LED_MODE);
-						LOG(LOG_INFOR, "Time delay: %ld", 30000 - sModem.TimeDelayNetwork_u32);
-						HAL_Delay(30000 - sModem.TimeDelayNetwork_u32);
+						HAL_Delay(500000 - sModem.TimeDelayNetwork_u32);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
 						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
@@ -326,7 +315,14 @@ uint8_t Protocol_Packet_Header (LoRaFrame_t *pFrame, uint8_t RespondType, uint8_
 
 	#ifdef DEVICE_TYPE_STATION
 		pFrame->DevAddr = sLoraVar.sFrameRx.DevAddr;
-		pFrame->NetAddr = sLoraVar.sFrameRx.NetAddr;
+		uint32_t NETID_u32 = 0;
+		uint8_t i = 0;
+
+		for (i = 0; i < 4; i++)
+		{
+			NETID_u32 = (NETID_u32 << 8) + *(sModem.sNET_id.Data_a8 + i);
+		}
+		pFrame->NetAddr = NETID_u32;
 	#else
 		uint32_t DCUID_u32 = 0;
 		uint32_t NETID_u32 = 0;

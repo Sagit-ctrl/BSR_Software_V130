@@ -1,4 +1,0 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c:10:6:MX_USART1_UART_Init	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c:28:6:MX_USART2_UART_Init	2
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c:46:6:HAL_UART_MspInit	5
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c:152:6:HAL_UART_MspDeInit	3
