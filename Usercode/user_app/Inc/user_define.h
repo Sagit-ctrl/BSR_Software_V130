@@ -47,11 +47,11 @@
 
 /*--- ID cua thiet bi -------*/
 #ifdef DEVICE_TYPE_STATION
-    #define NETID                                    	"N000"
-    #define DCUID										"S000"
+    #define NETID                                    	"N002"
+    #define DCUID										"S002"
 #else
-    #define NETID                                   	"N000"
-	#define DCUID										"T000"
+    #define NETID                                   	"N004"
+	#define DCUID										"T090"
 #endif
 
 #endif /* INC_USER_DEFINE_H_ */

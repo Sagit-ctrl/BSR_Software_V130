@@ -1,0 +1,13 @@
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:103:6:PWR_EnterStopMode	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:123:6:PWR_ExitStopMode	5
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:183:6:PWR_EnterStandbyMode	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:193:6:PWR_ExitStandbyMode	2
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:202:6:PWR_EnterSleepMode	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:208:6:PWR_ExitSleepMode	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:49:6:UTIL_LPM_DeInit	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:54:6:UTIL_LPM_SetStopMode	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:59:17:UTIL_LPM_GetMode	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:69:6:UTIL_LPM_EnterLowPower	4
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:94:6:UTIL_LPM_EnterStandbyMode	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:213:6:UTIL_LPM_Dis_Debug_STlink	1
+C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_lpm.c:43:6:UTIL_LPM_Init	1

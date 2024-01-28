@@ -61,16 +61,17 @@ uint8_t Protocol_Extract_Rx (uint8_t *pData, uint8_t Length, uint8_t NoProcess, 
 		}
 	#else
 		// Check NET ID
-		for (i = 0; i < 4; i++){
-			if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
-			{
-				return FALSE;
-			}
-		}
+
 		// Check DCU ID without send all node
 		if (sFrameRx->Header.Bits.SendAll == 0){
 			for (i = 0; i < 4; i++){
 				if ( *(pData + 1 + i) != *(sModem.sDCU_id.Data_a8 + i))
+				{
+					return FALSE;
+				}
+			}
+			for (i = 0; i < 4; i++){
+				if ( *(pData + 5 + i) != *(sModem.sNET_id.Data_a8 + i))
 				{
 					return FALSE;
 				}
@@ -167,6 +168,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
     	length_data = 0;
 	#else
         uint8_t 	length_data = 0;
+        uint32_t    delay = 0;
 	    switch(DataType)
 	    {
 	    	case _DATA_RTC:
@@ -214,7 +216,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 							Pos++;
 							Pos++;
 							Pos++;
-							Pos++;
+							delay = (*(pData + Pos++) - 0x30) * 4000;
 							break;
 						case OBIS_MODE:
 							length_data = *(pData + Pos++);
@@ -230,6 +232,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_OFF(__LED_MODE);
 						sModem.CheckInit = 1;
 						fevent_disable(sEventAppCom, _EVENT_IDLE_HANDLER);
+						HAL_Delay(30000 - delay);
 						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
@@ -242,7 +245,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						break;
 					case _MODE_MEASURE:
 						LED_ON(__LED_MODE);
-						HAL_Delay(500000 - sModem.TimeDelayNetwork_u32);
+						HAL_Delay(30000 - delay);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
 						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
@@ -282,8 +285,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 	       		break;
 	       	case _DATA_ACCEPT:
 	       		sModem.CheckJoin = 1;
-				sEventAppCom[_EVENT_IDLE_HANDLER].e_period = 1000;
-				fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
+//				fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 				sModem.Mode = _MODE_WAKEUP;
 				Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 	       		break;
