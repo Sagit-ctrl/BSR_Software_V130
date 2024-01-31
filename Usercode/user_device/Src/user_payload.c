@@ -233,6 +233,37 @@ void USER_Payload_Node_Join(uint32_t delay)
 	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_JOIN, delay);
 }
 
+void USER_Payload_Node_Test(uint32_t delay)
+{
+	/* Init */
+	LOG(LOG_DEBUG, "USER_Payload_Node_Test");
+	uint8_t     pData[128] = {0};
+    uint8_t     length = 0;
+    uint16_t	i = 0;
+    uint8_t     TempCrc = 0;
+
+    /* Packet */
+    pData[length++] = OBIS_ID_SENSOR;
+    pData[length++] = sModem.sDCU_id.Length_u16;
+
+    for (i = 0; i < sModem.sDCU_id.Length_u16; i++)
+        pData[length++] = *(sModem.sDCU_id.Data_a8 + i);
+
+    pData[length++] = OBIS_CONFIRM;
+    pData[length++] = 0x00;
+
+    length++;
+	for (i = 0; i < (length - 1); i++)
+		TempCrc ^= pData[i];
+
+    pData[length-1] = TempCrc;
+
+    /* Send */
+	sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+	sModem.TypeDataMessage = _DATA_NONE;
+	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_NONE, delay);
+}
+
 void USER_Payload_Node_Confirm(uint32_t delay)
 {
 	/* Init */

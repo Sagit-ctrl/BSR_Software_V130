@@ -26,7 +26,7 @@
 #define USE_MODEM_LORA  1
 #define USE_MODEM_FSK   0
 
-#define RF_FREQUENCY                                923000000 /* Hz */
+#define RF_FREQUENCY                                915000000 /* Hz */
 #define TX_OUTPUT_POWER                             19        /* dBm */
 
 #define LED_PERIOD_MS   500

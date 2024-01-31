@@ -36,8 +36,8 @@ void SysApp_Start(void)
 	#else
 		LED_ON(__LED_MODE);
 		LED_OFF(__LED_MEASURE);
-		UTIL_TIMER_Start (&TimerLoraTx);
-		USER_Payload_Node_Join(sModem.TimeDelaySingle_u32);
+//		UTIL_TIMER_Start (&TimerLoraTx);
+//		USER_Payload_Node_Join(sModem.TimeDelaySingle_u32);
 	#endif
 	fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 }

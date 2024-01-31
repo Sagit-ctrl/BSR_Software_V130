@@ -1,6 +1,6 @@
 Usercode/user_util/Src/user_util.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_util.c \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_util.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -39,14 +39,14 @@ Usercode/user_util/Src/user_util.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h ../../../Core/Inc/main.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
  ../../../../../../../../Utilities/misc/stm32_systime.h \
  ../../../Core/Inc/main.h ../../../Core/Inc/platform.h \
  ../../../../../../../../Drivers/BSP/B-L072Z-LRWAN1/b-l072z-lrwan1.h \
  ../../../SubGHz_Phy/Target/b_l072z_lrwan1_bus.h
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 ../../../Core/Inc/stm32l0xx_hal_conf.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:
@@ -85,10 +85,10 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
 ../../../Core/Inc/main.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
 ../../../../../../../../Utilities/misc/stm32_systime.h:
 ../../../Core/Inc/main.h:
 ../../../Core/Inc/platform.h:

@@ -247,6 +247,7 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 						LED_ON(__LED_MODE);
 						HAL_Delay(30000 - delay);
 						USER_Payload_Node_Calib(sModem.TimeDelayCalib_u32);
+						LED_OFF(__LED_MODE);
 						UTIL_TIMER_Stop (&TimerLoraTx);
 						UTIL_TIMER_Start (&TimerLoraTx);
 						break;

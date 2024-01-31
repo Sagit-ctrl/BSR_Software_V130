@@ -1,4 +1,4 @@
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:9:6:DBG_ConfigForLpm.part.0	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:4:6:DBG_Disable	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:9:6:DBG_ConfigForLpm	8	static
-C:/Users/Sagit/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:36:6:DBG_ProbesInit	0	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:9:6:DBG_ConfigForLpm.part.0	8	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:4:6:DBG_Disable	8	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:9:6:DBG_ConfigForLpm	8	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/sys_debug.c:36:6:DBG_ProbesInit	0	static

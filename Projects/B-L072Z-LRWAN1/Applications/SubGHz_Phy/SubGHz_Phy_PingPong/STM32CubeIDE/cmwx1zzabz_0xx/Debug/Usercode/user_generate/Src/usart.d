@@ -1,5 +1,5 @@
 Usercode/user_generate/Src/usart.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Src/usart.c \
  ../../../Core/Inc/usart.h ../../../Core/Inc/main.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \

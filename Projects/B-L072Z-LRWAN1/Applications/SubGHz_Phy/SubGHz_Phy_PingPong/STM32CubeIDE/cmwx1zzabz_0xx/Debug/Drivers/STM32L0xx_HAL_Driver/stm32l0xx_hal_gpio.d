@@ -1,5 +1,5 @@
 Drivers/STM32L0xx_HAL_Driver/stm32l0xx_hal_gpio.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \

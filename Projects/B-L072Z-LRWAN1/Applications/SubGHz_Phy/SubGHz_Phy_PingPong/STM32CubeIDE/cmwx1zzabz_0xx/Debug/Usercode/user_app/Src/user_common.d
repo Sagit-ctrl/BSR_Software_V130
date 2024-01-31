@@ -1,8 +1,8 @@
 Usercode/user_app/Src/user_common.o: \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Src/user_common.c \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../../../Core/Inc/stm32l0xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -41,15 +41,15 @@ Usercode/user_app/Src/user_common.o: \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h \
  ../../../Core/Inc/usart.h ../../../Core/Inc/main.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h \
  ../../../SubGHz_Phy/Target/radio_board_if.h \
  ../../../../../../../../Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h \
  ../../../SubGHz_Phy/Target/cmwx1zzabz_0xx_conf.h \
@@ -66,31 +66,31 @@ Usercode/user_app/Src/user_common.o: \
  ../../../SubGHz_Phy/Target/radio_board_if.h \
  ../../../Core/Inc/utilities_def.h ../../../Core/Inc/sys_debug.h \
  ../../../Core/Inc/sys_conf.h ../../../Core/Inc/platform.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_adc.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_adc.h \
  ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h \
  ../../../Core/Inc/adc.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h \
  ../../../../../../../../Utilities/misc/stm32_systime.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/gpio.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/gpio.h \
  ../../../Core/Inc/main.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h \
  ../../../Core/Inc/sys_app.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h \
- C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_payload.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h \
+ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_payload.h \
  ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_event_drive.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:
 ../../../Core/Inc/stm32l0xx_hal_conf.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h:
@@ -129,16 +129,16 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_uart.h:
 ../../../Core/Inc/usart.h:
 ../../../Core/Inc/main.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_struct.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_util.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_main.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_common.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h:
 ../../../SubGHz_Phy/Target/radio_board_if.h:
 ../../../../../../../../Drivers/BSP/CMWX1ZZABZ_0xx/cmwx1zzabz_0xx.h:
 ../../../SubGHz_Phy/Target/cmwx1zzabz_0xx_conf.h:
@@ -157,25 +157,25 @@ C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_lora.h:
 ../../../Core/Inc/sys_debug.h:
 ../../../Core/Inc/sys_conf.h:
 ../../../Core/Inc/platform.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_adc.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_adc.h:
 ../../../../../../../../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h:
 ../../../Core/Inc/adc.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_app/Inc/user_define.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_protocol.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_at.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_internal_mem.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_flash.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Inc/user_obis.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_modem.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_lpm.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/lptim.h:
 ../../../../../../../../Utilities/misc/stm32_systime.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/gpio.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/gpio.h:
 ../../../Core/Inc/main.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_time.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_rtc.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Inc/user_timer.h:
 ../../../Core/Inc/sys_app.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h:
-C:/Users/Sagit/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_payload.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_generate/Inc/i2c.h:
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_device/Inc/user_payload.h:
 ../../../../../../../../Middlewares/Third_Party/SubGHz_Phy/radio.h:

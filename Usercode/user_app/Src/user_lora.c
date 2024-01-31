@@ -235,6 +235,7 @@ static void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t LoraS
     }
     sLoraVar.Snr_u8 = LoraSnr_FskCfo;
     sLoraVar.Rssi_u8 = rssi;
+    LOG(LOG_INFOR, "Rssi: %ddB, Snr: %ddBm", sLoraVar.Snr_u8, sLoraVar.Rssi_u8);
     fevent_active(sEventAppLora, _EVENT_LORA_IRQ);
 }
 

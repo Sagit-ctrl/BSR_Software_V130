@@ -40,6 +40,7 @@ void USER_Payload_Node_Single(uint32_t delay);
 void USER_Payload_Node_Calib(uint32_t delay);
 void USER_Payload_Node_Mode(uint32_t delay);
 void USER_Payload_Node_Confirm(uint32_t delay);
+void USER_Payload_Node_Test(uint32_t delay);
 void USER_Payload_Station_Accept(uint32_t delay);
 void USER_Payload_Station_RTC(uint32_t delay);
 void USER_Payload_Station_Mode(uint32_t delay);
