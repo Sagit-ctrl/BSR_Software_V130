@@ -6,11 +6,11 @@ C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:244:6
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:329:6:_fAT_GET_RTC	64	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:419:6:_fAT_GET_AUTHOR	8	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:158:6:_fAT_SET_DUTY_WAKEUP	16	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:205:6:_fAT_SET_TYPE_MODEM	8	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:350:6:_fAT_RESET_MODEM	8	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:287:6:_fAT_SET_RTC	32	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:102:6:_fAT_SET_DEVICE_ID	16	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:130:6:_fAT_SET_NETWORK_ID	16	static
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:205:6:_fAT_SET_TYPE_MODEM	8	static
-C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:370:6:_fAT_SET_MODE	16	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:370:6:_fAT_SET_MODE	8	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:414:6:_fAT_GET_FIRM_VER	0	static
 C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_change/Src/user_at.c:38:9:Check_AT_User	40	static

@@ -28,7 +28,7 @@ sEvent_struct sEventAppCom[] =
 		{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
 	#else
 //		{ _EVENT_IDLE_HANDLER, 		    0, 0, 100000, 	_Cb_Idle_Handler },
-		{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
+		{ _EVENT_IDLE_HANDLER, 		    0, 0, 10000, 	_Cb_Idle_Handler },
 	#endif
 };
 
