@@ -1,3 +1,0 @@
-user_event_drive.c:10:9:fevent_active	1
-user_event_drive.c:21:9:fevent_enable	1
-user_event_drive.c:31:9:fevent_disable	1

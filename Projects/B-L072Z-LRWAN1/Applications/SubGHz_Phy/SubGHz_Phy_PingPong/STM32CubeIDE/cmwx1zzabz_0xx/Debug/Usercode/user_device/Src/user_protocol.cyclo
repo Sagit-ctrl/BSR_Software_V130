@@ -1,3 +1,0 @@
-user_protocol.c:96:9:Protocol_Process_Rx	21
-user_protocol.c:18:9:Protocol_Extract_Rx	8
-user_protocol.c:302:9:Protocol_Packet_Header	2

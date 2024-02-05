@@ -27,8 +27,8 @@ sEvent_struct sEventAppCom[] =
 	#ifdef DEVICE_TYPE_STATION
 		{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
 	#else
-//		{ _EVENT_IDLE_HANDLER, 		    0, 0, 100000, 	_Cb_Idle_Handler },
-		{ _EVENT_IDLE_HANDLER, 		    0, 0, 10000, 	_Cb_Idle_Handler },
+		{ _EVENT_IDLE_HANDLER, 		    0, 0, 100000, 	_Cb_Idle_Handler },
+//		{ _EVENT_IDLE_HANDLER, 		    0, 0, 10000, 	_Cb_Idle_Handler },
 	#endif
 };
 
@@ -114,6 +114,12 @@ static uint8_t _Cb_Timer_Lora_Tx(uint8_t event)
 		UTIL_TIMER_Stop (&TimerLoraTx);
 		UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
 		UTIL_TIMER_Start (&TimerLoraTx);
+		sModem.CountSleep ++;
+		if (sModem.CountSleep >= 3){
+			sModem.Mode = _MODE_SLEEP;
+			sModem.CountSleep = 3;
+			LED_OFF(__LED_MODE);
+		}
 		if (sModem.Mode != _MODE_WAKEUP)
 		{
 			USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
@@ -155,8 +161,8 @@ static uint8_t _Cb_Idle_Handler(uint8_t event)
 		fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 		LED_TOGGLE(__LED_MODE);
 	#else
-		USER_Payload_Node_Test(10);
-		fevent_enable(sEventAppCom, event);
+//		USER_Payload_Node_Test(10);
+//		fevent_enable(sEventAppCom, event);
 
 //		if (sModem.CheckInit == 0){
 //			if (sModem.CheckJoin == 0)
