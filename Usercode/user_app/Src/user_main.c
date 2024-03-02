@@ -1,7 +1,6 @@
 #include "user_main.h"
 #include "user_payload.h"
 #include "user_define.h"
-#include "i2c.h"
 #include "radio.h"
 
 /* Exported functions --------------------------------------------------------*/
@@ -15,7 +14,6 @@ void SysApp_Init (void)
 	#else
 		MX_USART1_UART_Init();
 		MX_ADC_Init();
-		MX_I2C1_Init();
 	#endif
 
 	AppLora_Init ();
@@ -34,12 +32,11 @@ void SysApp_Start(void)
 		LED_OFF(__LED_MODE);
 		Radio.Rx(RX_TIMEOUT_VALUE);
 	#else
-		LED_ON(__LED_MODE);
+		LED_OFF(__LED_MODE);
 		LED_OFF(__LED_MEASURE);
 		UTIL_TIMER_Start (&TimerLoraTx);
-		USER_Payload_Node_Join(sModem.TimeDelaySingle_u32);
+		USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
 	#endif
-	fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
 }
 
 void Main_Task (void)
@@ -51,22 +48,7 @@ void Main_Task (void)
 	for (;;)
 	{
 		TaskStatus_u8 = 0;
-
 		TaskStatus_u8 |= AppCom_Task();
-
 		TaskStatus_u8 |= AppLora_Task();
-
-		#ifdef DEVICE_TYPE_STATION
-		#else
-
-//			if ((TaskStatus_u8 == 0) && (sModem.Mode == 0))
-//			{
-//				LED_OFF(__LED_MODE);
-//				LED_OFF(__LED_MEASURE);
-//				LOG(LOG_DEBUG, "Low power mode");
-//				UTIL_LPM_SetStopMode((UTIL_LPM_State_t) LPM_FALSE);
-//				UTIL_LPM_EnterLowPower();
-//			}
-		#endif
 	}
 }

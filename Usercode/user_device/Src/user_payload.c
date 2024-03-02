@@ -42,27 +42,20 @@ void USER_Payload_Node_Single(uint32_t delay)
 	uint8_t     length = 0;
 	uint8_t     TempCrc = 0;
 	uint16_t	i = 0;
-	uint16_t	Value_Measure_Single = 0;
+	uint16_t	Value_Measure_Single_VP = 0;
+	uint16_t	Value_Measure_Single_VNA = 0;
 	uint16_t	Value_Measure_Battery = 0;
 
 	/* Measure */
 	for( i = 0; i < TIME_MEASURE_SINGLE; i++)
 	{
-		switch(sModem.TypeModem_u8)
-		{
-			case _LORA_NODE_VNA:
-				Value_Measure_Single += Get_Vol_VNA();
-				break;
-			case _LORA_NODE_VP:
-				Value_Measure_Single += Get_Vol_VP();
-				break;
-			default:
-				break;
-		}
+		Value_Measure_Single_VNA += Get_Vol_VNA();
+		Value_Measure_Single_VP += Get_Vol_VP();
 		HAL_Delay(DELAY_MEASURE_SINGLE);
 		LED_TOGGLE(__LED_MEASURE);
 	}
-	Value_Measure_Single /= TIME_MEASURE_SINGLE;
+	Value_Measure_Single_VNA /= TIME_MEASURE_SINGLE;
+	Value_Measure_Single_VP /= TIME_MEASURE_SINGLE;
 	Value_Measure_Battery = Get_Vol_BAT();
 
 	/* Packet */
@@ -72,16 +65,15 @@ void USER_Payload_Node_Single(uint32_t delay)
 	for (i = 0; i < sModem.sDCU_id.Length_u16; i++)
 		pData[length++] = *(sModem.sDCU_id.Data_a8 + i);
 
-	if (sModem.TypeModem_u8 == _LORA_NODE_VNA)
-	{
-		pData[length++] = OBIS_VOL_VNA;
-	} else if (sModem.TypeModem_u8 == _LORA_NODE_VP)
-	{
-		pData[length++] = OBIS_VOL_VP;
-	}
+	pData[length++] = OBIS_VOL_VNA;
 	pData[length++] = 0x02;
-	pData[length++] = (Value_Measure_Single >> 8) & 0xFF;
-	pData[length++] = Value_Measure_Single & 0xFF;
+	pData[length++] = (Value_Measure_Single_VNA >> 8) & 0xFF;
+	pData[length++] = Value_Measure_Single_VNA & 0xFF;
+
+	pData[length++] = OBIS_VOL_VP;
+	pData[length++] = 0x02;
+	pData[length++] = (Value_Measure_Single_VP >> 8) & 0xFF;
+	pData[length++] = Value_Measure_Single_VP & 0xFF;
 
 	pData[length++] = OBIS_VOL_BAT;
 	pData[length++] = 0x01;
@@ -98,7 +90,7 @@ void USER_Payload_Node_Single(uint32_t delay)
 	/* Send */
 	sModem.bNeedConfirm = DATA_CONFIRMED_UP;
 	sModem.TypeDataMessage = _DATA_SINGLE;
-	AppLora_Send(pData, length, DATA_UNCONFIRMED_UP, _DATA_SINGLE, delay);
+	AppLora_Send(pData, length, DATA_CONFIRMED_UP, _DATA_SINGLE, delay);
 }
 
 void USER_Payload_Node_Calib(uint32_t delay)

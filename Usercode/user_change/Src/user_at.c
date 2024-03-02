@@ -388,11 +388,17 @@ void _fAT_SET_MODE(sData *str_Receiv, uint16_t Pos)
 				sModem.SendAll = 0;
 				break;
 			case _MODE_WAKEUP:
+//				sModem.Mode = _MODE_WAKEUP;
+//				DCU_Response_AT((uint8_t *)"OK", 2);
+//				UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 * 3);
+//				UTIL_TIMER_Stop (&TimerLoraTx);
+//				UTIL_TIMER_Start (&TimerLoraTx);
 				sModem.Mode = _MODE_WAKEUP;
+				sModem.SendAll = 1;
 				DCU_Response_AT((uint8_t *)"OK", 2);
-				UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 * 3);
-				UTIL_TIMER_Stop (&TimerLoraTx);
-				UTIL_TIMER_Start (&TimerLoraTx);
+				USER_Payload_Station_Mode(0);
+				sModem.SendAll = 0;
+				sModem.Mode = _MODE_SLEEP;
 				break;
 			case _MODE_MEASURE:
 				sModem.Mode = _MODE_MEASURE;

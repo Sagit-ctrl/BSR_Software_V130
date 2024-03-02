@@ -28,12 +28,9 @@ Struct_Modem_Variable		sModem =
 	#ifdef DEVICE_TYPE_STATION
 		.Mode				= _MODE_SLEEP,
 	#else
-		.Mode				= _MODE_WAKEUP,
+		.Mode				= _MODE_SLEEP,
 	#endif
 	.SendAll			= 0,
-	.CheckInit			= 0,
-	.CheckJoin			= 0,
-	.CountSleep			= 0,
 };
 
 SModemFreqActionInformation     sFreqInfor =

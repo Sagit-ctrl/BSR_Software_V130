@@ -159,17 +159,12 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
                 break;
             *(sMessTx.Data_a8 + sMessTx.Length_u16++) = *(pData + i);
         }
-
-//        LOG_Array(LOG_TRANS, sMessTx.Data_a8, sMessTx.Length_u16);
         for (i = 0; i < sMessTx.Length_u16; i++)
         {
         	*(sModem.sBackup.Data_a8 + i) = *(sMessTx.Data_a8 + i);
         }
         sModem.sBackup.Length_u16 = sMessTx.Length_u16;
-//        LOG_Array(LOG_INFOR, sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
 
-//        HAL_Delay(delay);
-//    	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
     	LED_ON(__LED_MEASURE);
         if (delay != 0)
         {
@@ -268,35 +263,16 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
     {
         case RX:
 			#ifdef DEVICE_TYPE_STATION
-				sModem.bNeedConfirm = DATA_UNCONFIRMED_DOWN;
-				sModem.TypeDataMessage = _DATA_NONE;
-				sModem.TimeTrySendAgain = 0;
-				Reset_Buff(&sModem.sBackup);
 	        	LOG(LOG_DEBUG, "OnRxDone");
-	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) == TRUE)
+	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) != TRUE)
 				{
-//					LOG(LOG_DEBUG, "Protocol Process Done!");
-				} else {
 		            Radio.Rx(RX_TIMEOUT_VALUE);
 				}
 			#else
-				sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
-				sModem.TypeDataMessage = _DATA_NONE;
-				sModem.TimeTrySendAgain = 0;
-				Reset_Buff(&sModem.sBackup);
 	        	LOG(LOG_DEBUG, "OnRxDone");
-	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) == TRUE)
+	        	if (Protocol_Extract_Rx(BufferRx, RxBufferSize, 0, &sLoraVar.sFrameRx) != TRUE)
 				{
-					LOG(LOG_DEBUG, "Protocol Process Done!");
-				} else {
-					if (sModem.Mode == 0)
-					{
-			        	sModem.RxTimeAfter = SysTimeGet();
-			        	Radio.Rx(RX_TIMEOUT_VALUE - (sModem.RxTimeAfter.Seconds - sModem.RxTimeBefore.Seconds) * 1000 - (sModem.RxTimeAfter.SubSeconds - sModem.RxTimeBefore.SubSeconds));
-					} else {
-			        	sModem.RxTimeAfter = SysTimeGet();
-			        	Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE - (sModem.RxTimeAfter.Seconds - sModem.RxTimeBefore.Seconds) * 1000 - (sModem.RxTimeAfter.SubSeconds - sModem.RxTimeBefore.SubSeconds));
-					}
+		            Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 				}
 			#endif
             break;
@@ -306,12 +282,18 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 			#ifdef DEVICE_TYPE_STATION
 				Radio.Rx(RX_TIMEOUT_VALUE);
 			#else
-				if(sModem.CheckInit == 0)
+				if(sModem.bNeedConfirm == DATA_CONFIRMED_UP)
 				{
-					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
-				} else {
+					LOG(LOG_DEBUG, "RX_TIMEOUT_VALUE");
 					Radio.Rx(RX_TIMEOUT_VALUE);
+				} else {
+					LOG(LOG_DEBUG, "RX_TIMEOUT_VALUE_ACTIVE");
+					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
 				}
+				sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+				sModem.TypeDataMessage = _DATA_NONE;
+				sModem.TimeTrySendAgain = 0;
+				Reset_Buff(&sModem.sBackup);
 			#endif
             break;
         case TX_TIMEOUT:
@@ -357,18 +339,14 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
-					if (sModem.CheckInit == 1)
+					if(sModem.Mode == _MODE_WAKEUP)
 					{
-						if(sModem.Mode == _MODE_WAKEUP)
-						{
-							UTIL_TIMER_Stop (&TimerLoraTx);
-							UTIL_TIMER_Start (&TimerLoraTx);
-							sModem.Mode = _MODE_SLEEP;
-							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
-						}
+						UTIL_TIMER_Stop (&TimerLoraTx);
+						UTIL_TIMER_Start (&TimerLoraTx);
+						sModem.Mode = _MODE_SLEEP;
+						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 					}
 				}
 			#endif
@@ -413,19 +391,15 @@ static uint8_t _Cb_Lora_IRQ (uint8_t event)
 						sModem.TypeDataMessage = _DATA_NONE;
 						sModem.TimeTrySendAgain = 0;
 						Reset_Buff(&sModem.sBackup);
-//						UTIL_TIMER_Start (&TimerLoraTx);
 					}
 				} else {
-					if (sModem.CheckInit == 1)
+					if(sModem.Mode == _MODE_WAKEUP)
 					{
-						if(sModem.Mode == _MODE_WAKEUP)
-						{
-							UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelayTx_u32);
-							UTIL_TIMER_Stop (&TimerLoraTx);
-							UTIL_TIMER_Start (&TimerLoraTx);
-							sModem.Mode = _MODE_SLEEP;
-							USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
-						}
+						UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelayTx_u32);
+						UTIL_TIMER_Stop (&TimerLoraTx);
+						UTIL_TIMER_Start (&TimerLoraTx);
+						sModem.Mode = _MODE_SLEEP;
+						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 					}
 				}
 			#endif

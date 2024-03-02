@@ -31,7 +31,7 @@
 /* Define --------------------------------------------------------------------*/
 #define UART_BAURATE									115200
 
-#define DEFAULT_FREQ_WAKEUP                             100
+#define DEFAULT_FREQ_WAKEUP                             300
 #define DEFAULT_NUMBER_WAKE_UP                          1
 #define DEFAULT_OFFSET_ADC_VP							30		// unit mV
 #define DEFAULT_OFFSET_ADC_VNA							30		// unit mV
@@ -47,11 +47,11 @@
 
 /*--- ID cua thiet bi -------*/
 #ifdef DEVICE_TYPE_STATION
-    #define NETID                                    	"N002"
-    #define DCUID										"S002"
+    #define NETID                                    	"N001"
+    #define DCUID										"S001"
 #else
-    #define NETID                                   	"N004"
-	#define DCUID										"T090"
+    #define NETID                                   	"N001"
+	#define DCUID										"T082"
 #endif
 
 #endif /* INC_USER_DEFINE_H_ */
