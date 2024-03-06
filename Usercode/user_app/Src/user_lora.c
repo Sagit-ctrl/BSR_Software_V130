@@ -3,7 +3,6 @@
 #include "platform.h"
 #include "sys_app.h"
 #include "radio.h"
-#include "app_version.h"
 #include "user_payload.h"
 #include "stm32_seq.h"
 #include "utilities_def.h"
@@ -62,11 +61,6 @@ void AppLora_Init(void)
 {
     uint32_t random_delay;
     /* Print APP version*/
-//    APP_LOG(TS_OFF, VLEVEL_L, "user_lora.c: LORA_VERSION= V%X.%X.%X\r\n",
-//            (uint8_t)(__APP_VERSION >> __APP_VERSION_MAIN_SHIFT),
-//            (uint8_t)(__APP_VERSION >> __APP_VERSION_SUB1_SHIFT),
-//            (uint8_t)(__APP_VERSION >> __APP_VERSION_SUB2_SHIFT));
-
     /* Radio initialization */
     RadioEvents.TxDone = 	OnTxDone;
     RadioEvents.RxDone = 	OnRxDone;
