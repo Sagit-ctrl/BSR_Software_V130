@@ -41,8 +41,8 @@ StructLoraManager    sLoraVar =
     .sIntanData = {&aINTAN_DATA[0], 0},
 };
 
-static UTIL_TIMER_Object_t TimerSend;
-static void _Cb_Timer_Send_Event(void *context);
+UTIL_TIMER_Object_t TimerSend;
+void _Cb_Timer_Send_Event(void *context);
 
 static UTIL_TIMER_Object_t TimerLoraTxAgain;
 static void _Cb_Timer_Lora_Tx_Again(void *context);
@@ -164,6 +164,7 @@ uint8_t AppLora_Send (uint8_t *pData, uint8_t Length, uint8_t RespondType, uint8
         {
         	UTIL_TIMER_SetPeriod(&TimerSend, delay);
         	UTIL_TIMER_Start(&TimerSend);
+        	sModem.HaveMessNotSend = 1;
         } else {
         	Radio.Send(sMessTx.Data_a8, sMessTx.Length_u16);
             LED_OFF(__LED_MEASURE);
@@ -418,8 +419,16 @@ static void _Cb_Timer_Lora_Tx_Again(void *context)
 
 }
 
-static void _Cb_Timer_Send_Event(void *context)
+void _Cb_Timer_Send_Event(void *context)
 {
-	Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+	if (sModem.HaveMessNotSend == 1)
+	{
+		Radio.Send(sModem.sBackup.Data_a8, sModem.sBackup.Length_u16);
+	} else {
+		sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+		sModem.TypeDataMessage = _DATA_NONE;
+		sModem.TimeTrySendAgain = 0;
+		Reset_Buff(&sModem.sBackup);
+	}
     LED_OFF(__LED_MEASURE);
 }

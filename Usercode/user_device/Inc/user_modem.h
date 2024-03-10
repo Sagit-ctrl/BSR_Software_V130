@@ -54,6 +54,7 @@ typedef struct
     uint32_t		TimeDelayNetwork_u32;
 
     uint8_t         SendAll;
+    uint8_t			HaveMessNotSend;
 }Struct_Modem_Variable;
 
 typedef struct

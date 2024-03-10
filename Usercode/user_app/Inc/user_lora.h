@@ -90,6 +90,7 @@ typedef struct
 extern StructLoraManager    sLoraVar;
 extern sEvent_struct        sEventAppLora[];
 extern StructLoraHandle     shLora;
+extern UTIL_TIMER_Object_t TimerSend;
 
 /*===================== Function =========================*/
 void        AppLora_Init(void);

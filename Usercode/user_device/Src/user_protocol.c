@@ -176,6 +176,15 @@ uint8_t Protocol_Process_Rx (uint8_t DataType, uint8_t *pData, uint8_t Length)
 					case _MODE_WAKEUP:
 						LED_ON(__LED_MODE);
 						UTIL_TIMER_Stop(&TimerLoraTx);
+						if (sModem.HaveMessNotSend == 1)
+						{
+							UTIL_TIMER_Stop(&TimerSend);
+							sModem.HaveMessNotSend = 0;
+							sModem.bNeedConfirm = DATA_UNCONFIRMED_UP;
+							sModem.TypeDataMessage = _DATA_NONE;
+							sModem.TimeTrySendAgain = 0;
+							Reset_Buff(&sModem.sBackup);
+						}
 						USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
 						break;
 					case _MODE_MEASURE:
