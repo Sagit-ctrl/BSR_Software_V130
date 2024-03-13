@@ -34,8 +34,13 @@ void SysApp_Start(void)
 	#else
 		LED_OFF(__LED_MODE);
 		LED_OFF(__LED_MEASURE);
+<<<<<<< HEAD
 		UTIL_TIMER_Start (&TimerLoraTx);
 		USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+=======
+//		UTIL_TIMER_Start (&TimerLoraTx);
+//		USER_Payload_Node_Join(sModem.TimeDelaySingle_u32);
+>>>>>>> parent of 8c1c28a (Last ver in BSR 5/2/2024)
 	#endif
 }
 

@@ -1,0 +1,7 @@
+user_flash.c:7:19:OnchipFlashWriteData	4
+user_flash.c:43:19:OnchipFlashCopy	4
+user_flash.c:83:19:OnchipFlashPageErase	2
+user_flash.c:112:6:Erase_Firmware	2
+user_flash.c:119:6:OnchipFlashReadData	2
+user_flash.c:137:9:Save_Array	1
+user_flash.c:153:9:Save_Array_without_erase	1

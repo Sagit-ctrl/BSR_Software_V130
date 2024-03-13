@@ -1,0 +1,7 @@
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:7:19:OnchipFlashWriteData	32	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:43:19:OnchipFlashCopy	32	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:83:19:OnchipFlashPageErase	16	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:112:6:Erase_Firmware	16	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:119:6:OnchipFlashReadData	8	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:137:9:Save_Array	272	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Usercode/user_util/Src/user_flash.c:153:9:Save_Array_without_erase	272	static

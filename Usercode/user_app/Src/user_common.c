@@ -24,7 +24,16 @@ sEvent_struct sEventAppCom[] =
 	{ _EVENT_TIMER_START, 		    0, 0, 0, 	    _Cb_Timer_Start },
 	{ _EVENT_TIMER_LORA_TX, 		0, 0, 0, 	    _Cb_Timer_Lora_Tx },
 	{ _EVENT_UART_DEBUG, 		    0, 0, 5, 	    _Cb_Uart_Debug },
+<<<<<<< HEAD
 	{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
+=======
+	#ifdef DEVICE_TYPE_STATION
+		{ _EVENT_IDLE_HANDLER, 		    0, 0, 1000, 	_Cb_Idle_Handler },
+	#else
+//		{ _EVENT_IDLE_HANDLER, 		    0, 0, 100000, 	_Cb_Idle_Handler },
+		{ _EVENT_IDLE_HANDLER, 		    0, 0, 10000, 	_Cb_Idle_Handler },
+	#endif
+>>>>>>> parent of 8c1c28a (Last ver in BSR 5/2/2024)
 };
 
 UTIL_TIMER_Object_t TimerLoraTx;
@@ -101,10 +110,26 @@ static uint8_t _Cb_Timer_Start(uint8_t event)
 
 static uint8_t _Cb_Timer_Lora_Tx(uint8_t event)
 {
+<<<<<<< HEAD
 	UTIL_TIMER_Stop (&TimerLoraTx);
 	UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
 	UTIL_TIMER_Start (&TimerLoraTx);
 	USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+=======
+	#ifdef DEVICE_TYPE_STATION
+		sModem.Mode = _MODE_SLEEP;
+	#else
+		UTIL_TIMER_Stop (&TimerLoraTx);
+		UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000);
+		UTIL_TIMER_Start (&TimerLoraTx);
+		if (sModem.Mode != _MODE_WAKEUP)
+		{
+			USER_Payload_Node_Single(sModem.TimeDelaySingle_u32);
+		} else {
+			USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+		}
+	#endif
+>>>>>>> parent of 8c1c28a (Last ver in BSR 5/2/2024)
     return 1;
 }
 
@@ -135,6 +160,57 @@ static uint8_t _Cb_Uart_Debug(uint8_t event)
 
 static uint8_t _Cb_Idle_Handler(uint8_t event)
 {
+<<<<<<< HEAD
+=======
+	#ifdef DEVICE_TYPE_STATION
+		fevent_enable(sEventAppCom, _EVENT_IDLE_HANDLER);
+		LED_TOGGLE(__LED_MODE);
+	#else
+		USER_Payload_Node_Test(10);
+		fevent_enable(sEventAppCom, event);
+
+//		if (sModem.CheckInit == 0){
+//			if (sModem.CheckJoin == 0)
+//			{
+//				sModem.CountSleep ++;
+//				if(sModem.CountSleep <= 2){
+//					USER_Payload_Node_Join(sModem.TimeDelaySingle_u32);
+//					fevent_enable(sEventAppCom, event);
+//				} else
+//				{
+//					LED_OFF(__LED_MODE);
+//					sModem.CheckInit = 1;
+//					sModem.CheckJoin = 1;
+//					sModem.CountSleep = 0;
+//					sModem.Mode = 0;
+//					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+//					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
+//					UTIL_TIMER_Stop (&TimerLoraTx);
+//					UTIL_TIMER_Start(&TimerLoraTx);
+//				}
+//			} else {
+//				sModem.CountSleep ++;
+//				if(sModem.CountSleep < 2){
+//					LED_ON(__LED_MODE);
+//					Radio.Rx(RX_TIMEOUT_VALUE_ACTIVE);
+//					fevent_enable(sEventAppCom, event);
+//				} else
+//				{
+//					LED_OFF(__LED_MODE);
+//					sModem.CheckInit = 1;
+//					sModem.CheckJoin = 1;
+//					sModem.CountSleep = 0;
+//					sModem.Mode = 0;
+//					Radio.Sleep();
+//					USER_Payload_Node_Mode(sModem.TimeDelaySingle_u32);
+//					UTIL_TIMER_SetPeriod (&TimerLoraTx, sFreqInfor.FreqWakeup_u32 * 1000 - sModem.TimeDelaySingle_u32);
+//					UTIL_TIMER_Stop (&TimerLoraTx);
+//					UTIL_TIMER_Start(&TimerLoraTx);
+//				}
+//			}
+//		}
+	#endif
+>>>>>>> parent of 8c1c28a (Last ver in BSR 5/2/2024)
 	return 1;
 }
 

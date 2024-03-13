@@ -1,0 +1,4 @@
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:149:6:Error_Handler	8	static,ignoring_inline_asm
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:39:6:SystemClock_Config	120	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:93:6:SystemClock_Config_MSI	128	static
+C:/Users/MDBK/Desktop/BSR_Software_V130/Projects/B-L072Z-LRWAN1/Applications/SubGHz_Phy/SubGHz_Phy_PingPong/Core/Src/main.c:12:5:main	8	static

@@ -1,0 +1,4 @@
+lptim.c:12:6:MX_LPTIM1_Init	2
+lptim.c:29:6:HAL_LPTIM_MspInit	2
+lptim.c:50:6:HAL_LPTIM_MspDeInit	2
+lptim.c:64:6:_Error_Handler	1
